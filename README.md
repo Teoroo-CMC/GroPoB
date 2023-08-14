@@ -3,7 +3,7 @@ Generalized Amber Force Field (GAFF) for polymer electrolyte systems
 
 # Polymer Electrolyte builder for MD simulations
 
-This is a tutorial to build initial configurations and force field parameters required for the Classical Molecular dynamics simulation using GROMACS software of polymer electrolyte system PEO-LiTFSI. This tutorial is based on the jupyter notebook written using different open-source tools. Before building the PE system, one has to answer the following questions:
+This is a tutorial to build initial configurations and force field parameters required for the Classical Molecular dynamics simulation using GROMACS software of polymer electrolyte system PEO-LiTFSI. This tutorial is based on the jupyter notebook, written using different open-source tools. Before building the PE system, one has to answer the following questions:
 
 Questions | In this tutorial
 -------- | ----------------
@@ -15,10 +15,13 @@ Questions | In this tutorial
 
 ## Prerequisites
 
-This tutorial assumes that the user is familiar with python (jupyter notebook) and MD simulations using GROMACS. The prequisites for running the jupyter notebook are:
+This tutorial assumes the user is familiar with Python (jupyter notebook) and MD simulations using GROMACS. The prerequisites for running the jupyter notebook are:
 
 * [**GROMACS**](https://www.gromacs.org/)
 * [*ambertools*](https://ambermd.org/AmberTools.php)
+  	* antechamber
+  	* prepgen
+  	* tleap
 * [**ACPYPE**](https://pypi.org/project/acpype/)
 * **Python packages** 
     * jupyter
