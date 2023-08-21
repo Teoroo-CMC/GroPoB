@@ -48,7 +48,7 @@ monomer="COCCOCCOCCOC"
 ```
 This will create a folder named **PEO.acpype** in the working directory containing all the GAFF parameter files and GROMACS topology files. The two important files are *PEO.pdb* and *PEO.ac* copied to outside of acpype folder for next steps.
 
-The monomer can also be visualized using *nglview* and also atom indexes are labled that is useful to define the *HEAD*,*CHAIN*, and *TAIL* part of the monomer.
+The monomer can also be visualized using *nglview*, and atom indexes are labeled, which is helpful to define the *HEAD*,*CHAIN*, and *TAIL* parts of the monomer.
 
 ```python
 #Visualize the molecule
@@ -60,11 +60,11 @@ vi
 ![monomer](./monomer.png){width=300px}
 
 
-## Step-2: Defining the HEAD, CHAIN, and TAIL of monomer
+## Step-2: Defining the HEAD, CHAIN, and TAIL of the monomer
 This is the most complicated step of this tutorial as it required to choose the two different atom indexes:
 
 1. Head/Tail atom index numbers
-2. The atom indexes that needed to be omitted near Head/Tail ids.
+2. The atom indexes needed to be omitted near Head/Tail ids.
 
 ```python
 #Defining CHAIN HEAD and TAIL in the monomer directory
@@ -72,7 +72,7 @@ ac=open('PEO.ac',mode='r') #Reading .ac file
 [next(ac) for _ in range(2)] #Skipping first two lines of text
 l=ac.readlines() #Reading lines
 
-#Breaking the parts of monomer to CHAIN, HEAD and TAIL
+#Breaking the parts of the monomer into CHAIN, HEAD and TAIL
 chain=open('PEO.chain','w+');head=open('PEO.head','w+');tail=open('PEO.tail','w+')
 #Atom index where head and tail of monomer; Check from above ngl view of mol
 head_id=15
