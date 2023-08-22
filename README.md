@@ -8,8 +8,8 @@ This is a tutorial to build initial configurations and force field parameters re
 Questions | In this tutorial
 -------- | ----------------
 *What is the monomer?* | -COCOCOCOC-
-*No. of monomers in the polymer chain?* | 25
-*What is the end group?* | -CH$_3$
+*No. of monomers in the polymer chain?* | 20
+*What is the end group?* | -CH_3
 *What is the salt?* | LiTFSI
 *No. of polymers and salt ions* | 100,20
 
