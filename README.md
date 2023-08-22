@@ -22,12 +22,12 @@ This tutorial assumes the user is familiar with Python (jupyter notebook) and MD
   	* antechamber
   	* prepgen
   	* tleap
-* [**ACPYPE**](https://pypi.org/project/acpype/)
 * **Python packages** 
     * jupyter
     * ASE
     * nglview
-
+* [*intermol*](https://github.com/shirtsgroup/InterMol)
+  
 Run the initial cell to import python packages required for the tutorial and create a working directory.
 ```python
 import numpy as np
@@ -40,19 +40,29 @@ WDIR='/home/harish/GroPolBul/tutorial/PEO-LiTFSI'
 ```
 
 ## Step-1: Parameterizing monomer
-The monomer can be read from any structural file formats supported by *ASE* or can be provided as a SMILE format and then, *acpype* can be used to parameterize the monomer.
+The monomer or short polymer chain can be read from any structural file formats such as *.pdb, *.xyz, and *.gro and then "antechamber" can be used to parameterize the monomer.
 ```python
-monomer="COCCOCCOCCOC"
-!rm PEO.acpype    # To remove old folder
-!acpype -i {monomer} -b PEO -n 0 -o gmx
+#Use short polymer with repeat group, head and tail group
+#repeat group: COCCOCCOCCOCCOC
+#head and tail group: C
+#Use antechamber (ambertools) to optimize and prameterise with AM1-BCC charges 
+#antechamber options help:
+#Usage: antechamber -i     input file name
+#                   -fi    input file format
+#                   -o     output file name
+#                   -fo    output file format
+#                   -c     charge method
+#                   -nc    net molecular charge (int)
+#                   -rn    residue name
+
+!antechamber -i PEO_initial.pdb -fi pdb -o PEO.ac -fo ac -at gaff -an y -c bcc -nc 0 -rn PEO 
 ```
-This will create a folder named **PEO.acpype** in the working directory containing all the GAFF parameter files and GROMACS topology files. The two important files are *PEO.pdb* and *PEO.ac* copied to outside of acpype folder for next steps.
 
 The monomer can also be visualized using *nglview*, and atom indexes are labeled, which is helpful to define the *HEAD*,*CHAIN*, and *TAIL* parts of the monomer.
 
 ```python
 #Visualize the molecule
-mol=read('PEO.pdb')
+mol=read('PEO_initial.pdb')
 vi=ngl.show_ase(mol);vi.add_label(radius=2,color='black',label_type='atomindex')
 vi
 ```
@@ -72,47 +82,54 @@ ac=open('PEO.ac',mode='r') #Reading .ac file
 [next(ac) for _ in range(2)] #Skipping first two lines of text
 l=ac.readlines() #Reading lines
 
-#Breaking the parts of the monomer into CHAIN, HEAD and TAIL
-chain=open('PEO.chain','w+');head=open('PEO.head','w+');tail=open('PEO.tail','w+')
+#Breaking the parts of monomer to CHAIN, HEAD and TAIL
 #Atom index where head and tail of monomer; Check from above ngl view of mol
-head_id=15
-tail_id=1
+#Change these values accordingly
+head_id=1
+tail_id=7
 
-head_omit=[16, 41, 42, 43]
-tail_omit=[0, 17, 18, 19]
-
-chain.write('HEAD_NAME '+str(l[head_id].split()[2])+'\n')
-tail.write('HEAD_NAME '+str(l[head_id].split()[2])+'\n')
-chain.write('TAIL_NAME '+str(l[tail_id].split()[2])+'\n')
-head.write('TAIL_NAME '+str(l[tail_id].split()[2])+'\n')
-
-for i in range(len(head_omit)):
-	chain.write('OMIT_NAME '+str(l[int(head_omit[i])].split()[2])+'\n')
-	tail.write('OMIT_NAME '+str(l[int(head_omit[i])].split()[2])+'\n')
-chain.write('PRE_HEAD_TYPE '+str(l[tail_id].split()[9])+'\n')
-tail.write('PRE_HEAD_TYPE '+str(l[tail_id].split()[9])+'\n')
-tail.write('CHARGE 0')
-
-for i in range(len(tail_omit)):
-	chain.write('OMIT_NAME '+str(l[int(tail_omit[i])].split()[2])+'\n')
-	head.write('OMIT_NAME '+str(l[int(tail_omit[i])].split()[2])+'\n')
-chain.write('POST_TAIL_TYPE '+str(l[head_id].split()[9])+'\n')
-chain.write('CHARGE 0')
-head.write('POST_TAIL_TYPE '+str(l[head_id].split()[9])+'\n')
-head.write('CHARGE 0')
-
-chain.close();head.close();tail.close()
-
-#Use prepgen to prepare the CHAIN, HEAD and TAIL res files
-#Adds dummy atoms at the desired positions
-!prepgen -i PEO.ac -o PEO.prepi -f prepi -m PEO.chain -rn PEO -rf PEO.res 
-!prepgen -i PEO.ac -o HPT.prepi -f prepi -m PEO.head -rn HPT -rf HPT.res 
-!prepgen -i PEO.ac -o TPT.prepi -f prepi -m PEO.tail -rn TPT -rf TPT.res 
+head_omit=[3, 23, 24, 25] #Atoms to omit near head
+tail_omit=[8, 32, 33, 34] #Atoms to omit near tail
 ```
+Using "prepgen" we will generate three *.prepi files
+1. PEO.prepi : CHAIN
+2. HPT.prepi : HEAD part
+3. TPT.prepi : TAIL part
 
-ADD DETAILS ABOUT CHOOSING THE INDEXES AND FILE TYPES
+Using these files, we can build the polymer chain.
 
 ## Step-3: Build and parameterize single polymer chain
+Here we need to set the variable "n_mono_repeat" which saves number of monomer units in the short polymer chain, and need to choose the variable "n_mono_pol" i.e. number of monomers in the desired polymer.
+Next "tleap" is used to prepare the desired single polymer chain.
+```python
+#Build the desired homopolymer using above prepi files
+%mkdir polymer
+n_mono_repeat=5
+n_mono_pol=20
+
+repeat=" ".join(['PEO'] * int(int(n_mono_pol/n_mono_repeat)-2))
+print('HPT '+str(repeat)+' TPT')
+
+#Write the tleap input file to combine the preparatory files and build polymer chain
+tleap=open('polymer/PEO_tleap.in','w+')
+tleap.write('''source leaprc.gaff
+loadamberprep PEO.prepi
+loadamberprep HPT.prepi
+loadamberprep TPT.prepi
+mol = sequence {HPT '''+str(repeat)+''' TPT}
+savepdb mol polymer/PEO_'''+str(n_mono_pol)+'''mer.pdb
+saveamberparm mol polymer/PEO_'''+str(n_mono_pol)+'''mer.prmtop polymer/PEO_'''+str(n_mono_pol)+'''mer.inpcrd
+quit''')
+tleap.close()
+
+!tleap -s -f polymer/PEO_tleap.in > polymer/PEO_tleap.out
+```
+This will generate *.prmtop and *.inpcrd files, these are coordinates and parameter files for AMBER. These files can be converted from AMBER to GROMACS using "intermol".
+```python
+#Converting AMBER to GROMACS using "intermol".
+!python /home/harish/InterMol/intermol/convert.py --amb_in polymer/PEO_{n_mono_pol}mer.inpcrd polymer/PEO_{n_mono_pol}mer.prmtop --gromacs
+```
+Finally visualize the polymer using nglview.
 
 ## Step-4: Choose salt (cation+anion)
 
