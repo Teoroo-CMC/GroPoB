@@ -57,7 +57,7 @@ vi=ngl.show_ase(mol);vi.add_label(radius=2,color='black',label_type='atomindex')
 vi
 ```
 
-![monomer](./Short_chain_peo.png){width=300px}
+![monomer](./Short_chain_peo.png){width=100px}
 
 
 ## Step-2: Defining the HEAD, CHAIN, and TAIL of the monomer
