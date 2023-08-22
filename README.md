@@ -131,6 +131,8 @@ This will generate *.prmtop and *.inpcrd files, these are coordinates and parame
 ```
 Finally visualize the polymer using nglview.
 
+![polymer](./Polymer_chain_PEO.png){width=100px}
+
 ## Step-4: Choose salt (cation+anion)
 
 ## Step-5: Build polymer electrolyte system
