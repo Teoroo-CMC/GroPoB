@@ -1,0 +1,3398 @@
+log started: Tue Dec 14 18:56:10 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> mol = sequence {HPT PCLL PCLL PCLL PTM PCLL PCLR PCLR PCLR PTM PCLR HPT}
+Sequence: HPT
+Sequence: PCLL
+Joining HPT - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PTM
+Joining PCLL - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLR
+Joining PCLL - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: PCLR
+Joining PTM - PCLR
+Sequence: HPT
+Joining PCLR - HPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+ ** Warning: No sp2 improper torsion term for  n-os-c-c3
+        atoms are: N O3 C C12
+old PREP-specified impropers:
+ <HPT 1>:  N    O    C    O3  
+ <HPT 1>:  C    C1   N    H   
+ <HPT 1>:  C7   C6   N1   H13 
+ <HPT 1>:  N1   N2   C7   O1  
+ <HPT 1>:  C7   C8   N2   H14 
+ <HPT 1>:  N2   N3   C8   N4  
+ <HPT 1>:  C8   C9   N3   H15 
+ <HPT 1>:  C12  C10  C9   N3  
+ <HPT 1>:  C11  C9   C10  H16 
+ <HPT 1>:  C10  N4   C11  O2  
+ <PCLL 2>:  C4   O3   C5   O1  
+ <PCLL 2>:  C10  O4   C11  O2  
+ <PCLL 3>:  C4   O3   C5   O1  
+ <PCLL 3>:  C10  O4   C11  O2  
+ <PCLL 4>:  C4   O3   C5   O1  
+ <PCLL 4>:  C10  O4   C11  O2  
+ <PTM 5>:  O5   O2   C3   O1  
+ <PTM 5>:  O6   O3   C7   O4  
+ <PCLL 6>:  C4   O3   C5   O1  
+ <PCLL 6>:  C10  O4   C11  O2  
+ <PCLR 7>:  C4   O1   C3   O   
+ <PCLR 7>:  C10  O3   C9   O2  
+ <PCLR 8>:  C4   O1   C3   O   
+ <PCLR 8>:  C10  O3   C9   O2  
+ <PCLR 9>:  C4   O1   C3   O   
+ <PCLR 9>:  C10  O3   C9   O2  
+ <PTM 10>:  O5   O2   C3   O1  
+ <PTM 10>:  O6   O3   C7   O4  
+ <PCLR 11>:  C4   O1   C3   O   
+ <PCLR 11>:  C10  O3   C9   O2  
+ <HPT 12>:  N    O    C    O3  
+ <HPT 12>:  C    C1   N    H   
+ <HPT 12>:  C7   C6   N1   H13 
+ <HPT 12>:  N1   N2   C7   O1  
+ <HPT 12>:  C7   C8   N2   H14 
+ <HPT 12>:  N2   N3   C8   N4  
+ <HPT 12>:  C8   C9   N3   H15 
+ <HPT 12>:  C12  C10  C9   N3  
+ <HPT 12>:  C11  C9   C10  H16 
+ <HPT 12>:  C10  N4   C11  O2  
+ total 36 improper torsions applied
+ 40 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+ quit
+	Quit
+log started: Tue Dec 14 18:58:55 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT TPT PCLL PCLL PCLL PCLL PTM PCLR PCLR PCLR PTM PCLR HPT}
+Sequence: HPT
+Sequence: TPT
+Joining HPT - TPT
+Sequence: PCLL
+ERROR: Comparing atoms
+        .R<TPT 2>.A<C1 1>, 
+        .R<TPT 2>.A<O1 5>, 
+        .R<TPT 2>.A<H4 29>, and 
+        .R<TPT 2>.A<H5 30> 
+       to atoms
+        .R<TPT 2>.A<C1 1>, 
+        .R<PCLL 1>.A<C1 1>, 
+        .R<TPT 2>.A<O1 5>, and 
+        .R<TPT 2>.A<H4 29> 
+       This error may be due to faulty Connection atoms.
+log started: Tue Dec 14 19:00:29 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT TPT PCLL PCLL PCLL PCLL PTM PCLR PCLR PCLR PTM PCLR TPT HPT}
+Sequence: HPT
+Sequence: TPT
+Joining HPT - TPT
+Sequence: PCLL
+ERROR: Comparing atoms
+        .R<TPT 2>.A<C1 1>, 
+        .R<TPT 2>.A<O1 5>, 
+        .R<TPT 2>.A<H4 29>, and 
+        .R<TPT 2>.A<H5 30> 
+       to atoms
+        .R<TPT 2>.A<C1 1>, 
+        .R<PCLL 1>.A<C1 1>, 
+        .R<TPT 2>.A<O1 5>, and 
+        .R<TPT 2>.A<H4 29> 
+       This error may be due to faulty Connection atoms.
+log started: Tue Dec 14 19:00:53 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT TPT PCLL PCLL PCLL PTM PCLL PTM PCLR PCLR PCLR PCLR TPT }
+Sequence: HPT
+Sequence: TPT
+Joining HPT - TPT
+Sequence: PCLL
+ERROR: Comparing atoms
+        .R<TPT 2>.A<C1 1>, 
+        .R<TPT 2>.A<O1 5>, 
+        .R<TPT 2>.A<H4 29>, and 
+        .R<TPT 2>.A<H5 30> 
+       to atoms
+        .R<TPT 2>.A<C1 1>, 
+        .R<PCLL 1>.A<C1 1>, 
+        .R<TPT 2>.A<O1 5>, and 
+        .R<TPT 2>.A<H4 29> 
+       This error may be due to faulty Connection atoms.
+log started: Tue Dec 14 19:01:29 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT TPT PCLL PCLL PCLL PTM PCLL PTM PCLR PCLR PCLR PCLR TPT }
+Sequence: HPT
+Sequence: TPT
+Joining HPT - TPT
+Sequence: PCLL
+ERROR: Comparing atoms
+        .R<TPT 2>.A<C1 1>, 
+        .R<TPT 2>.A<O1 5>, 
+        .R<TPT 2>.A<H4 29>, and 
+        .R<TPT 2>.A<H5 30> 
+       to atoms
+        .R<TPT 2>.A<C1 1>, 
+        .R<PCLL 1>.A<C1 1>, 
+        .R<TPT 2>.A<O1 5>, and 
+        .R<TPT 2>.A<H4 29> 
+       This error may be due to faulty Connection atoms.
+log started: Tue Dec 14 19:01:34 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT TPT PCLL PCLL PCLL PTM PCLL PTM PCLR PCLR PCLR PCLR TPT }
+Sequence: HPT
+Sequence: TPT
+Joining HPT - TPT
+Sequence: PCLL
+ERROR: Comparing atoms
+        .R<TPT 2>.A<C1 1>, 
+        .R<TPT 2>.A<O1 5>, 
+        .R<TPT 2>.A<H4 29>, and 
+        .R<TPT 2>.A<H5 30> 
+       to atoms
+        .R<TPT 2>.A<C1 1>, 
+        .R<PCLL 1>.A<C1 1>, 
+        .R<TPT 2>.A<O1 5>, and 
+        .R<TPT 2>.A<H4 29> 
+       This error may be due to faulty Connection atoms.
+log started: Tue Dec 14 19:01:44 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT TPT PCLL PCLL PCLL PTM PCLL PTM PCLR PCLR PCLR PCLR TPT }
+Sequence: HPT
+Sequence: TPT
+Joining HPT - TPT
+Sequence: PCLL
+ERROR: Comparing atoms
+        .R<TPT 2>.A<C1 1>, 
+        .R<TPT 2>.A<O1 5>, 
+        .R<TPT 2>.A<H4 29>, and 
+        .R<TPT 2>.A<H5 30> 
+       to atoms
+        .R<TPT 2>.A<C1 1>, 
+        .R<PCLL 1>.A<C1 1>, 
+        .R<TPT 2>.A<O1 5>, and 
+        .R<TPT 2>.A<H4 29> 
+       This error may be due to faulty Connection atoms.
+log started: Tue Dec 14 19:03:37 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT PTM PCLL PTM PCLL PCLL PCLL PCLR PCLR PCLR PCLR PTM PTM HPT }
+Sequence: HPT
+Sequence: PTM
+Joining HPT - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PTM
+Joining PCLL - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLR
+Joining PCLL - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: PTM
+Joining PTM - PTM
+Sequence: HPT
+Joining PTM - HPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+ ** Warning: No sp2 improper torsion term for  n-os-c-c3
+        atoms are: N O3 C C8
+old PREP-specified impropers:
+ <HPT 1>:  N    O    C    O3  
+ <HPT 1>:  C    C1   N    H   
+ <HPT 1>:  C7   C6   N1   H13 
+ <HPT 1>:  N1   N2   C7   O1  
+ <HPT 1>:  C7   C8   N2   H14 
+ <HPT 1>:  N2   N3   C8   N4  
+ <HPT 1>:  C8   C9   N3   H15 
+ <HPT 1>:  C12  C10  C9   N3  
+ <HPT 1>:  C11  C9   C10  H16 
+ <HPT 1>:  C10  N4   C11  O2  
+ <PTM 2>:  O5   O2   C3   O1  
+ <PTM 2>:  O6   O3   C7   O4  
+ <PCLL 3>:  C4   O3   C5   O1  
+ <PCLL 3>:  C10  O4   C11  O2  
+ <PTM 4>:  O5   O2   C3   O1  
+ <PTM 4>:  O6   O3   C7   O4  
+ <PCLL 5>:  C4   O3   C5   O1  
+ <PCLL 5>:  C10  O4   C11  O2  
+ <PCLL 6>:  C4   O3   C5   O1  
+ <PCLL 6>:  C10  O4   C11  O2  
+ <PCLL 7>:  C4   O3   C5   O1  
+ <PCLL 7>:  C10  O4   C11  O2  
+ <PCLR 8>:  C4   O1   C3   O   
+ <PCLR 8>:  C10  O3   C9   O2  
+ <PCLR 9>:  C4   O1   C3   O   
+ <PCLR 9>:  C10  O3   C9   O2  
+ <PCLR 10>:  C4   O1   C3   O   
+ <PCLR 10>:  C10  O3   C9   O2  
+ <PCLR 11>:  C4   O1   C3   O   
+ <PCLR 11>:  C10  O3   C9   O2  
+ <PTM 12>:  O5   O2   C3   O1  
+ <PTM 12>:  O6   O3   C7   O4  
+ <PTM 13>:  O5   O2   C3   O1  
+ <PTM 13>:  O6   O3   C7   O4  
+ <HPT 14>:  N    O    C    O3  
+ <HPT 14>:  C    C1   N    H   
+ <HPT 14>:  C7   C6   N1   H13 
+ <HPT 14>:  N1   N2   C7   O1  
+ <HPT 14>:  C7   C8   N2   H14 
+ <HPT 14>:  N2   N3   C8   N4  
+ <HPT 14>:  C8   C9   N3   H15 
+ <HPT 14>:  C12  C10  C9   N3  
+ <HPT 14>:  C11  C9   C10  H16 
+ <HPT 14>:  C10  N4   C11  O2  
+ total 40 improper torsions applied
+ 44 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+ quit
+	Quit
+log started: Tue Dec 14 19:04:34 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT PTM PCLL PCLL PCLL PCLL PTM PCLR PTM PCLR PCLR PCLR PTM TPT }
+Sequence: HPT
+Sequence: PTM
+Joining HPT - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PTM
+Joining PCLL - PTM
+Sequence: PCLR
+Joining PTM - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: PCLR
+Joining PTM - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: TPT
+Joining PTM - TPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+old PREP-specified impropers:
+ <HPT 1>:  N    O    C    O3  
+ <HPT 1>:  C    C1   N    H   
+ <HPT 1>:  C7   C6   N1   H13 
+ <HPT 1>:  N1   N2   C7   O1  
+ <HPT 1>:  C7   C8   N2   H14 
+ <HPT 1>:  N2   N3   C8   N4  
+ <HPT 1>:  C8   C9   N3   H15 
+ <HPT 1>:  C12  C10  C9   N3  
+ <HPT 1>:  C11  C9   C10  H16 
+ <HPT 1>:  C10  N4   C11  O2  
+ <PTM 2>:  O5   O2   C3   O1  
+ <PTM 2>:  O6   O3   C7   O4  
+ <PCLL 3>:  C4   O3   C5   O1  
+ <PCLL 3>:  C10  O4   C11  O2  
+ <PCLL 4>:  C4   O3   C5   O1  
+ <PCLL 4>:  C10  O4   C11  O2  
+ <PCLL 5>:  C4   O3   C5   O1  
+ <PCLL 5>:  C10  O4   C11  O2  
+ <PCLL 6>:  C4   O3   C5   O1  
+ <PCLL 6>:  C10  O4   C11  O2  
+ <PTM 7>:  O5   O2   C3   O1  
+ <PTM 7>:  O6   O3   C7   O4  
+ <PCLR 8>:  C4   O1   C3   O   
+ <PCLR 8>:  C10  O3   C9   O2  
+ <PTM 9>:  O5   O2   C3   O1  
+ <PTM 9>:  O6   O3   C7   O4  
+ <PCLR 10>:  C4   O1   C3   O   
+ <PCLR 10>:  C10  O3   C9   O2  
+ <PCLR 11>:  C4   O1   C3   O   
+ <PCLR 11>:  C10  O3   C9   O2  
+ <PCLR 12>:  C4   O1   C3   O   
+ <PCLR 12>:  C10  O3   C9   O2  
+ <PTM 13>:  O5   O2   C3   O1  
+ <PTM 13>:  O6   O3   C7   O4  
+ <TPT 14>:  O5   O1   C3   O2  
+ <TPT 14>:  O6   O3   C7   O4  
+ total 33 improper torsions applied
+ 36 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+ quit
+	Quit
+log started: Tue Dec 14 19:21:50 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT PTM PTM PCLL PCLL PCLL PCLL PCLR PCLR PTM PCLR PCLR PTM TPT }
+Sequence: HPT
+Sequence: PTM
+Joining HPT - PTM
+Sequence: PTM
+Joining PTM - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLR
+Joining PCLL - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: PCLR
+Joining PTM - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: TPT
+Joining PTM - TPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+old PREP-specified impropers:
+ <HPT 1>:  N    O    C    O3  
+ <HPT 1>:  C    C1   N    H   
+ <HPT 1>:  C7   C6   N1   H13 
+ <HPT 1>:  N1   N2   C7   O1  
+ <HPT 1>:  C7   C8   N2   H14 
+ <HPT 1>:  N2   N3   C8   N4  
+ <HPT 1>:  C8   C9   N3   H15 
+ <HPT 1>:  C12  C10  C9   N3  
+ <HPT 1>:  C11  C9   C10  H16 
+ <HPT 1>:  C10  N4   C11  O2  
+ <PTM 2>:  O5   O2   C3   O1  
+ <PTM 2>:  O6   O3   C7   O4  
+ <PTM 3>:  O5   O2   C3   O1  
+ <PTM 3>:  O6   O3   C7   O4  
+ <PCLL 4>:  C4   O3   C5   O1  
+ <PCLL 4>:  C10  O4   C11  O2  
+ <PCLL 5>:  C4   O3   C5   O1  
+ <PCLL 5>:  C10  O4   C11  O2  
+ <PCLL 6>:  C4   O3   C5   O1  
+ <PCLL 6>:  C10  O4   C11  O2  
+ <PCLL 7>:  C4   O3   C5   O1  
+ <PCLL 7>:  C10  O4   C11  O2  
+ <PCLR 8>:  C4   O1   C3   O   
+ <PCLR 8>:  C10  O3   C9   O2  
+ <PCLR 9>:  C4   O1   C3   O   
+ <PCLR 9>:  C10  O3   C9   O2  
+ <PTM 10>:  O5   O2   C3   O1  
+ <PTM 10>:  O6   O3   C7   O4  
+ <PCLR 11>:  C4   O1   C3   O   
+ <PCLR 11>:  C10  O3   C9   O2  
+ <PCLR 12>:  C4   O1   C3   O   
+ <PCLR 12>:  C10  O3   C9   O2  
+ <PTM 13>:  O5   O2   C3   O1  
+ <PTM 13>:  O6   O3   C7   O4  
+ <TPT 14>:  O5   O1   C3   O2  
+ <TPT 14>:  O6   O3   C7   O4  
+ total 33 improper torsions applied
+ 36 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+ quit
+	Quit
+log started: Tue Dec 14 19:22:29 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT PTM PCLL PCLL PTM PCLL PCLL PCLR PCLR PCLR PCLR PTM TPT HPT }
+Sequence: HPT
+Sequence: PTM
+Joining HPT - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PTM
+Joining PCLL - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLR
+Joining PCLL - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: TPT
+Joining PTM - TPT
+Sequence: HPT
+ERROR: Comparing atoms
+        .R<TPT 13>.A<C1 1>, 
+        .R<TPT 13>.A<O1 5>, 
+        .R<TPT 13>.A<H4 29>, and 
+        .R<TPT 13>.A<H5 30> 
+       to atoms
+        .R<TPT 13>.A<C1 1>, 
+        .R<HPT 1>.A<C 1>, 
+        .R<TPT 13>.A<O1 5>, and 
+        .R<TPT 13>.A<H4 29> 
+       This error may be due to faulty Connection atoms.
+log started: Tue Dec 14 19:23:03 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT PTM PTM PCLL PCLL PCLL PCLL PTM PCLR PCLR PCLR PCLR PTM HPT }
+Sequence: HPT
+Sequence: PTM
+Joining HPT - PTM
+Sequence: PTM
+Joining PTM - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PTM
+Joining PCLL - PTM
+Sequence: PCLR
+Joining PTM - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: HPT
+Joining PTM - HPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+ ** Warning: No sp2 improper torsion term for  n-os-c-c3
+        atoms are: N O3 C C8
+old PREP-specified impropers:
+ <HPT 1>:  N    O    C    O3  
+ <HPT 1>:  C    C1   N    H   
+ <HPT 1>:  C7   C6   N1   H13 
+ <HPT 1>:  N1   N2   C7   O1  
+ <HPT 1>:  C7   C8   N2   H14 
+ <HPT 1>:  N2   N3   C8   N4  
+ <HPT 1>:  C8   C9   N3   H15 
+ <HPT 1>:  C12  C10  C9   N3  
+ <HPT 1>:  C11  C9   C10  H16 
+ <HPT 1>:  C10  N4   C11  O2  
+ <PTM 2>:  O5   O2   C3   O1  
+ <PTM 2>:  O6   O3   C7   O4  
+ <PTM 3>:  O5   O2   C3   O1  
+ <PTM 3>:  O6   O3   C7   O4  
+ <PCLL 4>:  C4   O3   C5   O1  
+ <PCLL 4>:  C10  O4   C11  O2  
+ <PCLL 5>:  C4   O3   C5   O1  
+ <PCLL 5>:  C10  O4   C11  O2  
+ <PCLL 6>:  C4   O3   C5   O1  
+ <PCLL 6>:  C10  O4   C11  O2  
+ <PCLL 7>:  C4   O3   C5   O1  
+ <PCLL 7>:  C10  O4   C11  O2  
+ <PTM 8>:  O5   O2   C3   O1  
+ <PTM 8>:  O6   O3   C7   O4  
+ <PCLR 9>:  C4   O1   C3   O   
+ <PCLR 9>:  C10  O3   C9   O2  
+ <PCLR 10>:  C4   O1   C3   O   
+ <PCLR 10>:  C10  O3   C9   O2  
+ <PCLR 11>:  C4   O1   C3   O   
+ <PCLR 11>:  C10  O3   C9   O2  
+ <PCLR 12>:  C4   O1   C3   O   
+ <PCLR 12>:  C10  O3   C9   O2  
+ <PTM 13>:  O5   O2   C3   O1  
+ <PTM 13>:  O6   O3   C7   O4  
+ <HPT 14>:  N    O    C    O3  
+ <HPT 14>:  C    C1   N    H   
+ <HPT 14>:  C7   C6   N1   H13 
+ <HPT 14>:  N1   N2   C7   O1  
+ <HPT 14>:  C7   C8   N2   H14 
+ <HPT 14>:  N2   N3   C8   N4  
+ <HPT 14>:  C8   C9   N3   H15 
+ <HPT 14>:  C12  C10  C9   N3  
+ <HPT 14>:  C11  C9   C10  H16 
+ <HPT 14>:  C10  N4   C11  O2  
+ total 40 improper torsions applied
+ 44 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+ quit
+	Quit
+log started: Tue Dec 14 19:23:38 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT PTM PTM PCLL PCLL PCLL PCLL PTM PCLR PCLR PCLR PCLR HPT }
+Sequence: HPT
+Sequence: PTM
+Joining HPT - PTM
+Sequence: PTM
+Joining PTM - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PTM
+Joining PCLL - PTM
+Sequence: PCLR
+Joining PTM - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: HPT
+Joining PCLR - HPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+ ** Warning: No sp2 improper torsion term for  n-os-c-c3
+        atoms are: N O3 C C12
+old PREP-specified impropers:
+ <HPT 1>:  N    O    C    O3  
+ <HPT 1>:  C    C1   N    H   
+ <HPT 1>:  C7   C6   N1   H13 
+ <HPT 1>:  N1   N2   C7   O1  
+ <HPT 1>:  C7   C8   N2   H14 
+ <HPT 1>:  N2   N3   C8   N4  
+ <HPT 1>:  C8   C9   N3   H15 
+ <HPT 1>:  C12  C10  C9   N3  
+ <HPT 1>:  C11  C9   C10  H16 
+ <HPT 1>:  C10  N4   C11  O2  
+ <PTM 2>:  O5   O2   C3   O1  
+ <PTM 2>:  O6   O3   C7   O4  
+ <PTM 3>:  O5   O2   C3   O1  
+ <PTM 3>:  O6   O3   C7   O4  
+ <PCLL 4>:  C4   O3   C5   O1  
+ <PCLL 4>:  C10  O4   C11  O2  
+ <PCLL 5>:  C4   O3   C5   O1  
+ <PCLL 5>:  C10  O4   C11  O2  
+ <PCLL 6>:  C4   O3   C5   O1  
+ <PCLL 6>:  C10  O4   C11  O2  
+ <PCLL 7>:  C4   O3   C5   O1  
+ <PCLL 7>:  C10  O4   C11  O2  
+ <PTM 8>:  O5   O2   C3   O1  
+ <PTM 8>:  O6   O3   C7   O4  
+ <PCLR 9>:  C4   O1   C3   O   
+ <PCLR 9>:  C10  O3   C9   O2  
+ <PCLR 10>:  C4   O1   C3   O   
+ <PCLR 10>:  C10  O3   C9   O2  
+ <PCLR 11>:  C4   O1   C3   O   
+ <PCLR 11>:  C10  O3   C9   O2  
+ <PCLR 12>:  C4   O1   C3   O   
+ <PCLR 12>:  C10  O3   C9   O2  
+ <HPT 13>:  N    O    C    O3  
+ <HPT 13>:  C    C1   N    H   
+ <HPT 13>:  C7   C6   N1   H13 
+ <HPT 13>:  N1   N2   C7   O1  
+ <HPT 13>:  C7   C8   N2   H14 
+ <HPT 13>:  N2   N3   C8   N4  
+ <HPT 13>:  C8   C9   N3   H15 
+ <HPT 13>:  C12  C10  C9   N3  
+ <HPT 13>:  C11  C9   C10  H16 
+ <HPT 13>:  C10  N4   C11  O2  
+ total 38 improper torsions applied
+ 42 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+ quit
+	Quit
+log started: Tue Dec 14 20:11:25 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi
+Could not open file /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi: No such file or directory
+> mol = sequence {HPT PTM PCLL PCLL PCLL PCLL PCLR PCLR PCLR PCLR PTM TPT }
+Sequence: HPT
+Sequence: PTM
+Joining HPT - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLR
+Joining PCLL - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+sequence: Illegal UNIT named: TPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+savePdb: Argument #1 is type String must be of type: [unit]
+usage:  savePdb <object> <filename>
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.inpcrd
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+ quit
+	Quit
+log started: Tue Dec 14 20:12:24 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT PTM PCLL PCLL PCLL PCLL PCLR PCLR PCLR PCLR PTM TPT }
+Sequence: HPT
+Sequence: PTM
+Joining HPT - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLR
+Joining PCLL - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: TPT
+Joining PTM - TPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+old PREP-specified impropers:
+ <HPT 1>:  N    O    C    O3  
+ <HPT 1>:  C    C1   N    H   
+ <HPT 1>:  C7   C6   N1   H13 
+ <HPT 1>:  N1   N2   C7   O1  
+ <HPT 1>:  C7   C8   N2   H14 
+ <HPT 1>:  N2   N3   C8   N4  
+ <HPT 1>:  C8   C9   N3   H15 
+ <HPT 1>:  C12  C10  C9   N3  
+ <HPT 1>:  C11  C9   C10  H16 
+ <HPT 1>:  C10  N4   C11  O2  
+ <PTM 2>:  O5   O2   C3   O1  
+ <PTM 2>:  O6   O3   C7   O4  
+ <PCLL 3>:  C4   O3   C5   O1  
+ <PCLL 3>:  C10  O4   C11  O2  
+ <PCLL 4>:  C4   O3   C5   O1  
+ <PCLL 4>:  C10  O4   C11  O2  
+ <PCLL 5>:  C4   O3   C5   O1  
+ <PCLL 5>:  C10  O4   C11  O2  
+ <PCLL 6>:  C4   O3   C5   O1  
+ <PCLL 6>:  C10  O4   C11  O2  
+ <PCLR 7>:  C4   O1   C3   O   
+ <PCLR 7>:  C10  O3   C9   O2  
+ <PCLR 8>:  C4   O1   C3   O   
+ <PCLR 8>:  C10  O3   C9   O2  
+ <PCLR 9>:  C4   O1   C3   O   
+ <PCLR 9>:  C10  O3   C9   O2  
+ <PCLR 10>:  C4   O1   C3   O   
+ <PCLR 10>:  C10  O3   C9   O2  
+ <PTM 11>:  O5   O2   C3   O1  
+ <PTM 11>:  O6   O3   C7   O4  
+ <TPT 12>:  O5   O1   C3   O2  
+ <TPT 12>:  O6   O3   C7   O4  
+ total 29 improper torsions applied
+ 32 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+ quit
+	Quit
+log started: Tue Dec 14 20:14:27 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi
+Could not open file /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi: No such file or directory
+> mol = sequence {HPT TPT }
+Sequence: HPT
+sequence: Illegal UNIT named: TPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+savePdb: Argument #1 is type String must be of type: [unit]
+usage:  savePdb <object> <filename>
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.inpcrd
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+ quit
+	Quit
+log started: Tue Dec 14 20:16:31 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT TPT }
+Sequence: HPT
+Sequence: TPT
+Joining HPT - TPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+ ** Warning: No sp2 improper torsion term for  na-n-cc-nd
+        atoms are: N3 N2 C8 N4
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  cd-na-cc-c3
+        atoms are: C10 N3 C9 C13
+old PREP-specified impropers:
+ <HPT 1>:  N    O    C    O3  
+ <HPT 1>:  C    C1   N    H   
+ <HPT 1>:  C7   C6   N1   H13 
+ <HPT 1>:  N1   N2   C7   O1  
+ <HPT 1>:  C7   C8   N2   H14 
+ <HPT 1>:  N2   N3   C8   N4  
+ <HPT 1>:  C8   C9   N3   H15 
+ <HPT 1>:  C12  C10  C9   N3  
+ <HPT 1>:  C11  C9   C10  H16 
+ <HPT 1>:  C10  N4   C11  O2  
+ <TPT 2>:  -M   C10  C9   N3  
+ <TPT 2>:  C11  C9   C10  H16 
+ <TPT 2>:  C10  N4   C11  O2  
+ <TPT 2>:  C8   C9   N3   H15 
+ <TPT 2>:  N2   N3   C8   N4  
+ <TPT 2>:  C7   C8   N2   H14 
+ <TPT 2>:  N2   N1   C7   O1  
+ <TPT 2>:  C7   C6   N1   H13 
+ <TPT 2>:  C1   C    N    H   
+ <TPT 2>:  N    O    C    O3  
+ total 14 improper torsions applied
+ 20 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+ quit
+	Quit
+log started: Tue Dec 14 20:16:52 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT PTM PCLL PCLL PCLL PCLL PCLR PCLR PCLR PCLR PTM TPT }
+Sequence: HPT
+Sequence: PTM
+Joining HPT - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLR
+Joining PCLL - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: TPT
+Joining PTM - TPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+ ** Warning: No sp2 improper torsion term for  na-n-cc-nd
+        atoms are: N3 N2 C8 N4
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  cd-na-cc-c3
+        atoms are: C10 N3 C9 C8
+old PREP-specified impropers:
+ <HPT 1>:  N    O    C    O3  
+ <HPT 1>:  C    C1   N    H   
+ <HPT 1>:  C7   C6   N1   H13 
+ <HPT 1>:  N1   N2   C7   O1  
+ <HPT 1>:  C7   C8   N2   H14 
+ <HPT 1>:  N2   N3   C8   N4  
+ <HPT 1>:  C8   C9   N3   H15 
+ <HPT 1>:  C12  C10  C9   N3  
+ <HPT 1>:  C11  C9   C10  H16 
+ <HPT 1>:  C10  N4   C11  O2  
+ <PTM 2>:  O5   O2   C3   O1  
+ <PTM 2>:  O6   O3   C7   O4  
+ <PCLL 3>:  C4   O3   C5   O1  
+ <PCLL 3>:  C10  O4   C11  O2  
+ <PCLL 4>:  C4   O3   C5   O1  
+ <PCLL 4>:  C10  O4   C11  O2  
+ <PCLL 5>:  C4   O3   C5   O1  
+ <PCLL 5>:  C10  O4   C11  O2  
+ <PCLL 6>:  C4   O3   C5   O1  
+ <PCLL 6>:  C10  O4   C11  O2  
+ <PCLR 7>:  C4   O1   C3   O   
+ <PCLR 7>:  C10  O3   C9   O2  
+ <PCLR 8>:  C4   O1   C3   O   
+ <PCLR 8>:  C10  O3   C9   O2  
+ <PCLR 9>:  C4   O1   C3   O   
+ <PCLR 9>:  C10  O3   C9   O2  
+ <PCLR 10>:  C4   O1   C3   O   
+ <PCLR 10>:  C10  O3   C9   O2  
+ <PTM 11>:  O5   O2   C3   O1  
+ <PTM 11>:  O6   O3   C7   O4  
+ <TPT 12>:  -M   C10  C9   N3  
+ <TPT 12>:  C11  C9   C10  H16 
+ <TPT 12>:  C10  N4   C11  O2  
+ <TPT 12>:  C8   C9   N3   H15 
+ <TPT 12>:  N2   N3   C8   N4  
+ <TPT 12>:  C7   C8   N2   H14 
+ <TPT 12>:  N2   N1   C7   O1  
+ <TPT 12>:  C7   C6   N1   H13 
+ <TPT 12>:  C1   C    N    H   
+ <TPT 12>:  N    O    C    O3  
+ total 34 improper torsions applied
+ 40 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+ quit
+	Quit
+log started: Tue Dec 14 20:17:47 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT PTM PCLL PCLL PCLL PCLL PCLR PCLR PCLR PCLR PTM TPT }
+Sequence: HPT
+Sequence: PTM
+Joining HPT - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLR
+Joining PCLL - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: TPT
+Joining PTM - TPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+old PREP-specified impropers:
+ <HPT 1>:  N    O    C    O3  
+ <HPT 1>:  C    C1   N    H   
+ <HPT 1>:  C7   C6   N1   H13 
+ <HPT 1>:  N1   N2   C7   O1  
+ <HPT 1>:  C7   C8   N2   H14 
+ <HPT 1>:  N2   N3   C8   N4  
+ <HPT 1>:  C8   C9   N3   H15 
+ <HPT 1>:  C12  C10  C9   N3  
+ <HPT 1>:  C11  C9   C10  H16 
+ <HPT 1>:  C10  N4   C11  O2  
+ <PTM 2>:  O5   O2   C3   O1  
+ <PTM 2>:  O6   O3   C7   O4  
+ <PCLL 3>:  C4   O3   C5   O1  
+ <PCLL 3>:  C10  O4   C11  O2  
+ <PCLL 4>:  C4   O3   C5   O1  
+ <PCLL 4>:  C10  O4   C11  O2  
+ <PCLL 5>:  C4   O3   C5   O1  
+ <PCLL 5>:  C10  O4   C11  O2  
+ <PCLL 6>:  C4   O3   C5   O1  
+ <PCLL 6>:  C10  O4   C11  O2  
+ <PCLR 7>:  C4   O1   C3   O   
+ <PCLR 7>:  C10  O3   C9   O2  
+ <PCLR 8>:  C4   O1   C3   O   
+ <PCLR 8>:  C10  O3   C9   O2  
+ <PCLR 9>:  C4   O1   C3   O   
+ <PCLR 9>:  C10  O3   C9   O2  
+ <PCLR 10>:  C4   O1   C3   O   
+ <PCLR 10>:  C10  O3   C9   O2  
+ <PTM 11>:  O5   O2   C3   O1  
+ <PTM 11>:  O6   O3   C7   O4  
+ <TPT 12>:  O5   O1   C3   O2  
+ <TPT 12>:  O6   O3   C7   O4  
+ total 29 improper torsions applied
+ 32 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+ quit
+	Quit
+log started: Tue Dec 14 20:19:09 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT PTM PCLL PCLL PCLL PCLL PCLR PCLR PCLR PCLR PTM TPT }
+Sequence: HPT
+Sequence: PTM
+Joining HPT - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLR
+Joining PCLL - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: TPT
+Joining PTM - TPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+old PREP-specified impropers:
+ <HPT 1>:  N    O    C    O3  
+ <HPT 1>:  C    C1   N    H   
+ <HPT 1>:  C7   C6   N1   H13 
+ <HPT 1>:  N1   N2   C7   O1  
+ <HPT 1>:  C7   C8   N2   H14 
+ <HPT 1>:  N2   N3   C8   N4  
+ <HPT 1>:  C8   C9   N3   H15 
+ <HPT 1>:  C12  C10  C9   N3  
+ <HPT 1>:  C11  C9   C10  H16 
+ <HPT 1>:  C10  N4   C11  O2  
+ <PTM 2>:  O5   O2   C3   O1  
+ <PTM 2>:  O6   O3   C7   O4  
+ <PCLL 3>:  C4   O3   C5   O1  
+ <PCLL 3>:  C10  O4   C11  O2  
+ <PCLL 4>:  C4   O3   C5   O1  
+ <PCLL 4>:  C10  O4   C11  O2  
+ <PCLL 5>:  C4   O3   C5   O1  
+ <PCLL 5>:  C10  O4   C11  O2  
+ <PCLL 6>:  C4   O3   C5   O1  
+ <PCLL 6>:  C10  O4   C11  O2  
+ <PCLR 7>:  C4   O1   C3   O   
+ <PCLR 7>:  C10  O3   C9   O2  
+ <PCLR 8>:  C4   O1   C3   O   
+ <PCLR 8>:  C10  O3   C9   O2  
+ <PCLR 9>:  C4   O1   C3   O   
+ <PCLR 9>:  C10  O3   C9   O2  
+ <PCLR 10>:  C4   O1   C3   O   
+ <PCLR 10>:  C10  O3   C9   O2  
+ <PTM 11>:  O5   O2   C3   O1  
+ <PTM 11>:  O6   O3   C7   O4  
+ <TPT 12>:  N    O    C    O3  
+ <TPT 12>:  C1   C    N    H   
+ <TPT 12>:  C7   C6   N1   H13 
+ <TPT 12>:  N1   N2   C7   O1  
+ <TPT 12>:  C7   C8   N2   H14 
+ <TPT 12>:  N2   N3   C8   N4  
+ <TPT 12>:  C8   C9   N3   H15 
+ <TPT 12>:  C12  C10  C9   N3  
+ <TPT 12>:  C11  C9   C10  H16 
+ <TPT 12>:  C10  N4   C11  O2  
+ total 34 improper torsions applied
+ 40 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+ quit
+	Quit

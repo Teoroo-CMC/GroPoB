@@ -1,0 +1,19 @@
+; PEO_GMX_OPLS.top created by acpype (v: 2022.6.6) on Mon Aug 21 13:37:42 2023
+
+; Include forcefield parameters
+#include "ffoplsaa.itp"
+
+; Include PEO_GMX.itp topology
+#include "PEO_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_PEO.itp"
+#endif
+
+[ system ]
+ PEO
+
+[ molecules ]
+; Compound        nmols
+ PEO              1     

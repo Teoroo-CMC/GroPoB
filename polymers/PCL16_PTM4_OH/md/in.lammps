@@ -1,0 +1,56 @@
+units real
+atom_style full
+
+dimension 3
+boundary p p p
+
+bond_style hybrid harmonic
+angle_style hybrid harmonic
+dihedral_style hybrid multi/harmonic
+special_bonds lj 0.0 0.0 0.5 coul 0.0 0.0 0.8333
+
+read_data polymer.lmp
+
+pair_style lj/cut/coul/long 9.0 9.0
+pair_modify tail yes
+kspace_style pppm 1e-8
+
+pair_coeff 1 1   0.2104001   3.0664700
+pair_coeff 2 2   0.0000000   0.0000000
+pair_coeff 3 3   0.1094001   3.3996700
+pair_coeff 4 4   0.0157000   2.4713500
+pair_coeff 5 5   0.0157000   2.6495300
+pair_coeff 6 6   0.1700000   3.0000100
+pair_coeff 7 7   0.0860000   3.3996700
+pair_coeff 8 8   0.2100000   2.9599200
+
+pair_modify mix arithmetic
+# ---------- Define Settings ---------------------
+compute eng all pe/atom
+compute eatoms all reduce sum c_eng
+# ---------- Run Energy Minimization ---------------------
+reset_timestep 0
+fix rlx all box/relax iso 0.0 vmax 0.001
+thermo 10
+thermo_style custom step temp pe lx ly lz press pxx pyy pzz c_eatoms
+min_style sd 
+minimize 1.0e-4 1.0e-6 1000 10000 
+write_restart restart.sd.lammps
+# ---------- NVE energy minimization---------------------
+fix minnve all nve
+fix myshk all shake 1e-4 200 0 t 2 4 5
+timestep 0.1
+thermo 500
+thermo_style custom step temp pe lx ly lz press pxx pyy pzz c_eatoms
+run 5000
+write_restart restart.minnve.lammps
+# ---------- NVE equilibration---------------------
+#read_restart restart.minnve.lammps
+fix minnve all nve
+fix myshk all shake 1e-4 200 0 t 2 4 5
+timestep 1
+thermo 500
+thermo_style custom step temp pe lx ly lz press pxx pyy pzz c_eatoms
+run 50000
+write_restart restart.nveeq.lammps
+write_data data.nveeq.lammps

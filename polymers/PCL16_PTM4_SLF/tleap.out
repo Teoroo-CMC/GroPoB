@@ -1,0 +1,85 @@
+-I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/prep to search path.
+-I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/lib to search path.
+-I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm to search path.
+-I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/cmd to search path.
+-s: Ignoring startup file: leaprc
+-f: Source tleap.in.
+
+Welcome to LEaP!
+Sourcing: ./tleap.in
+----- Source: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/cmd/leaprc.gaff
+----- Source of /pdc/vol/amber/16.at17/amd64_co7/dat/leap/cmd/leaprc.gaff done
+Log file: ./leap.log
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL16_PTM4_SLF/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <HPT 1>:  N    O    C    O3  
+ <HPT 1>:  C    C1   N    H   
+ <HPT 1>:  C7   C6   N1   H13 
+ <HPT 1>:  N1   N2   C7   O1  
+ <HPT 1>:  C7   C8   N2   H14 
+ <HPT 1>:  N2   N3   C8   N4  
+ <HPT 1>:  C8   C9   N3   H15 
+ <HPT 1>:  C12  C10  C9   N3  
+ <HPT 1>:  C11  C9   C10  H16 
+ <HPT 1>:  C10  N4   C11  O2  
+ <PTM 2>:  O5   O2   C3   O1  
+ <PTM 2>:  O6   O3   C7   O4  
+ <PCLL 3>:  C4   O3   C5   O1  
+ <PCLL 3>:  C10  O4   C11  O2  
+ <PCLL 4>:  C4   O3   C5   O1  
+ <PCLL 4>:  C10  O4   C11  O2  
+ <PCLL 5>:  C4   O3   C5   O1  
+ <PCLL 5>:  C10  O4   C11  O2  
+ <PCLL 6>:  C4   O3   C5   O1  
+ <PCLL 6>:  C10  O4   C11  O2  
+ <PCLR 7>:  C4   O1   C3   O   
+ <PCLR 7>:  C10  O3   C9   O2  
+ <PCLR 8>:  C4   O1   C3   O   
+ <PCLR 8>:  C10  O3   C9   O2  
+ <PCLR 9>:  C4   O1   C3   O   
+ <PCLR 9>:  C10  O3   C9   O2  
+ <PCLR 10>:  C4   O1   C3   O   
+ <PCLR 10>:  C10  O3   C9   O2  
+ <PTM 11>:  O5   O2   C3   O1  
+ <PTM 11>:  O6   O3   C7   O4  
+ <TPT 12>:  N    O    C    O3  
+ <TPT 12>:  C1   C    N    H   
+ <TPT 12>:  C7   C6   N1   H13 
+ <TPT 12>:  N1   N2   C7   O1  
+ <TPT 12>:  C7   C8   N2   H14 
+ <TPT 12>:  N2   N3   C8   N4  
+ <TPT 12>:  C8   C9   N3   H15 
+ <TPT 12>:  C12  C10  C9   N3  
+ <TPT 12>:  C11  C9   C10  H16 
+ <TPT 12>:  C10  N4   C11  O2  
+ total 34 improper torsions applied
+ 40 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+	Quit

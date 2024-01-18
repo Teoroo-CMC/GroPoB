@@ -1,0 +1,4266 @@
+Log file opened on Fri Oct 29 11:07:51 2021
+Host: t02n06.pdc.kth.se  pid: 12851  rank ID: 0  number of ranks:  1
+                   :-) GROMACS - gmx mdrun, VERSION 5.1.2 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, VERSION 5.1.2
+Executable:   /pdc/vol/gromacs/5.1.2/amd64_co7/haswell_threadmpi/bin/gmx
+Data prefix:  /pdc/vol/gromacs/5.1.2/amd64_co7/haswell_threadmpi
+Command line:
+  gmx mdrun -v -deffnm em
+
+GROMACS version:    VERSION 5.1.2
+Precision:          single
+Memory model:       64 bit
+MPI library:        thread_mpi
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 32)
+GPU support:        enabled
+OpenCL support:     disabled
+invsqrt routine:    gmx_software_invsqrt(x)
+SIMD instructions:  AVX2_256
+FFT library:        fftw-3.3.4-sse2-avx
+RDTSCP usage:       enabled
+C++11 compilation:  disabled
+TNG support:        enabled
+Tracing support:    disabled
+Built on:           Tue Feb 23 11:50:04 CET 2016
+Built by:           kthw@tegner-login-1.pdc.kth.se [CMAKE]
+Build OS/arch:      Linux 3.10.0-327.10.1.el7.x86_64 x86_64
+Build CPU vendor:   GenuineIntel
+Build CPU brand:    Intel(R) Xeon(R) CPU E5-2623 v3 @ 3.00GHz
+Build CPU family:   6   Model: 63   Stepping: 2
+Build CPU features: aes apic avx avx2 clfsh cmov cx8 cx16 f16c fma htt lahf_lm mmx msr nonstop_tsc pcid pclmuldq pdcm pdpe1gb popcnt pse rdrnd rdtscp sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
+C compiler:         /pdc/vol/gcc/4.8.4/bin/gcc GNU 4.8.4
+C compiler flags:    -march=core-avx2    -Wextra -Wno-missing-field-initializers -Wno-sign-compare -Wpointer-arith -Wall -Wno-unused -Wunused-value -Wunused-parameter  -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  -Wno-array-bounds 
+C++ compiler:       /pdc/vol/gcc/4.8.4/bin/g++ GNU 4.8.4
+C++ compiler flags:  -march=core-avx2    -Wextra -Wno-missing-field-initializers -Wpointer-arith -Wall -Wno-unused-function  -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  -Wno-array-bounds 
+Boost version:      1.53.0 (external)
+CUDA compiler:      /pdc/vol/cuda/cuda-7.0/bin/nvcc nvcc: NVIDIA (R) Cuda compiler driver;Copyright (c) 2005-2015 NVIDIA Corporation;Built on Mon_Feb_16_22:59:02_CST_2015;Cuda compilation tools, release 7.0, V7.0.27
+CUDA compiler flags:-gencode;arch=compute_20,code=sm_20;-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_52,code=sm_52;-gencode;arch=compute_52,code=compute_52;-use_fast_math;; ;-march=core-avx2;-Wextra;-Wno-missing-field-initializers;-Wpointer-arith;-Wall;-Wno-unused-function;-O3;-DNDEBUG;-funroll-all-loops;-fexcess-precision=fast;-Wno-array-bounds;
+CUDA driver:        10.20
+CUDA runtime:       7.0
+
+
+Running on 1 node with total 24 cores, 48 logical cores, 1 compatible GPU
+Hardware detected:
+  CPU info:
+    Vendor: GenuineIntel
+    Brand:  Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz
+    Family:  6  model: 63  stepping:  2
+    CPU features: aes apic avx avx2 clfsh cmov cx8 cx16 f16c fma htt lahf_lm mmx msr nonstop_tsc pcid pclmuldq pdcm pdpe1gb popcnt pse rdrnd rdtscp sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
+    SIMD instructions most likely to fit this hardware: AVX2_256
+    SIMD instructions selected at GROMACS compile time: AVX2_256
+  GPU info:
+    Number of GPUs detected: 1
+    #0: NVIDIA Quadro K420, compute cap.: 3.0, ECC:  no, stat: compatible
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+M. J. Abraham, T. Murtola, R. Schulz, S. Páll, J. C. Smith, B. Hess, E.
+Lindahl
+GROMACS: High performance molecular simulations through multi-level
+parallelism from laptops to supercomputers
+SoftwareX 1 (2015) pp. 19-25
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Páll, M. J. Abraham, C. Kutzner, B. Hess, E. Lindahl
+Tackling Exascale Software Challenges in Molecular Dynamics Simulations with
+GROMACS
+In S. Markidis & E. Laure (Eds.), Solving Software Challenges for Exascale 8759 (2015) pp. 3-27
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Pronk, S. Páll, R. Schulz, P. Larsson, P. Bjelkmar, R. Apostolov, M. R.
+Shirts, J. C. Smith, P. M. Kasson, D. van der Spoel, B. Hess, and E. Lindahl
+GROMACS 4.5: a high-throughput and highly parallel open source molecular
+simulation toolkit
+Bioinformatics 29 (2013) pp. 845-54
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and C. Kutzner and D. van der Spoel and E. Lindahl
+GROMACS 4: Algorithms for highly efficient, load-balanced, and scalable
+molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 435-447
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+D. van der Spoel, E. Lindahl, B. Hess, G. Groenhof, A. E. Mark and H. J. C.
+Berendsen
+GROMACS: Fast, Flexible and Free
+J. Comp. Chem. 26 (2005) pp. 1701-1719
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+E. Lindahl and B. Hess and D. van der Spoel
+GROMACS 3.0: A package for molecular simulation and trajectory analysis
+J. Mol. Mod. 7 (2001) pp. 306-317
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+H. J. C. Berendsen, D. van der Spoel and R. van Drunen
+GROMACS: A message-passing parallel molecular dynamics implementation
+Comp. Phys. Comm. 91 (1995) pp. 43-56
+-------- -------- --- Thank You --- -------- --------
+
+Input Parameters:
+   integrator                     = steep
+   tinit                          = 0
+   dt                             = 0.001
+   nsteps                         = 500
+   init-step                      = 0
+   simulation-part                = 1
+   comm-mode                      = Linear
+   nstcomm                        = 100
+   bd-fric                        = 0
+   ld-seed                        = 2328257014
+   emtol                          = 10
+   emstep                         = 0.01
+   niter                          = 20
+   fcstep                         = 0
+   nstcgsteep                     = 1000
+   nbfgscorr                      = 10
+   rtpi                           = 0.05
+   nstxout                        = 0
+   nstvout                        = 0
+   nstfout                        = 0
+   nstlog                         = 1000
+   nstcalcenergy                  = 100
+   nstenergy                      = 1000
+   nstxout-compressed             = 0
+   compressed-x-precision         = 1000
+   cutoff-scheme                  = Verlet
+   nstlist                        = 10
+   ns-type                        = Grid
+   pbc                            = xyz
+   periodic-molecules             = FALSE
+   verlet-buffer-tolerance        = 0.005
+   rlist                          = 1.05
+   rlistlong                      = 1.05
+   nstcalclr                      = 10
+   coulombtype                    = Cut-off
+   coulomb-modifier               = Potential-shift
+   rcoulomb-switch                = 0
+   rcoulomb                       = 1
+   epsilon-r                      = 1
+   epsilon-rf                     = inf
+   vdw-type                       = Cut-off
+   vdw-modifier                   = Potential-shift
+   rvdw-switch                    = 0
+   rvdw                           = 1
+   DispCorr                       = No
+   table-extension                = 1
+   fourierspacing                 = 0.12
+   fourier-nx                     = 0
+   fourier-ny                     = 0
+   fourier-nz                     = 0
+   pme-order                      = 4
+   ewald-rtol                     = 1e-05
+   ewald-rtol-lj                  = 0.001
+   lj-pme-comb-rule               = Geometric
+   ewald-geometry                 = 0
+   epsilon-surface                = 0
+   implicit-solvent               = No
+   gb-algorithm                   = Still
+   nstgbradii                     = 1
+   rgbradii                       = 1
+   gb-epsilon-solvent             = 80
+   gb-saltconc                    = 0
+   gb-obc-alpha                   = 1
+   gb-obc-beta                    = 0.8
+   gb-obc-gamma                   = 4.85
+   gb-dielectric-offset           = 0.009
+   sa-algorithm                   = Ace-approximation
+   sa-surface-tension             = 2.05016
+   tcoupl                         = No
+   nsttcouple                     = -1
+   nh-chain-length                = 0
+   print-nose-hoover-chain-variables = FALSE
+   pcoupl                         = No
+   pcoupltype                     = Isotropic
+   nstpcouple                     = -1
+   tau-p                          = 1
+   compressibility (3x3):
+      compressibility[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compressibility[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compressibility[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   ref-p (3x3):
+      ref-p[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   refcoord-scaling               = No
+   posres-com (3):
+      posres-com[0]= 0.00000e+00
+      posres-com[1]= 0.00000e+00
+      posres-com[2]= 0.00000e+00
+   posres-comB (3):
+      posres-comB[0]= 0.00000e+00
+      posres-comB[1]= 0.00000e+00
+      posres-comB[2]= 0.00000e+00
+   QMMM                           = FALSE
+   QMconstraints                  = 0
+   QMMMscheme                     = 0
+   MMChargeScaleFactor            = 1
+qm-opts:
+   ngQM                           = 0
+   constraint-algorithm           = Lincs
+   continuation                   = FALSE
+   Shake-SOR                      = FALSE
+   shake-tol                      = 0.0001
+   lincs-order                    = 4
+   lincs-iter                     = 1
+   lincs-warnangle                = 30
+   nwall                          = 0
+   wall-type                      = 9-3
+   wall-r-linpot                  = -1
+   wall-atomtype[0]               = -1
+   wall-atomtype[1]               = -1
+   wall-density[0]                = 0
+   wall-density[1]                = 0
+   wall-ewald-zfac                = 3
+   pull                           = FALSE
+   rotation                       = FALSE
+   interactiveMD                  = FALSE
+   disre                          = No
+   disre-weighting                = Conservative
+   disre-mixed                    = FALSE
+   dr-fc                          = 1000
+   dr-tau                         = 0
+   nstdisreout                    = 100
+   orire-fc                       = 0
+   orire-tau                      = 0
+   nstorireout                    = 100
+   free-energy                    = no
+   cos-acceleration               = 0
+   deform (3x3):
+      deform[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   simulated-tempering            = FALSE
+   E-x:
+      n = 0
+   E-xt:
+      n = 0
+   E-y:
+      n = 0
+   E-yt:
+      n = 0
+   E-z:
+      n = 0
+   E-zt:
+      n = 0
+   swapcoords                     = no
+   adress                         = FALSE
+   userint1                       = 0
+   userint2                       = 0
+   userint3                       = 0
+   userint4                       = 0
+   userreal1                      = 0
+   userreal2                      = 0
+   userreal3                      = 0
+   userreal4                      = 0
+grpopts:
+   nrdf:         447
+   ref-t:           0
+   tau-t:           0
+annealing:          No
+annealing-npoints:           0
+   acc:	           0           0           0
+   nfreeze:           N           N           N
+   energygrp-flags[  0]: 0
+
+Using 1 MPI thread
+Using 32 OpenMP threads 
+
+1 compatible GPU is present, with ID 0
+1 GPU auto-selected for this run.
+Mapping of GPU ID to the 1 PP rank in this node: 0
+
+Cut-off's:   NS: 1.05   Coulomb: 1   LJ: 1
+System total charge: -0.000
+Generated table with 1025 data points for 1-4 COUL.
+Tabscale = 500 points/nm
+Generated table with 1025 data points for 1-4 LJ6.
+Tabscale = 500 points/nm
+Generated table with 1025 data points for 1-4 LJ12.
+Tabscale = 500 points/nm
+Potential shift: LJ r^-12: -1.000e+00 r^-6: -1.000e+00, Coulomb -1e+00
+
+Using GPU 8x8 non-bonded kernels
+
+Removing pbc first time
+
+NOTE: The number of threads is not equal to the number of (logical) cores
+      and the -pin option is set to auto: will not pin thread to cores.
+      This can lead to significant performance degradation.
+      Consider using -pin on (and -pinoffset in case you run multiple jobs).
+
+Initiating Steepest Descents
+Started Steepest Descents on rank 0 Fri Oct 29 11:07:51 2021
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+01
+   Number of steps    =          500
+           Step           Time         Lambda
+              0        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.21796e+00    1.64777e+01    3.37550e+02    3.31302e+01    1.13861e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+    1.01919e+03   -4.35839e+02    2.11734e+03    0.00000e+00
+
+           Step           Time         Lambda
+              1        1.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.89778e+01    1.67947e+01    3.37672e+02    3.35291e+01    1.14143e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+    2.59908e+02   -4.45630e+02    1.37268e+03    0.00000e+00
+
+           Step           Time         Lambda
+              2        2.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.36423e+01    2.66571e+01    3.38237e+02    3.43115e+01    1.14482e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+    3.07798e+01   -4.53145e+02    1.20530e+03    0.00000e+00
+
+           Step           Time         Lambda
+              3        3.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    3.06135e+01    6.75205e+01    3.39765e+02    3.46231e+01    1.14238e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+    3.62385e+01   -4.50087e+02    1.20105e+03    0.00000e+00
+
+           Step           Time         Lambda
+              4        4.00000        0.00000
+
+           Step           Time         Lambda
+              5        5.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.61995e+01    3.89671e+01    3.39825e+02    3.48333e+01    1.14347e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -1.17142e+01   -4.54865e+02    1.11671e+03    0.00000e+00
+
+           Step           Time         Lambda
+              6        6.00000        0.00000
+
+           Step           Time         Lambda
+              7        7.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    4.53941e+00    3.83332e+01    3.40184e+02    3.43746e+01    1.14168e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -2.83608e+00   -4.52624e+02    1.10365e+03    0.00000e+00
+
+           Step           Time         Lambda
+              8        8.00000        0.00000
+
+           Step           Time         Lambda
+              9        9.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.36273e+01    2.96873e+01    3.40476e+02    3.47437e+01    1.14187e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -1.43908e+01   -4.54487e+02    1.09153e+03    0.00000e+00
+
+           Step           Time         Lambda
+             10       10.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    3.36428e+00    3.06754e+01    3.40892e+02    3.43761e+01    1.14074e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -1.31712e+01   -4.53351e+02    1.08353e+03    0.00000e+00
+
+           Step           Time         Lambda
+             11       11.00000        0.00000
+
+           Step           Time         Lambda
+             12       12.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.39341e+00    2.46624e+01    3.41144e+02    3.46759e+01    1.14088e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -1.95365e+01   -4.54514e+02    1.07570e+03    0.00000e+00
+
+           Step           Time         Lambda
+             13       13.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.94186e+00    2.48637e+01    3.41522e+02    3.43703e+01    1.14011e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -2.00274e+01   -4.53847e+02    1.06993e+03    0.00000e+00
+
+           Step           Time         Lambda
+             14       14.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.38048e+01    1.94545e+01    3.41950e+02    3.48005e+01    1.14022e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -2.63469e+01   -4.55153e+02    1.06873e+03    0.00000e+00
+
+           Step           Time         Lambda
+             15       15.00000        0.00000
+
+           Step           Time         Lambda
+             16       16.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    3.27994e+00    2.02726e+01    3.42022e+02    3.44295e+01    1.13978e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -2.48106e+01   -4.54344e+02    1.06062e+03    0.00000e+00
+
+           Step           Time         Lambda
+             17       17.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    4.66965e+00    1.75523e+01    3.42431e+02    3.45132e+01    1.13948e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -2.77640e+01   -4.54615e+02    1.05627e+03    0.00000e+00
+
+           Step           Time         Lambda
+             18       18.00000        0.00000
+
+           Step           Time         Lambda
+             19       19.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.59629e+00    1.78925e+01    3.42659e+02    3.42038e+01    1.13914e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -2.80000e+01   -4.54239e+02    1.05425e+03    0.00000e+00
+
+           Step           Time         Lambda
+             20       20.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    5.05038e+00    1.60227e+01    3.42866e+02    3.44886e+01    1.13913e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.01314e+01   -4.54688e+02    1.05273e+03    0.00000e+00
+
+           Step           Time         Lambda
+             21       21.00000        0.00000
+
+           Step           Time         Lambda
+             22       22.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.32554e+00    1.60084e+01    3.42989e+02    3.41999e+01    1.13893e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -2.99784e+01   -4.54371e+02    1.05010e+03    0.00000e+00
+
+           Step           Time         Lambda
+             23       23.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    3.23630e+00    1.50441e+01    3.43209e+02    3.43423e+01    1.13879e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.14707e+01   -4.54555e+02    1.04860e+03    0.00000e+00
+
+           Step           Time         Lambda
+             24       24.00000        0.00000
+
+           Step           Time         Lambda
+             25       25.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.17459e+00    1.48619e+01    3.43353e+02    3.40894e+01    1.13867e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.16091e+01   -4.54354e+02    1.04718e+03    0.00000e+00
+
+           Step           Time         Lambda
+             26       26.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.60483e+00    1.43660e+01    3.43505e+02    3.42444e+01    1.13855e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.26533e+01   -4.54487e+02    1.04613e+03    0.00000e+00
+
+           Step           Time         Lambda
+             27       27.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.89873e+00    1.42515e+01    3.43754e+02    3.38285e+01    1.13842e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.29826e+01   -4.54228e+02    1.04594e+03    0.00000e+00
+
+           Step           Time         Lambda
+             28       28.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    3.03015e+00    1.41425e+01    3.43803e+02    3.42566e+01    1.13831e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.39513e+01   -4.54480e+02    1.04512e+03    0.00000e+00
+
+           Step           Time         Lambda
+             29       29.00000        0.00000
+
+           Step           Time         Lambda
+             30       30.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.03895e+00    1.34307e+01    3.43942e+02    3.38838e+01    1.13829e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.39661e+01   -4.54291e+02    1.04333e+03    0.00000e+00
+
+           Step           Time         Lambda
+             31       31.00000        0.00000
+
+           Step           Time         Lambda
+             32       32.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.81398e+00    1.34283e+01    3.44007e+02    3.40298e+01    1.13819e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.44576e+01   -4.54344e+02    1.04267e+03    0.00000e+00
+
+           Step           Time         Lambda
+             33       33.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.97355e+00    1.30210e+01    3.44161e+02    3.38020e+01    1.13816e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.47697e+01   -4.54254e+02    1.04209e+03    0.00000e+00
+
+           Step           Time         Lambda
+             34       34.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.89945e+00    1.34394e+01    3.44250e+02    3.40424e+01    1.13798e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.54244e+01   -4.54307e+02    1.04188e+03    0.00000e+00
+
+           Step           Time         Lambda
+             35       35.00000        0.00000
+
+           Step           Time         Lambda
+             36       36.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.78766e+00    1.27254e+01    3.44365e+02    3.37523e+01    1.13802e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.55230e+01   -4.54215e+02    1.04092e+03    0.00000e+00
+
+           Step           Time         Lambda
+             37       37.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.50501e+00    1.29075e+01    3.44440e+02    3.38514e+01    1.13790e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.59224e+01   -4.54215e+02    1.04047e+03    0.00000e+00
+
+           Step           Time         Lambda
+             38       38.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.21561e+00    1.23204e+01    3.44625e+02    3.35331e+01    1.13793e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.62506e+01   -4.54122e+02    1.04025e+03    0.00000e+00
+
+           Step           Time         Lambda
+             39       39.00000        0.00000
+
+           Step           Time         Lambda
+             40       40.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.40918e+00    1.27268e+01    3.44618e+02    3.37604e+01    1.13780e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.64754e+01   -4.54149e+02    1.03969e+03    0.00000e+00
+
+           Step           Time         Lambda
+             41       41.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.90630e+00    1.22084e+01    3.44755e+02    3.35152e+01    1.13783e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.67150e+01   -4.54084e+02    1.03941e+03    0.00000e+00
+
+           Step           Time         Lambda
+             42       42.00000        0.00000
+
+           Step           Time         Lambda
+             43       43.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.35351e+00    1.25773e+01    3.44763e+02    3.36738e+01    1.13771e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.69055e+01   -4.54091e+02    1.03908e+03    0.00000e+00
+
+           Step           Time         Lambda
+             44       44.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.67822e+00    1.21807e+01    3.44861e+02    3.34997e+01    1.13774e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.70794e+01   -4.54046e+02    1.03883e+03    0.00000e+00
+
+           Step           Time         Lambda
+             45       45.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.25894e+00    1.25691e+01    3.44897e+02    3.36234e+01    1.13761e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.73246e+01   -4.54033e+02    1.03860e+03    0.00000e+00
+
+           Step           Time         Lambda
+             46       46.00000        0.00000
+
+           Step           Time         Lambda
+             47       47.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.59519e+00    1.21123e+01    3.44980e+02    3.34423e+01    1.13766e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.74412e+01   -4.53993e+02    1.03835e+03    0.00000e+00
+
+           Step           Time         Lambda
+             48       48.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.29390e+00    1.23466e+01    3.45009e+02    3.35115e+01    1.13757e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.76062e+01   -4.53979e+02    1.03815e+03    0.00000e+00
+
+           Step           Time         Lambda
+             49       49.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.64677e+00    1.19762e+01    3.45106e+02    3.33446e+01    1.13759e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.77821e+01   -4.53932e+02    1.03795e+03    0.00000e+00
+
+           Step           Time         Lambda
+             50       50.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.10369e+00    1.26343e+01    3.45125e+02    3.35285e+01    1.13743e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.80091e+01   -4.53915e+02    1.03790e+03    0.00000e+00
+
+           Step           Time         Lambda
+             51       51.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    2.27164e+00    1.16363e+01    3.45276e+02    3.31210e+01    1.13758e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.81432e+01   -4.53847e+02    1.03789e+03    0.00000e+00
+
+           Step           Time         Lambda
+             52       52.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.04941e+00    1.28890e+01    3.45204e+02    3.35348e+01    1.13733e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.82760e+01   -4.53865e+02    1.03786e+03    0.00000e+00
+
+           Step           Time         Lambda
+             53       53.00000        0.00000
+
+           Step           Time         Lambda
+             54       54.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.45209e+00    1.19432e+01    3.45297e+02    3.32447e+01    1.13745e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.83349e+01   -4.53824e+02    1.03723e+03    0.00000e+00
+
+           Step           Time         Lambda
+             55       55.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.08702e+00    1.23089e+01    3.45339e+02    3.33188e+01    1.13733e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.85409e+01   -4.53787e+02    1.03705e+03    0.00000e+00
+
+           Step           Time         Lambda
+             56       56.00000        0.00000
+
+           Step           Time         Lambda
+             57       57.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.69490e+00    1.17032e+01    3.45431e+02    3.30866e+01    1.13741e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.86376e+01   -4.53744e+02    1.03694e+03    0.00000e+00
+
+           Step           Time         Lambda
+             58       58.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.93363e-01    1.24310e+01    3.45405e+02    3.33010e+01    1.13725e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.87414e+01   -4.53737e+02    1.03690e+03    0.00000e+00
+
+           Step           Time         Lambda
+             59       59.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.91819e+00    1.15441e+01    3.45519e+02    3.29733e+01    1.13738e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.88298e+01   -4.53687e+02    1.03682e+03    0.00000e+00
+
+           Step           Time         Lambda
+             60       60.00000        0.00000
+
+           Step           Time         Lambda
+             61       61.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.20424e+00    1.20080e+01    3.45486e+02    3.31408e+01    1.13727e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.88738e+01   -4.53689e+02    1.03655e+03    0.00000e+00
+
+           Step           Time         Lambda
+             62       62.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.47280e+00    1.17349e+01    3.45554e+02    3.30154e+01    1.13728e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.89885e+01   -4.53647e+02    1.03643e+03    0.00000e+00
+
+           Step           Time         Lambda
+             63       63.00000        0.00000
+
+           Step           Time         Lambda
+             64       64.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.12201e+00    1.20431e+01    3.45550e+02    3.31006e+01    1.13721e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.90525e+01   -4.53635e+02    1.03633e+03    0.00000e+00
+
+           Step           Time         Lambda
+             65       65.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.49742e+00    1.16726e+01    3.45612e+02    3.29525e+01    1.13725e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.91302e+01   -4.53600e+02    1.03625e+03    0.00000e+00
+
+           Step           Time         Lambda
+             66       66.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.58615e-01    1.22408e+01    3.45595e+02    3.31069e+01    1.13712e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.92123e+01   -4.53586e+02    1.03622e+03    0.00000e+00
+
+           Step           Time         Lambda
+             67       67.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.67917e+00    1.15163e+01    3.45681e+02    3.28494e+01    1.13722e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.92728e+01   -4.53545e+02    1.03613e+03    0.00000e+00
+
+           Step           Time         Lambda
+             68       68.00000        0.00000
+
+           Step           Time         Lambda
+             69       69.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.15551e+00    1.19040e+01    3.45656e+02    3.29775e+01    1.13713e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.93038e+01   -4.53545e+02    1.03598e+03    0.00000e+00
+
+           Step           Time         Lambda
+             70       70.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.38488e+00    1.16667e+01    3.45703e+02    3.28752e+01    1.13715e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.93738e+01   -4.53512e+02    1.03589e+03    0.00000e+00
+
+           Step           Time         Lambda
+             71       71.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.63698e-01    1.21028e+01    3.45695e+02    3.29851e+01    1.13704e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.94499e+01   -4.53492e+02    1.03585e+03    0.00000e+00
+
+           Step           Time         Lambda
+             72       72.00000        0.00000
+
+           Step           Time         Lambda
+             73       73.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.30000e+00    1.16914e+01    3.45740e+02    3.28475e+01    1.13710e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.94808e+01   -4.53469e+02    1.03573e+03    0.00000e+00
+
+           Step           Time         Lambda
+             74       74.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.10854e+00    1.18565e+01    3.45745e+02    3.28820e+01    1.13704e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.95324e+01   -4.53451e+02    1.03565e+03    0.00000e+00
+
+           Step           Time         Lambda
+             75       75.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.44385e+00    1.15315e+01    3.45797e+02    3.27506e+01    1.13707e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.95953e+01   -4.53414e+02    1.03559e+03    0.00000e+00
+
+           Step           Time         Lambda
+             76       76.00000        0.00000
+
+           Step           Time         Lambda
+             77       77.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.08415e+00    1.18387e+01    3.45780e+02    3.28418e+01    1.13700e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.96233e+01   -4.53408e+02    1.03551e+03    0.00000e+00
+
+           Step           Time         Lambda
+             78       78.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.35695e+00    1.15602e+01    3.45820e+02    3.27348e+01    1.13703e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.96658e+01   -4.53381e+02    1.03545e+03    0.00000e+00
+
+           Step           Time         Lambda
+             79       79.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.71098e-01    1.19385e+01    3.45804e+02    3.28361e+01    1.13694e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.97099e+01   -4.53367e+02    1.03541e+03    0.00000e+00
+
+           Step           Time         Lambda
+             80       80.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.60756e+00    1.13504e+01    3.45872e+02    3.26240e+01    1.13702e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.97537e+01   -4.53329e+02    1.03539e+03    0.00000e+00
+
+           Step           Time         Lambda
+             81       81.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.71295e-01    1.20604e+01    3.45821e+02    3.28394e+01    1.13688e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.97807e+01   -4.53332e+02    1.03536e+03    0.00000e+00
+
+           Step           Time         Lambda
+             82       82.00000        0.00000
+
+           Step           Time         Lambda
+             83       83.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.23960e+00    1.15798e+01    3.45866e+02    3.26880e+01    1.13694e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.98010e+01   -4.53309e+02    1.03521e+03    0.00000e+00
+
+           Step           Time         Lambda
+             84       84.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.05837e+00    1.17350e+01    3.45866e+02    3.27197e+01    1.13689e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.98420e+01   -4.53289e+02    1.03514e+03    0.00000e+00
+
+           Step           Time         Lambda
+             85       85.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.52965e+00    1.13103e+01    3.45922e+02    3.25550e+01    1.13694e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.98934e+01   -4.53247e+02    1.03511e+03    0.00000e+00
+
+           Step           Time         Lambda
+             86       86.00000        0.00000
+
+           Step           Time         Lambda
+             87       87.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.08251e+00    1.16609e+01    3.45894e+02    3.26688e+01    1.13686e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.99059e+01   -4.53248e+02    1.03501e+03    0.00000e+00
+
+           Step           Time         Lambda
+             88       88.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.30356e+00    1.14320e+01    3.45925e+02    3.25799e+01    1.13688e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.99392e+01   -4.53220e+02    1.03496e+03    0.00000e+00
+
+           Step           Time         Lambda
+             89       89.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.93948e-01    1.18539e+01    3.45900e+02    3.26944e+01    1.13678e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -3.99721e+01   -4.53207e+02    1.03494e+03    0.00000e+00
+
+           Step           Time         Lambda
+             90       90.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.62391e+00    1.11738e+01    3.45969e+02    3.24592e+01    1.13688e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.00011e+01   -4.53170e+02    1.03494e+03    0.00000e+00
+
+           Step           Time         Lambda
+             91       91.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    7.95744e-01    1.19941e+01    3.45904e+02    3.27103e+01    1.13672e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.00159e+01   -4.53178e+02    1.03493e+03    0.00000e+00
+
+           Step           Time         Lambda
+             92       92.00000        0.00000
+
+           Step           Time         Lambda
+             93       93.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.20236e+00    1.14369e+01    3.45951e+02    3.25411e+01    1.13680e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.00305e+01   -4.53155e+02    1.03475e+03    0.00000e+00
+
+           Step           Time         Lambda
+             94       94.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00146e+00    1.16127e+01    3.45945e+02    3.25813e+01    1.13674e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.00610e+01   -4.53134e+02    1.03469e+03    0.00000e+00
+
+           Step           Time         Lambda
+             95       95.00000        0.00000
+
+           Step           Time         Lambda
+             96       96.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.31168e+00    1.12972e+01    3.45978e+02    3.24708e+01    1.13678e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.00813e+01   -4.53110e+02    1.03465e+03    0.00000e+00
+
+           Step           Time         Lambda
+             97       97.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.07338e-01    1.16934e+01    3.45948e+02    3.25859e+01    1.13669e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.00989e+01   -4.53104e+02    1.03462e+03    0.00000e+00
+
+           Step           Time         Lambda
+             98       98.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.44492e+00    1.11628e+01    3.45999e+02    3.24063e+01    1.13677e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.01187e+01   -4.53074e+02    1.03459e+03    0.00000e+00
+
+           Step           Time         Lambda
+             99       99.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.27775e-01    1.17797e+01    3.45950e+02    3.25930e+01    1.13664e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.01309e+01   -4.53076e+02    1.03459e+03    0.00000e+00
+
+           Step           Time         Lambda
+            100      100.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.64110e+00    1.10088e+01    3.46022e+02    3.23335e+01    1.13676e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.01518e+01   -4.53039e+02    1.03458e+03    0.00000e+00
+
+           Step           Time         Lambda
+            101      101.00000        0.00000
+
+           Step           Time         Lambda
+            102      102.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.06845e+00    1.14210e+01    3.45983e+02    3.24760e+01    1.13667e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.01556e+01   -4.53045e+02    1.03442e+03    0.00000e+00
+
+           Step           Time         Lambda
+            103      103.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.24554e+00    1.12284e+01    3.46004e+02    3.24025e+01    1.13668e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.01786e+01   -4.53017e+02    1.03437e+03    0.00000e+00
+
+           Step           Time         Lambda
+            104      104.00000        0.00000
+
+           Step           Time         Lambda
+            105      105.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.94922e-01    1.14530e+01    3.45986e+02    3.24689e+01    1.13663e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.01889e+01   -4.53011e+02    1.03433e+03    0.00000e+00
+
+           Step           Time         Lambda
+            106      106.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.30911e+00    1.11394e+01    3.46016e+02    3.23596e+01    1.13667e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.02054e+01   -4.52986e+02    1.03430e+03    0.00000e+00
+
+           Step           Time         Lambda
+            107      107.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.56373e-01    1.15934e+01    3.45979e+02    3.24949e+01    1.13657e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.02162e+01   -4.52983e+02    1.03429e+03    0.00000e+00
+
+           Step           Time         Lambda
+            108      108.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.46409e+00    1.09930e+01    3.46033e+02    3.22955e+01    1.13666e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.02316e+01   -4.52953e+02    1.03426e+03    0.00000e+00
+
+           Step           Time         Lambda
+            109      109.00000        0.00000
+
+           Step           Time         Lambda
+            110      110.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.05259e+00    1.13123e+01    3.46003e+02    3.24025e+01    1.13659e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.02347e+01   -4.52956e+02    1.03417e+03    0.00000e+00
+
+           Step           Time         Lambda
+            111      111.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.18785e+00    1.11610e+01    3.46017e+02    3.23472e+01    1.13660e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.02484e+01   -4.52935e+02    1.03413e+03    0.00000e+00
+
+           Step           Time         Lambda
+            112      112.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.32452e-01    1.13987e+01    3.45997e+02    3.24148e+01    1.13653e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.02610e+01   -4.52923e+02    1.03409e+03    0.00000e+00
+
+           Step           Time         Lambda
+            113      113.00000        0.00000
+
+           Step           Time         Lambda
+            114      114.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.22930e+00    1.10834e+01    3.46025e+02    3.23108e+01    1.13658e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.02707e+01   -4.52904e+02    1.03405e+03    0.00000e+00
+
+           Step           Time         Lambda
+            115      115.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.41395e-01    1.13500e+01    3.46001e+02    3.23912e+01    1.13651e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.02782e+01   -4.52898e+02    1.03402e+03    0.00000e+00
+
+           Step           Time         Lambda
+            116      116.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.40429e+00    1.09134e+01    3.46041e+02    3.22415e+01    1.13657e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.02922e+01   -4.52870e+02    1.03401e+03    0.00000e+00
+
+           Step           Time         Lambda
+            117      117.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.54642e-01    1.14264e+01    3.45994e+02    3.24038e+01    1.13647e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.02955e+01   -4.52873e+02    1.03398e+03    0.00000e+00
+
+           Step           Time         Lambda
+            118      118.00000        0.00000
+
+           Step           Time         Lambda
+            119      119.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.14967e+00    1.10785e+01    3.46023e+02    3.22945e+01    1.13652e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03026e+01   -4.52857e+02    1.03391e+03    0.00000e+00
+
+           Step           Time         Lambda
+            120      120.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00106e+00    1.12033e+01    3.46011e+02    3.23304e+01    1.13648e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03101e+01   -4.52846e+02    1.03387e+03    0.00000e+00
+
+           Step           Time         Lambda
+            121      121.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.27054e+00    1.09326e+01    3.46034e+02    3.22364e+01    1.13651e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03223e+01   -4.52822e+02    1.03384e+03    0.00000e+00
+
+           Step           Time         Lambda
+            122      122.00000        0.00000
+
+           Step           Time         Lambda
+            123      123.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.83453e-01    1.11821e+01    3.46010e+02    3.23162e+01    1.13645e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03253e+01   -4.52820e+02    1.03380e+03    0.00000e+00
+
+           Step           Time         Lambda
+            124      124.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.20523e+00    1.09512e+01    3.46029e+02    3.22381e+01    1.13648e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03338e+01   -4.52802e+02    1.03377e+03    0.00000e+00
+
+           Step           Time         Lambda
+            125      125.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.04535e-01    1.12356e+01    3.46002e+02    3.23249e+01    1.13641e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03391e+01   -4.52796e+02    1.03374e+03    0.00000e+00
+
+           Step           Time         Lambda
+            126      126.00000        0.00000
+
+           Step           Time         Lambda
+            127      127.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.13282e+00    1.09788e+01    3.46023e+02    3.22426e+01    1.13645e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03447e+01   -4.52781e+02    1.03370e+03    0.00000e+00
+
+           Step           Time         Lambda
+            128      128.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.02607e+00    1.10652e+01    3.46013e+02    3.22683e+01    1.13642e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03492e+01   -4.52774e+02    1.03367e+03    0.00000e+00
+
+           Step           Time         Lambda
+            129      129.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.13775e+00    1.09385e+01    3.46022e+02    3.22243e+01    1.13643e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03562e+01   -4.52758e+02    1.03364e+03    0.00000e+00
+
+           Step           Time         Lambda
+            130      130.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.66033e-01    1.10868e+01    3.46006e+02    3.22688e+01    1.13638e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03621e+01   -4.52748e+02    1.03360e+03    0.00000e+00
+
+           Step           Time         Lambda
+            131      131.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.35583e+00    1.07194e+01    3.46037e+02    3.21422e+01    1.13643e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03730e+01   -4.52719e+02    1.03359e+03    0.00000e+00
+
+           Step           Time         Lambda
+            132      132.00000        0.00000
+
+           Step           Time         Lambda
+            133      133.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00973e+00    1.09989e+01    3.46009e+02    3.22363e+01    1.13637e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03734e+01   -4.52721e+02    1.03353e+03    0.00000e+00
+
+           Step           Time         Lambda
+            134      134.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.15109e+00    1.08442e+01    3.46019e+02    3.21835e+01    1.13638e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03801e+01   -4.52704e+02    1.03350e+03    0.00000e+00
+
+           Step           Time         Lambda
+            135      135.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.18425e-01    1.10575e+01    3.45997e+02    3.22490e+01    1.13633e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03847e+01   -4.52695e+02    1.03347e+03    0.00000e+00
+
+           Step           Time         Lambda
+            136      136.00000        0.00000
+
+           Step           Time         Lambda
+            137      137.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.17230e+00    1.07877e+01    3.46018e+02    3.21610e+01    1.13636e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03903e+01   -4.52679e+02    1.03343e+03    0.00000e+00
+
+           Step           Time         Lambda
+            138      138.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.50521e-01    1.09862e+01    3.45997e+02    3.22238e+01    1.13632e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.03929e+01   -4.52674e+02    1.03341e+03    0.00000e+00
+
+           Step           Time         Lambda
+            139      139.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.25279e+00    1.06857e+01    3.46021e+02    3.21229e+01    1.13636e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04003e+01   -4.52652e+02    1.03339e+03    0.00000e+00
+
+           Step           Time         Lambda
+            140      140.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.18151e-01    1.11191e+01    3.45979e+02    3.22586e+01    1.13626e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04015e+01   -4.52652e+02    1.03338e+03    0.00000e+00
+
+           Step           Time         Lambda
+            141      141.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.39888e+00    1.05474e+01    3.46027e+02    3.20706e+01    1.13635e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04098e+01   -4.52624e+02    1.03336e+03    0.00000e+00
+
+           Step           Time         Lambda
+            142      142.00000        0.00000
+
+           Step           Time         Lambda
+            143      143.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00700e+00    1.08534e+01    3.45995e+02    3.21760e+01    1.13629e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04092e+01   -4.52628e+02    1.03328e+03    0.00000e+00
+
+           Step           Time         Lambda
+            144      144.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.13675e+00    1.07089e+01    3.46004e+02    3.21270e+01    1.13630e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04149e+01   -4.52611e+02    1.03325e+03    0.00000e+00
+
+           Step           Time         Lambda
+            145      145.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.88465e-01    1.09415e+01    3.45978e+02    3.21994e+01    1.13624e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04184e+01   -4.52602e+02    1.03323e+03    0.00000e+00
+
+           Step           Time         Lambda
+            146      146.00000        0.00000
+
+           Step           Time         Lambda
+            147      147.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.16811e+00    1.06432e+01    3.46001e+02    3.21028e+01    1.13628e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04233e+01   -4.52584e+02    1.03319e+03    0.00000e+00
+
+           Step           Time         Lambda
+            148      148.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.10465e-01    1.08808e+01    3.45976e+02    3.21786e+01    1.13623e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04250e+01   -4.52580e+02    1.03317e+03    0.00000e+00
+
+           Step           Time         Lambda
+            149      149.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.34563e+00    1.04718e+01    3.46009e+02    3.20405e+01    1.13629e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04324e+01   -4.52554e+02    1.03317e+03    0.00000e+00
+
+           Step           Time         Lambda
+            150      150.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.25485e-01    1.09562e+01    3.45961e+02    3.21982e+01    1.13619e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04313e+01   -4.52559e+02    1.03314e+03    0.00000e+00
+
+           Step           Time         Lambda
+            151      151.00000        0.00000
+
+           Step           Time         Lambda
+            152      152.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.10456e+00    1.06305e+01    3.45986e+02    3.20962e+01    1.13624e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04354e+01   -4.52544e+02    1.03307e+03    0.00000e+00
+
+           Step           Time         Lambda
+            153      153.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.62732e-01    1.07513e+01    3.45971e+02    3.21344e+01    1.13620e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04378e+01   -4.52535e+02    1.03305e+03    0.00000e+00
+
+           Step           Time         Lambda
+            154      154.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.21711e+00    1.04957e+01    3.45988e+02    3.20488e+01    1.13623e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04437e+01   -4.52513e+02    1.03302e+03    0.00000e+00
+
+           Step           Time         Lambda
+            155      155.00000        0.00000
+
+           Step           Time         Lambda
+            156      156.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.50478e-01    1.07288e+01    3.45963e+02    3.21258e+01    1.13618e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04439e+01   -4.52513e+02    1.03299e+03    0.00000e+00
+
+           Step           Time         Lambda
+            157      157.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.15152e+00    1.05190e+01    3.45978e+02    3.20566e+01    1.13621e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04483e+01   -4.52497e+02    1.03297e+03    0.00000e+00
+
+           Step           Time         Lambda
+            158      158.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.86417e-01    1.07679e+01    3.45950e+02    3.21361e+01    1.13615e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04494e+01   -4.52492e+02    1.03295e+03    0.00000e+00
+
+           Step           Time         Lambda
+            159      159.00000        0.00000
+
+           Step           Time         Lambda
+            160      160.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.09589e+00    1.05363e+01    3.45968e+02    3.20620e+01    1.13618e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04529e+01   -4.52478e+02    1.03291e+03    0.00000e+00
+
+           Step           Time         Lambda
+            161      161.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.88985e-01    1.06248e+01    3.45956e+02    3.20908e+01    1.13615e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04544e+01   -4.52472e+02    1.03289e+03    0.00000e+00
+
+           Step           Time         Lambda
+            162      162.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.09570e+00    1.05052e+01    3.45962e+02    3.20512e+01    1.13616e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04580e+01   -4.52458e+02    1.03286e+03    0.00000e+00
+
+           Step           Time         Lambda
+            163      163.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.39926e-01    1.06402e+01    3.45943e+02    3.20946e+01    1.13612e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04600e+01   -4.52449e+02    1.03283e+03    0.00000e+00
+
+           Step           Time         Lambda
+            164      164.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.27453e+00    1.03201e+01    3.45966e+02    3.19866e+01    1.13617e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04663e+01   -4.52424e+02    1.03282e+03    0.00000e+00
+
+           Step           Time         Lambda
+            165      165.00000        0.00000
+
+           Step           Time         Lambda
+            166      166.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.67223e-01    1.05754e+01    3.45939e+02    3.20733e+01    1.13611e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04655e+01   -4.52426e+02    1.03278e+03    0.00000e+00
+
+           Step           Time         Lambda
+            167      167.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.12121e+00    1.04114e+01    3.45948e+02    3.20191e+01    1.13613e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04695e+01   -4.52410e+02    1.03275e+03    0.00000e+00
+
+           Step           Time         Lambda
+            168      168.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.84764e-01    1.06322e+01    3.45922e+02    3.20901e+01    1.13608e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04707e+01   -4.52404e+02    1.03273e+03    0.00000e+00
+
+           Step           Time         Lambda
+            169      169.00000        0.00000
+
+           Step           Time         Lambda
+            170      170.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.11235e+00    1.03867e+01    3.45940e+02    3.20110e+01    1.13611e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04742e+01   -4.52389e+02    1.03270e+03    0.00000e+00
+
+           Step           Time         Lambda
+            171      171.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.47528e-01    1.05317e+01    3.45922e+02    3.20584e+01    1.13607e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04751e+01   -4.52384e+02    1.03268e+03    0.00000e+00
+
+           Step           Time         Lambda
+            172      172.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.15082e+00    1.03222e+01    3.45936e+02    3.19890e+01    1.13610e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04793e+01   -4.52366e+02    1.03265e+03    0.00000e+00
+
+           Step           Time         Lambda
+            173      173.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.24830e-01    1.06452e+01    3.45900e+02    3.20921e+01    1.13603e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04797e+01   -4.52362e+02    1.03265e+03    0.00000e+00
+
+           Step           Time         Lambda
+            174      174.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.34890e+00    1.01429e+01    3.45941e+02    3.19250e+01    1.13611e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04861e+01   -4.52336e+02    1.03265e+03    0.00000e+00
+
+           Step           Time         Lambda
+            175      175.00000        0.00000
+
+           Step           Time         Lambda
+            176      176.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.94357e-01    1.04182e+01    3.45911e+02    3.20217e+01    1.13605e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04848e+01   -4.52340e+02    1.03257e+03    0.00000e+00
+
+           Step           Time         Lambda
+            177      177.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.06647e+00    1.03312e+01    3.45913e+02    3.19930e+01    1.13605e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04880e+01   -4.52326e+02    1.03254e+03    0.00000e+00
+
+           Step           Time         Lambda
+            178      178.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.34630e-01    1.04416e+01    3.45895e+02    3.20291e+01    1.13602e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04900e+01   -4.52315e+02    1.03251e+03    0.00000e+00
+
+           Step           Time         Lambda
+            179      179.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.28652e+00    1.01120e+01    3.45917e+02    3.19171e+01    1.13606e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04963e+01   -4.52288e+02    1.03251e+03    0.00000e+00
+
+           Step           Time         Lambda
+            180      180.00000        0.00000
+
+           Step           Time         Lambda
+            181      181.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.41043e-01    1.03988e+01    3.45886e+02    3.20156e+01    1.13600e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04951e+01   -4.52291e+02    1.03246e+03    0.00000e+00
+
+           Step           Time         Lambda
+            182      182.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.15710e+00    1.01795e+01    3.45900e+02    3.19428e+01    1.13603e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04994e+01   -4.52272e+02    1.03244e+03    0.00000e+00
+
+           Step           Time         Lambda
+            183      183.00000        0.00000
+
+           Step           Time         Lambda
+            184      184.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.41548e-01    1.03686e+01    3.45878e+02    3.20061e+01    1.13599e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.04993e+01   -4.52270e+02    1.03241e+03    0.00000e+00
+
+           Step           Time         Lambda
+            185      185.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.08784e+00    1.02129e+01    3.45887e+02    3.19551e+01    1.13601e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05023e+01   -4.52257e+02    1.03239e+03    0.00000e+00
+
+           Step           Time         Lambda
+            186      186.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.27977e-01    1.03544e+01    3.45868e+02    3.20017e+01    1.13597e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05033e+01   -4.52250e+02    1.03237e+03    0.00000e+00
+
+           Step           Time         Lambda
+            187      187.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.18413e+00    1.01004e+01    3.45884e+02    3.19170e+01    1.13600e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05079e+01   -4.52230e+02    1.03235e+03    0.00000e+00
+
+           Step           Time         Lambda
+            188      188.00000        0.00000
+
+           Step           Time         Lambda
+            189      189.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.45251e-01    1.03066e+01    3.45861e+02    3.19869e+01    1.13596e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05075e+01   -4.52230e+02    1.03232e+03    0.00000e+00
+
+           Step           Time         Lambda
+            190      190.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.08249e+00    1.01603e+01    3.45869e+02    3.19388e+01    1.13597e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05106e+01   -4.52216e+02    1.03230e+03    0.00000e+00
+
+           Step           Time         Lambda
+            191      191.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.20527e-01    1.03042e+01    3.45850e+02    3.19864e+01    1.13594e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05116e+01   -4.52209e+02    1.03228e+03    0.00000e+00
+
+           Step           Time         Lambda
+            192      192.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.20216e+00    1.00296e+01    3.45868e+02    3.18943e+01    1.13597e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05165e+01   -4.52188e+02    1.03226e+03    0.00000e+00
+
+           Step           Time         Lambda
+            193      193.00000        0.00000
+
+           Step           Time         Lambda
+            194      194.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.47166e-01    1.02468e+01    3.45843e+02    3.19685e+01    1.13593e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05159e+01   -4.52188e+02    1.03223e+03    0.00000e+00
+
+           Step           Time         Lambda
+            195      195.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.07839e+00    1.01064e+01    3.45851e+02    3.19223e+01    1.13594e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05189e+01   -4.52175e+02    1.03221e+03    0.00000e+00
+
+           Step           Time         Lambda
+            196      196.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.12123e-01    1.02553e+01    3.45830e+02    3.19717e+01    1.13590e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05199e+01   -4.52168e+02    1.03219e+03    0.00000e+00
+
+           Step           Time         Lambda
+            197      197.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.22507e+00    9.95576e+00    3.45850e+02    3.18705e+01    1.13595e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05252e+01   -4.52145e+02    1.03218e+03    0.00000e+00
+
+           Step           Time         Lambda
+            198      198.00000        0.00000
+
+           Step           Time         Lambda
+            199      199.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.54843e-01    1.01810e+01    3.45825e+02    3.19483e+01    1.13590e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05244e+01   -4.52146e+02    1.03214e+03    0.00000e+00
+
+           Step           Time         Lambda
+            200      200.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.06610e+00    1.00601e+01    3.45830e+02    3.19085e+01    1.13591e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05274e+01   -4.52133e+02    1.03212e+03    0.00000e+00
+
+           Step           Time         Lambda
+            201      201.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.14750e-01    1.01944e+01    3.45811e+02    3.19530e+01    1.13587e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05287e+01   -4.52125e+02    1.03209e+03    0.00000e+00
+
+           Step           Time         Lambda
+            202      202.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.21925e+00    9.90273e+00    3.45830e+02    3.18546e+01    1.13592e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05340e+01   -4.52102e+02    1.03209e+03    0.00000e+00
+
+           Step           Time         Lambda
+            203      203.00000        0.00000
+
+           Step           Time         Lambda
+            204      204.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.41590e-01    1.01366e+01    3.45803e+02    3.19352e+01    1.13587e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05333e+01   -4.52103e+02    1.03205e+03    0.00000e+00
+
+           Step           Time         Lambda
+            205      205.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.08111e+00    9.98899e+00    3.45811e+02    3.18865e+01    1.13588e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05365e+01   -4.52088e+02    1.03203e+03    0.00000e+00
+
+           Step           Time         Lambda
+            206      206.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.79984e-01    1.01756e+01    3.45786e+02    3.19482e+01    1.13584e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05375e+01   -4.52082e+02    1.03201e+03    0.00000e+00
+
+           Step           Time         Lambda
+            207      207.00000        0.00000
+
+           Step           Time         Lambda
+            208      208.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.08081e+00    9.96288e+00    3.45801e+02    3.18787e+01    1.13587e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05407e+01   -4.52068e+02    1.03198e+03    0.00000e+00
+
+           Step           Time         Lambda
+            209      209.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.29136e-01    1.00971e+01    3.45783e+02    3.19238e+01    1.13584e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05414e+01   -4.52063e+02    1.03196e+03    0.00000e+00
+
+           Step           Time         Lambda
+            210      210.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.09857e+00    9.92200e+00    3.45793e+02    3.18657e+01    1.13586e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05450e+01   -4.52048e+02    1.03194e+03    0.00000e+00
+
+           Step           Time         Lambda
+            211      211.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.42783e-01    1.01683e+01    3.45762e+02    3.19466e+01    1.13580e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05456e+01   -4.52042e+02    1.03193e+03    0.00000e+00
+
+           Step           Time         Lambda
+            212      212.00000        0.00000
+
+           Step           Time         Lambda
+            213      213.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.05436e+00    9.93511e+00    3.45779e+02    3.18714e+01    1.13584e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05488e+01   -4.52029e+02    1.03190e+03    0.00000e+00
+
+           Step           Time         Lambda
+            214      214.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.41480e-01    1.00328e+01    3.45764e+02    3.19041e+01    1.13581e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05498e+01   -4.52023e+02    1.03188e+03    0.00000e+00
+
+           Step           Time         Lambda
+            215      215.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.07770e+00    9.88870e+00    3.45771e+02    3.18565e+01    1.13583e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05533e+01   -4.52008e+02    1.03186e+03    0.00000e+00
+
+           Step           Time         Lambda
+            216      216.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.56897e-01    1.00982e+01    3.45743e+02    3.19255e+01    1.13578e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05542e+01   -4.52001e+02    1.03184e+03    0.00000e+00
+
+           Step           Time         Lambda
+            217      217.00000        0.00000
+
+           Step           Time         Lambda
+            218      218.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.07918e+00    9.86127e+00    3.45760e+02    3.18483e+01    1.13581e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05576e+01   -4.51987e+02    1.03182e+03    0.00000e+00
+
+           Step           Time         Lambda
+            219      219.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.08435e-01    1.00154e+01    3.45740e+02    3.18999e+01    1.13578e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05584e+01   -4.51982e+02    1.03180e+03    0.00000e+00
+
+           Step           Time         Lambda
+            220      220.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.13411e+00    9.79003e+00    3.45754e+02    3.18246e+01    1.13581e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05627e+01   -4.51964e+02    1.03178e+03    0.00000e+00
+
+           Step           Time         Lambda
+            221      221.00000        0.00000
+
+           Step           Time         Lambda
+            222      222.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.29014e-01    9.96966e+00    3.45732e+02    3.18857e+01    1.13577e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05626e+01   -4.51963e+02    1.03176e+03    0.00000e+00
+
+           Step           Time         Lambda
+            223      223.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.04407e+00    9.84656e+00    3.45738e+02    3.18453e+01    1.13578e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05653e+01   -4.51951e+02    1.03174e+03    0.00000e+00
+
+           Step           Time         Lambda
+            224      224.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.32697e-01    9.94284e+00    3.45723e+02    3.18777e+01    1.13576e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05666e+01   -4.51944e+02    1.03172e+03    0.00000e+00
+
+           Step           Time         Lambda
+            225      225.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.08889e+00    9.78102e+00    3.45731e+02    3.18239e+01    1.13578e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05705e+01   -4.51927e+02    1.03170e+03    0.00000e+00
+
+           Step           Time         Lambda
+            226      226.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.11592e-01    1.00567e+01    3.45696e+02    3.19137e+01    1.13571e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05712e+01   -4.51921e+02    1.03170e+03    0.00000e+00
+
+           Step           Time         Lambda
+            227      227.00000        0.00000
+
+           Step           Time         Lambda
+            228      228.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.04368e+00    9.79553e+00    3.45716e+02    3.18300e+01    1.13575e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05746e+01   -4.51908e+02    1.03166e+03    0.00000e+00
+
+           Step           Time         Lambda
+            229      229.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.23236e-01    9.90093e+00    3.45699e+02    3.18655e+01    1.13573e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05760e+01   -4.51901e+02    1.03164e+03    0.00000e+00
+
+           Step           Time         Lambda
+            230      230.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.10545e+00    9.71603e+00    3.45709e+02    3.18037e+01    1.13575e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05802e+01   -4.51883e+02    1.03162e+03    0.00000e+00
+
+           Step           Time         Lambda
+            231      231.00000        0.00000
+
+           Step           Time         Lambda
+            232      232.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.20398e-01    9.88024e+00    3.45688e+02    3.18594e+01    1.13571e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05803e+01   -4.51881e+02    1.03160e+03    0.00000e+00
+
+           Step           Time         Lambda
+            233      233.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.05094e+00    9.74257e+00    3.45695e+02    3.18140e+01    1.13573e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05835e+01   -4.51868e+02    1.03158e+03    0.00000e+00
+
+           Step           Time         Lambda
+            234      234.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.05294e-01    9.87359e+00    3.45676e+02    3.18578e+01    1.13570e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05847e+01   -4.51862e+02    1.03156e+03    0.00000e+00
+
+           Step           Time         Lambda
+            235      235.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.14419e+00    9.63899e+00    3.45690e+02    3.17789e+01    1.13573e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05895e+01   -4.51842e+02    1.03155e+03    0.00000e+00
+
+           Step           Time         Lambda
+            236      236.00000        0.00000
+
+           Step           Time         Lambda
+            237      237.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.15506e-01    9.83921e+00    3.45666e+02    3.18475e+01    1.13569e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05893e+01   -4.51842e+02    1.03152e+03    0.00000e+00
+
+           Step           Time         Lambda
+            238      238.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.05604e+00    9.69217e+00    3.45674e+02    3.17988e+01    1.13571e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05925e+01   -4.51828e+02    1.03151e+03    0.00000e+00
+
+           Step           Time         Lambda
+            239      239.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.89044e-01    9.84521e+00    3.45653e+02    3.18499e+01    1.13567e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05938e+01   -4.51822e+02    1.03149e+03    0.00000e+00
+
+           Step           Time         Lambda
+            240      240.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.18472e+00    9.56277e+00    3.45671e+02    3.17540e+01    1.13571e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05991e+01   -4.51800e+02    1.03148e+03    0.00000e+00
+
+           Step           Time         Lambda
+            241      241.00000        0.00000
+
+           Step           Time         Lambda
+            242      242.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.35155e-01    9.77255e+00    3.45647e+02    3.18272e+01    1.13566e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.05986e+01   -4.51801e+02    1.03145e+03    0.00000e+00
+
+           Step           Time         Lambda
+            243      243.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.03176e+00    9.66860e+00    3.45650e+02    3.17927e+01    1.13568e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06016e+01   -4.51789e+02    1.03143e+03    0.00000e+00
+
+           Step           Time         Lambda
+            244      244.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.08754e-01    9.77722e+00    3.45632e+02    3.18293e+01    1.13565e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06032e+01   -4.51781e+02    1.03141e+03    0.00000e+00
+
+           Step           Time         Lambda
+            245      245.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.13691e+00    9.55374e+00    3.45645e+02    3.17536e+01    1.13568e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06083e+01   -4.51761e+02    1.03140e+03    0.00000e+00
+
+           Step           Time         Lambda
+            246      246.00000        0.00000
+
+           Step           Time         Lambda
+            247      247.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.94444e-01    9.76926e+00    3.45619e+02    3.18273e+01    1.13563e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06081e+01   -4.51760e+02    1.03137e+03    0.00000e+00
+
+           Step           Time         Lambda
+            248      248.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.08392e+00    9.57707e+00    3.45630e+02    3.17630e+01    1.13566e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06122e+01   -4.51745e+02    1.03136e+03    0.00000e+00
+
+           Step           Time         Lambda
+            249      249.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.33281e-01    9.81848e+00    3.45600e+02    3.18433e+01    1.13560e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06128e+01   -4.51740e+02    1.03135e+03    0.00000e+00
+
+           Step           Time         Lambda
+            250      250.00000        0.00000
+
+           Step           Time         Lambda
+            251      251.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.02256e+00    9.61056e+00    3.45615e+02    3.17756e+01    1.13564e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06159e+01   -4.51728e+02    1.03132e+03    0.00000e+00
+
+           Step           Time         Lambda
+            252      252.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.38972e-01    9.68157e+00    3.45603e+02    3.17998e+01    1.13562e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06172e+01   -4.51722e+02    1.03130e+03    0.00000e+00
+
+           Step           Time         Lambda
+            253      253.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.02283e+00    9.59007e+00    3.45604e+02    3.17694e+01    1.13563e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06205e+01   -4.51710e+02    1.03128e+03    0.00000e+00
+
+           Step           Time         Lambda
+            254      254.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.01928e-01    9.69699e+00    3.45586e+02    3.18054e+01    1.13560e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06224e+01   -4.51701e+02    1.03126e+03    0.00000e+00
+
+           Step           Time         Lambda
+            255      255.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.15578e+00    9.45324e+00    3.45600e+02    3.17222e+01    1.13563e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06281e+01   -4.51679e+02    1.03125e+03    0.00000e+00
+
+           Step           Time         Lambda
+            256      256.00000        0.00000
+
+           Step           Time         Lambda
+            257      257.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.90900e-01    9.68617e+00    3.45573e+02    3.18025e+01    1.13558e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06278e+01   -4.51680e+02    1.03122e+03    0.00000e+00
+
+           Step           Time         Lambda
+            258      258.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.09190e+00    9.48460e+00    3.45585e+02    3.17345e+01    1.13561e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06319e+01   -4.51663e+02    1.03121e+03    0.00000e+00
+
+           Step           Time         Lambda
+            259      259.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    7.98413e-01    9.77666e+00    3.45549e+02    3.18310e+01    1.13555e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06326e+01   -4.51660e+02    1.03121e+03    0.00000e+00
+
+           Step           Time         Lambda
+            260      260.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.25254e+00    9.34413e+00    3.45584e+02    3.16839e+01    1.13562e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06387e+01   -4.51636e+02    1.03121e+03    0.00000e+00
+
+           Step           Time         Lambda
+            261      261.00000        0.00000
+
+           Step           Time         Lambda
+            262      262.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.48025e-01    9.58497e+00    3.45556e+02    3.17703e+01    1.13557e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06378e+01   -4.51639e+02    1.03115e+03    0.00000e+00
+
+           Step           Time         Lambda
+            263      263.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00381e+00    9.52021e+00    3.45554e+02    3.17488e+01    1.13557e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06410e+01   -4.51627e+02    1.03113e+03    0.00000e+00
+
+           Step           Time         Lambda
+            264      264.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.12421e-01    9.59729e+00    3.45538e+02    3.17750e+01    1.13555e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06436e+01   -4.51617e+02    1.03111e+03    0.00000e+00
+
+           Step           Time         Lambda
+            265      265.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.12399e+00    9.39055e+00    3.45548e+02    3.17043e+01    1.13557e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06491e+01   -4.51595e+02    1.03110e+03    0.00000e+00
+
+           Step           Time         Lambda
+            266      266.00000        0.00000
+
+           Step           Time         Lambda
+            267      267.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.57391e-01    9.63515e+00    3.45519e+02    3.17877e+01    1.13552e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06493e+01   -4.51595e+02    1.03108e+03    0.00000e+00
+
+           Step           Time         Lambda
+            268      268.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.15730e+00    9.34608e+00    3.45539e+02    3.16891e+01    1.13557e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06544e+01   -4.51575e+02    1.03107e+03    0.00000e+00
+
+           Step           Time         Lambda
+            269      269.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    7.81692e-01    9.71209e+00    3.45498e+02    3.18117e+01    1.13549e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06541e+01   -4.51576e+02    1.03107e+03    0.00000e+00
+
+           Step           Time         Lambda
+            270      270.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.25591e+00    9.25843e+00    3.45534e+02    3.16573e+01    1.13557e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06603e+01   -4.51552e+02    1.03106e+03    0.00000e+00
+
+           Step           Time         Lambda
+            271      271.00000        0.00000
+
+           Step           Time         Lambda
+            272      272.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.36209e-01    9.51161e+00    3.45505e+02    3.17483e+01    1.13552e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06594e+01   -4.51556e+02    1.03100e+03    0.00000e+00
+
+           Step           Time         Lambda
+            273      273.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.01486e+00    9.42511e+00    3.45505e+02    3.17193e+01    1.13552e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06631e+01   -4.51542e+02    1.03098e+03    0.00000e+00
+
+           Step           Time         Lambda
+            274      274.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.74522e-01    9.55325e+00    3.45483e+02    3.17623e+01    1.13549e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06656e+01   -4.51532e+02    1.03096e+03    0.00000e+00
+
+           Step           Time         Lambda
+            275      275.00000        0.00000
+
+           Step           Time         Lambda
+            276      276.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.04681e+00    9.37584e+00    3.45494e+02    3.17030e+01    1.13552e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06692e+01   -4.51519e+02    1.03095e+03    0.00000e+00
+
+           Step           Time         Lambda
+            277      277.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.77302e-01    9.53224e+00    3.45473e+02    3.17558e+01    1.13548e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06704e+01   -4.51514e+02    1.03093e+03    0.00000e+00
+
+           Step           Time         Lambda
+            278      278.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.12396e+00    9.29308e+00    3.45487e+02    3.16742e+01    1.13552e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06755e+01   -4.51496e+02    1.03092e+03    0.00000e+00
+
+           Step           Time         Lambda
+            279      279.00000        0.00000
+
+           Step           Time         Lambda
+            280      280.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.08892e-01    9.47997e+00    3.45465e+02    3.17391e+01    1.13548e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06755e+01   -4.51495e+02    1.03090e+03    0.00000e+00
+
+           Step           Time         Lambda
+            281      281.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.01361e+00    9.36965e+00    3.45469e+02    3.17022e+01    1.13549e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06786e+01   -4.51484e+02    1.03088e+03    0.00000e+00
+
+           Step           Time         Lambda
+            282      282.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.03404e-01    9.46809e+00    3.45453e+02    3.17355e+01    1.13546e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06805e+01   -4.51477e+02    1.03087e+03    0.00000e+00
+
+           Step           Time         Lambda
+            283      283.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.07166e+00    9.29918e+00    3.45460e+02    3.16783e+01    1.13549e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06851e+01   -4.51460e+02    1.03085e+03    0.00000e+00
+
+           Step           Time         Lambda
+            284      284.00000        0.00000
+
+           Step           Time         Lambda
+            285      285.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.00146e-01    9.45310e+00    3.45440e+02    3.17310e+01    1.13545e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06857e+01   -4.51458e+02    1.03083e+03    0.00000e+00
+
+           Step           Time         Lambda
+            286      286.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.02253e+00    9.32570e+00    3.45446e+02    3.16882e+01    1.13547e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06891e+01   -4.51445e+02    1.03082e+03    0.00000e+00
+
+           Step           Time         Lambda
+            287      287.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.85731e-01    9.45086e+00    3.45427e+02    3.17305e+01    1.13544e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06909e+01   -4.51439e+02    1.03080e+03    0.00000e+00
+
+           Step           Time         Lambda
+            288      288.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.11038e+00    9.23249e+00    3.45439e+02    3.16556e+01    1.13547e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06960e+01   -4.51420e+02    1.03079e+03    0.00000e+00
+
+           Step           Time         Lambda
+            289      289.00000        0.00000
+
+           Step           Time         Lambda
+            290      290.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.85392e-01    9.43280e+00    3.45415e+02    3.17249e+01    1.13543e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06963e+01   -4.51420e+02    1.03077e+03    0.00000e+00
+
+           Step           Time         Lambda
+            291      291.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.03979e+00    9.27504e+00    3.45424e+02    3.16716e+01    1.13545e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.06999e+01   -4.51406e+02    1.03075e+03    0.00000e+00
+
+           Step           Time         Lambda
+            292      292.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.57978e-01    9.44583e+00    3.45400e+02    3.17293e+01    1.13541e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07015e+01   -4.51401e+02    1.03074e+03    0.00000e+00
+
+           Step           Time         Lambda
+            293      293.00000        0.00000
+
+           Step           Time         Lambda
+            294      294.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00576e+00    9.28904e+00    3.45410e+02    3.16771e+01    1.13543e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07045e+01   -4.51390e+02    1.03072e+03    0.00000e+00
+
+           Step           Time         Lambda
+            295      295.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.25322e-01    9.35906e+00    3.45398e+02    3.17012e+01    1.13542e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07060e+01   -4.51385e+02    1.03071e+03    0.00000e+00
+
+           Step           Time         Lambda
+            296      296.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.93542e-01    9.28488e+00    3.45398e+02    3.16761e+01    1.13542e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07092e+01   -4.51374e+02    1.03069e+03    0.00000e+00
+
+           Step           Time         Lambda
+            297      297.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.06889e-01    9.35997e+00    3.45383e+02    3.17017e+01    1.13540e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07116e+01   -4.51366e+02    1.03067e+03    0.00000e+00
+
+           Step           Time         Lambda
+            298      298.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.05553e+00    9.20458e+00    3.45390e+02    3.16490e+01    1.13542e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07099e+01   -4.51346e+02    1.03066e+03    0.00000e+00
+
+           Step           Time         Lambda
+            299      299.00000        0.00000
+
+           Step           Time         Lambda
+            300      300.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.80844e-01    9.36839e+00    3.45368e+02    3.17048e+01    1.13538e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07113e+01   -4.51346e+02    1.03064e+03    0.00000e+00
+
+           Step           Time         Lambda
+            301      301.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.04310e+00    9.20087e+00    3.45377e+02    3.16481e+01    1.13540e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07123e+01   -4.51331e+02    1.03063e+03    0.00000e+00
+
+           Step           Time         Lambda
+            302      302.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.30047e-01    9.40807e+00    3.45349e+02    3.17178e+01    1.13535e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07130e+01   -4.51328e+02    1.03062e+03    0.00000e+00
+
+           Step           Time         Lambda
+            303      303.00000        0.00000
+
+           Step           Time         Lambda
+            304      304.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.01893e+00    9.20548e+00    3.45363e+02    3.16502e+01    1.13538e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07147e+01   -4.51314e+02    1.03059e+03    0.00000e+00
+
+           Step           Time         Lambda
+            305      305.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.00472e-01    9.31203e+00    3.45347e+02    3.16868e+01    1.13536e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07153e+01   -4.51310e+02    1.03058e+03    0.00000e+00
+
+           Step           Time         Lambda
+            306      306.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.01841e+00    9.18968e+00    3.45352e+02    3.16452e+01    1.13537e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07176e+01   -4.51297e+02    1.03056e+03    0.00000e+00
+
+           Step           Time         Lambda
+            307      307.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.53235e-01    9.34480e+00    3.45329e+02    3.16977e+01    1.13533e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07184e+01   -4.51291e+02    1.03055e+03    0.00000e+00
+
+           Step           Time         Lambda
+            308      308.00000        0.00000
+
+           Step           Time         Lambda
+            309      309.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.01368e+00    9.17668e+00    3.45340e+02    3.16412e+01    1.13536e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07208e+01   -4.51279e+02    1.03053e+03    0.00000e+00
+
+           Step           Time         Lambda
+            310      310.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.98953e-01    9.27981e+00    3.45324e+02    3.16764e+01    1.13533e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07216e+01   -4.51275e+02    1.03052e+03    0.00000e+00
+
+           Step           Time         Lambda
+            311      311.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.02138e+00    9.15332e+00    3.45329e+02    3.16334e+01    1.13535e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07244e+01   -4.51261e+02    1.03050e+03    0.00000e+00
+
+           Step           Time         Lambda
+            312      312.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.40770e-01    9.32566e+00    3.45303e+02    3.16912e+01    1.13531e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07254e+01   -4.51255e+02    1.03049e+03    0.00000e+00
+
+           Step           Time         Lambda
+            313      313.00000        0.00000
+
+           Step           Time         Lambda
+            314      314.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.02667e+00    9.13187e+00    3.45317e+02    3.16260e+01    1.13534e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07284e+01   -4.51243e+02    1.03047e+03    0.00000e+00
+
+           Step           Time         Lambda
+            315      315.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.82083e-01    9.26407e+00    3.45298e+02    3.16711e+01    1.13531e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07291e+01   -4.51239e+02    1.03045e+03    0.00000e+00
+
+           Step           Time         Lambda
+            316      316.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.04839e+00    9.09703e+00    3.45306e+02    3.16140e+01    1.13533e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07326e+01   -4.51224e+02    1.03044e+03    0.00000e+00
+
+           Step           Time         Lambda
+            317      317.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    7.95531e-01    9.34850e+00    3.45274e+02    3.16977e+01    1.13527e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07332e+01   -4.51220e+02    1.03044e+03    0.00000e+00
+
+           Step           Time         Lambda
+            318      318.00000        0.00000
+
+           Step           Time         Lambda
+            319      319.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00659e+00    9.11700e+00    3.45291e+02    3.16212e+01    1.13531e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07364e+01   -4.51208e+02    1.03040e+03    0.00000e+00
+
+           Step           Time         Lambda
+            320      320.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.92547e-01    9.21987e+00    3.45274e+02    3.16563e+01    1.13529e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07374e+01   -4.51203e+02    1.03039e+03    0.00000e+00
+
+           Step           Time         Lambda
+            321      321.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.03180e+00    9.07863e+00    3.45280e+02    3.16077e+01    1.13531e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07410e+01   -4.51189e+02    1.03037e+03    0.00000e+00
+
+           Step           Time         Lambda
+            322      322.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.08535e-01    9.29827e+00    3.45250e+02    3.16811e+01    1.13526e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07420e+01   -4.51184e+02    1.03037e+03    0.00000e+00
+
+           Step           Time         Lambda
+            323      323.00000        0.00000
+
+           Step           Time         Lambda
+            324      324.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.03189e+00    9.06202e+00    3.45268e+02    3.16019e+01    1.13529e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07455e+01   -4.51171e+02    1.03034e+03    0.00000e+00
+
+           Step           Time         Lambda
+            325      325.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.63214e-01    9.21855e+00    3.45246e+02    3.16553e+01    1.13526e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07463e+01   -4.51167e+02    1.03033e+03    0.00000e+00
+
+           Step           Time         Lambda
+            326      326.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.08495e+00    9.00272e+00    3.45259e+02    3.15806e+01    1.13529e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07508e+01   -4.51151e+02    1.03032e+03    0.00000e+00
+
+           Step           Time         Lambda
+            327      327.00000        0.00000
+
+           Step           Time         Lambda
+            328      328.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.85025e-01    9.17986e+00    3.45237e+02    3.16423e+01    1.13525e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07508e+01   -4.51150e+02    1.03030e+03    0.00000e+00
+
+           Step           Time         Lambda
+            329      329.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.95185e-01    9.06527e+00    3.45242e+02    3.16032e+01    1.13527e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07536e+01   -4.51140e+02    1.03028e+03    0.00000e+00
+
+           Step           Time         Lambda
+            330      330.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.91492e-01    9.15880e+00    3.45226e+02    3.16350e+01    1.13524e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07551e+01   -4.51134e+02    1.03027e+03    0.00000e+00
+
+           Step           Time         Lambda
+            331      331.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.03377e+00    9.01510e+00    3.45232e+02    3.15855e+01    1.13526e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07590e+01   -4.51120e+02    1.03025e+03    0.00000e+00
+
+           Step           Time         Lambda
+            332      332.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    7.87098e-01    9.26358e+00    3.45199e+02    3.16680e+01    1.13521e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07603e+01   -4.51115e+02    1.03025e+03    0.00000e+00
+
+           Step           Time         Lambda
+            333      333.00000        0.00000
+
+           Step           Time         Lambda
+            334      334.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.02208e+00    9.00929e+00    3.45218e+02    3.15834e+01    1.13525e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07640e+01   -4.51102e+02    1.03022e+03    0.00000e+00
+
+           Step           Time         Lambda
+            335      335.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.58215e-01    9.16222e+00    3.45197e+02    3.16354e+01    1.13521e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07650e+01   -4.51098e+02    1.03020e+03    0.00000e+00
+
+           Step           Time         Lambda
+            336      336.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.09993e+00    8.93039e+00    3.45211e+02    3.15545e+01    1.13525e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07700e+01   -4.51081e+02    1.03020e+03    0.00000e+00
+
+           Step           Time         Lambda
+            337      337.00000        0.00000
+
+           Step           Time         Lambda
+            338      338.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.75093e-01    9.12901e+00    3.45187e+02    3.16239e+01    1.13521e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07698e+01   -4.51081e+02    1.03017e+03    0.00000e+00
+
+           Step           Time         Lambda
+            339      339.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00556e+00    8.99523e+00    3.45194e+02    3.15780e+01    1.13523e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07731e+01   -4.51070e+02    1.03016e+03    0.00000e+00
+
+           Step           Time         Lambda
+            340      340.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.68400e-01    9.12229e+00    3.45174e+02    3.16212e+01    1.13520e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07746e+01   -4.51065e+02    1.03014e+03    0.00000e+00
+
+           Step           Time         Lambda
+            341      341.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.08067e+00    8.91675e+00    3.45186e+02    3.15494e+01    1.13523e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07793e+01   -4.51048e+02    1.03013e+03    0.00000e+00
+
+           Step           Time         Lambda
+            342      342.00000        0.00000
+
+           Step           Time         Lambda
+            343      343.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.65187e-01    9.11111e+00    3.45162e+02    3.16170e+01    1.13519e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07796e+01   -4.51049e+02    1.03011e+03    0.00000e+00
+
+           Step           Time         Lambda
+            344      344.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.01722e+00    8.95665e+00    3.45170e+02    3.15638e+01    1.13521e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07830e+01   -4.51037e+02    1.03010e+03    0.00000e+00
+
+           Step           Time         Lambda
+            345      345.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.49494e-01    9.11474e+00    3.45148e+02    3.16175e+01    1.13517e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07844e+01   -4.51033e+02    1.03009e+03    0.00000e+00
+
+           Step           Time         Lambda
+            346      346.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.12612e+00    8.85423e+00    3.45165e+02    3.15260e+01    1.13522e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07898e+01   -4.51014e+02    1.03008e+03    0.00000e+00
+
+           Step           Time         Lambda
+            347      347.00000        0.00000
+
+           Step           Time         Lambda
+            348      348.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.78282e-01    9.06849e+00    3.45139e+02    3.16017e+01    1.13517e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07895e+01   -4.51016e+02    1.03005e+03    0.00000e+00
+
+           Step           Time         Lambda
+            349      349.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00349e+00    8.94060e+00    3.45145e+02    3.15575e+01    1.13519e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07929e+01   -4.51004e+02    1.03004e+03    0.00000e+00
+
+           Step           Time         Lambda
+            350      350.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.57761e-01    9.07698e+00    3.45124e+02    3.16038e+01    1.13515e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07945e+01   -4.51000e+02    1.03002e+03    0.00000e+00
+
+           Step           Time         Lambda
+            351      351.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.10909e+00    8.83904e+00    3.45139e+02    3.15200e+01    1.13519e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07998e+01   -4.50982e+02    1.03002e+03    0.00000e+00
+
+           Step           Time         Lambda
+            352      352.00000        0.00000
+
+           Step           Time         Lambda
+            353      353.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.59221e-01    9.06114e+00    3.45112e+02    3.15979e+01    1.13514e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.07997e+01   -4.50984e+02    1.02999e+03    0.00000e+00
+
+           Step           Time         Lambda
+            354      354.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.02732e+00    8.89196e+00    3.45122e+02    3.15394e+01    1.13517e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08035e+01   -4.50971e+02    1.02998e+03    0.00000e+00
+
+           Step           Time         Lambda
+            355      355.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.23904e-01    9.08793e+00    3.45095e+02    3.16059e+01    1.13513e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08048e+01   -4.50968e+02    1.02997e+03    0.00000e+00
+
+           Step           Time         Lambda
+            356      356.00000        0.00000
+
+           Step           Time         Lambda
+            357      357.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.94039e-01    8.90809e+00    3.45108e+02    3.15448e+01    1.13516e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08079e+01   -4.50957e+02    1.02995e+03    0.00000e+00
+
+           Step           Time         Lambda
+            358      358.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.96343e-01    8.99597e+00    3.45094e+02    3.15751e+01    1.13513e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08092e+01   -4.50954e+02    1.02993e+03    0.00000e+00
+
+           Step           Time         Lambda
+            359      359.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.82275e-01    8.90658e+00    3.45096e+02    3.15439e+01    1.13515e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08124e+01   -4.50943e+02    1.02992e+03    0.00000e+00
+
+           Step           Time         Lambda
+            360      360.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.71614e-01    9.00797e+00    3.45078e+02    3.15783e+01    1.13512e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08145e+01   -4.50938e+02    1.02990e+03    0.00000e+00
+
+           Step           Time         Lambda
+            361      361.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.07919e+00    8.80939e+00    3.45088e+02    3.15082e+01    1.13515e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08199e+01   -4.50921e+02    1.02989e+03    0.00000e+00
+
+           Step           Time         Lambda
+            362      362.00000        0.00000
+
+           Step           Time         Lambda
+            363      363.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.37065e-01    9.03217e+00    3.45061e+02    3.15853e+01    1.13510e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08200e+01   -4.50921e+02    1.02988e+03    0.00000e+00
+
+           Step           Time         Lambda
+            364      364.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.06230e+00    8.81040e+00    3.45076e+02    3.15083e+01    1.13514e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08246e+01   -4.50907e+02    1.02986e+03    0.00000e+00
+
+           Step           Time         Lambda
+            365      365.00000        0.00000
+
+           Step           Time         Lambda
+            366      366.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.01758e-01    8.95049e+00    3.45058e+02    3.15576e+01    1.13511e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08248e+01   -4.50907e+02    1.02984e+03    0.00000e+00
+
+           Step           Time         Lambda
+            367      367.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.52229e-01    8.89624e+00    3.45058e+02    3.15387e+01    1.13511e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08271e+01   -4.50900e+02    1.02983e+03    0.00000e+00
+
+           Step           Time         Lambda
+            368      368.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.19469e-01    8.92253e+00    3.45050e+02    3.15475e+01    1.13510e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08291e+01   -4.50895e+02    1.02982e+03    0.00000e+00
+
+           Step           Time         Lambda
+            369      369.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.51428e-01    8.88473e+00    3.45047e+02    3.15342e+01    1.13510e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08320e+01   -4.50886e+02    1.02980e+03    0.00000e+00
+
+           Step           Time         Lambda
+            370      370.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.05198e-01    8.92263e+00    3.45035e+02    3.15466e+01    1.13509e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08350e+01   -4.50878e+02    1.02978e+03    0.00000e+00
+
+           Step           Time         Lambda
+            371      371.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.96803e-01    8.82638e+00    3.45034e+02    3.15127e+01    1.13510e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08394e+01   -4.50864e+02    1.02977e+03    0.00000e+00
+
+           Step           Time         Lambda
+            372      372.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    7.80329e-01    9.04908e+00    3.45001e+02    3.15863e+01    1.13505e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08425e+01   -4.50859e+02    1.02976e+03    0.00000e+00
+
+           Step           Time         Lambda
+            373      373.00000        0.00000
+
+           Step           Time         Lambda
+            374      374.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.10960e+00    8.71987e+00    3.45028e+02    3.14728e+01    1.13510e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08472e+01   -4.50841e+02    1.02975e+03    0.00000e+00
+
+           Step           Time         Lambda
+            375      375.00000        0.00000
+
+           Step           Time         Lambda
+            376      376.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.96132e-01    8.90177e+00    3.45005e+02    3.15377e+01    1.13506e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08472e+01   -4.50844e+02    1.02971e+03    0.00000e+00
+
+           Step           Time         Lambda
+            377      377.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.54280e-01    8.84026e+00    3.45006e+02    3.15161e+01    1.13507e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08496e+01   -4.50837e+02    1.02970e+03    0.00000e+00
+
+           Step           Time         Lambda
+            378      378.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.10908e-01    8.87627e+00    3.44997e+02    3.15283e+01    1.13506e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08516e+01   -4.50831e+02    1.02969e+03    0.00000e+00
+
+           Step           Time         Lambda
+            379      379.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.58537e-01    8.82431e+00    3.44994e+02    3.15097e+01    1.13506e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08549e+01   -4.50822e+02    1.02967e+03    0.00000e+00
+
+           Step           Time         Lambda
+            380      380.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.85006e-01    8.88846e+00    3.44980e+02    3.15314e+01    1.13504e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08576e+01   -4.50816e+02    1.02965e+03    0.00000e+00
+
+           Step           Time         Lambda
+            381      381.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.04492e+00    8.73305e+00    3.44985e+02    3.14756e+01    1.13506e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08628e+01   -4.50800e+02    1.02964e+03    0.00000e+00
+
+           Step           Time         Lambda
+            382      382.00000        0.00000
+
+           Step           Time         Lambda
+            383      383.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.32909e-01    8.93190e+00    3.44959e+02    3.15445e+01    1.13502e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08637e+01   -4.50801e+02    1.02963e+03    0.00000e+00
+
+           Step           Time         Lambda
+            384      384.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.08165e+00    8.69228e+00    3.44975e+02    3.14598e+01    1.13506e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08684e+01   -4.50785e+02    1.02962e+03    0.00000e+00
+
+           Step           Time         Lambda
+            385      385.00000        0.00000
+
+           Step           Time         Lambda
+            386      386.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.74294e-01    8.87493e+00    3.44953e+02    3.15244e+01    1.13502e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08687e+01   -4.50787e+02    1.02959e+03    0.00000e+00
+
+           Step           Time         Lambda
+            387      387.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.69497e-01    8.77666e+00    3.44957e+02    3.14901e+01    1.13504e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08716e+01   -4.50779e+02    1.02958e+03    0.00000e+00
+
+           Step           Time         Lambda
+            388      388.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.90185e-01    8.84795e+00    3.44944e+02    3.15144e+01    1.13502e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08734e+01   -4.50775e+02    1.02956e+03    0.00000e+00
+
+           Step           Time         Lambda
+            389      389.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.86965e-01    8.74884e+00    3.44946e+02    3.14793e+01    1.13503e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08771e+01   -4.50764e+02    1.02955e+03    0.00000e+00
+
+           Step           Time         Lambda
+            390      390.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.29478e-01    8.90117e+00    3.44923e+02    3.15307e+01    1.13499e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08795e+01   -4.50761e+02    1.02954e+03    0.00000e+00
+
+           Step           Time         Lambda
+            391      391.00000        0.00000
+
+           Step           Time         Lambda
+            392      392.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00830e+00    8.71814e+00    3.44935e+02    3.14673e+01    1.13502e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08829e+01   -4.50750e+02    1.02952e+03    0.00000e+00
+
+           Step           Time         Lambda
+            393      393.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.50675e-01    8.86622e+00    3.44914e+02    3.15181e+01    1.13499e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08843e+01   -4.50749e+02    1.02950e+03    0.00000e+00
+
+           Step           Time         Lambda
+            394      394.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.05580e+00    8.66739e+00    3.44926e+02    3.14477e+01    1.13502e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08888e+01   -4.50735e+02    1.02949e+03    0.00000e+00
+
+           Step           Time         Lambda
+            395      395.00000        0.00000
+
+           Step           Time         Lambda
+            396      396.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.72475e-01    8.83157e+00    3.44905e+02    3.15054e+01    1.13498e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08893e+01   -4.50736e+02    1.02947e+03    0.00000e+00
+
+           Step           Time         Lambda
+            397      397.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.72256e-01    8.72911e+00    3.44910e+02    3.14694e+01    1.13500e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08922e+01   -4.50728e+02    1.02946e+03    0.00000e+00
+
+           Step           Time         Lambda
+            398      398.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.79911e-01    8.81357e+00    3.44895e+02    3.14982e+01    1.13498e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08941e+01   -4.50725e+02    1.02945e+03    0.00000e+00
+
+           Step           Time         Lambda
+            399      399.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00481e+00    8.68860e+00    3.44899e+02    3.14538e+01    1.13500e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.08981e+01   -4.50714e+02    1.02943e+03    0.00000e+00
+
+           Step           Time         Lambda
+            400      400.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    7.90112e-01    8.90455e+00    3.44869e+02    3.15263e+01    1.13495e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09000e+01   -4.50712e+02    1.02942e+03    0.00000e+00
+
+           Step           Time         Lambda
+            401      401.00000        0.00000
+
+           Step           Time         Lambda
+            402      402.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.05675e+00    8.63403e+00    3.44890e+02    3.14325e+01    1.13499e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09043e+01   -4.50699e+02    1.02940e+03    0.00000e+00
+
+           Step           Time         Lambda
+            403      403.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    7.97703e-01    8.88438e+00    3.44859e+02    3.15184e+01    1.13494e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09048e+01   -4.50701e+02    1.02939e+03    0.00000e+00
+
+           Step           Time         Lambda
+            404      404.00000        0.00000
+
+           Step           Time         Lambda
+            405      405.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.67870e-01    8.69981e+00    3.44873e+02    3.14556e+01    1.13497e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09078e+01   -4.50692e+02    1.02937e+03    0.00000e+00
+
+           Step           Time         Lambda
+            406      406.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.03721e-01    8.75703e+00    3.44862e+02    3.14752e+01    1.13496e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09091e+01   -4.50690e+02    1.02936e+03    0.00000e+00
+
+           Step           Time         Lambda
+            407      407.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.44941e-01    8.71244e+00    3.44861e+02    3.14591e+01    1.13496e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09117e+01   -4.50684e+02    1.02934e+03    0.00000e+00
+
+           Step           Time         Lambda
+            408      408.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.02544e-01    8.74801e+00    3.44851e+02    3.14708e+01    1.13495e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09139e+01   -4.50679e+02    1.02933e+03    0.00000e+00
+
+           Step           Time         Lambda
+            409      409.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.64292e-01    8.68255e+00    3.44849e+02    3.14471e+01    1.13495e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09176e+01   -4.50671e+02    1.02931e+03    0.00000e+00
+
+           Step           Time         Lambda
+            410      410.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.46299e-01    8.79357e+00    3.44829e+02    3.14844e+01    1.13492e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09203e+01   -4.50666e+02    1.02929e+03    0.00000e+00
+
+           Step           Time         Lambda
+            411      411.00000        0.00000
+
+           Step           Time         Lambda
+            412      412.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00192e+00    8.63713e+00    3.44838e+02    3.14293e+01    1.13495e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09238e+01   -4.50657e+02    1.02927e+03    0.00000e+00
+
+           Step           Time         Lambda
+            413      413.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.36666e-01    8.79435e+00    3.44816e+02    3.14832e+01    1.13491e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09251e+01   -4.50656e+02    1.02926e+03    0.00000e+00
+
+           Step           Time         Lambda
+            414      414.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.09892e+00    8.54902e+00    3.44832e+02    3.13948e+01    1.13495e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09304e+01   -4.50642e+02    1.02926e+03    0.00000e+00
+
+           Step           Time         Lambda
+            415      415.00000        0.00000
+
+           Step           Time         Lambda
+            416      416.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.32211e-01    8.78921e+00    3.44803e+02    3.14799e+01    1.13490e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09301e+01   -4.50646e+02    1.02923e+03    0.00000e+00
+
+           Step           Time         Lambda
+            417      417.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.02039e+00    8.60125e+00    3.44816e+02    3.14136e+01    1.13493e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09338e+01   -4.50636e+02    1.02922e+03    0.00000e+00
+
+           Step           Time         Lambda
+            418      418.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.12886e-01    8.80236e+00    3.44789e+02    3.14825e+01    1.13489e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09348e+01   -4.50638e+02    1.02920e+03    0.00000e+00
+
+           Step           Time         Lambda
+            419      419.00000        0.00000
+
+           Step           Time         Lambda
+            420      420.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.70718e-01    8.63499e+00    3.44801e+02    3.14248e+01    1.13492e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09378e+01   -4.50629e+02    1.02918e+03    0.00000e+00
+
+           Step           Time         Lambda
+            421      421.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.93728e-01    8.70444e+00    3.44789e+02    3.14486e+01    1.13490e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09390e+01   -4.50628e+02    1.02917e+03    0.00000e+00
+
+           Step           Time         Lambda
+            422      422.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.53646e-01    8.64219e+00    3.44789e+02    3.14261e+01    1.13491e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09419e+01   -4.50622e+02    1.02915e+03    0.00000e+00
+
+           Step           Time         Lambda
+            423      423.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.83308e-01    8.70510e+00    3.44776e+02    3.14472e+01    1.13489e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09439e+01   -4.50619e+02    1.02914e+03    0.00000e+00
+
+           Step           Time         Lambda
+            424      424.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00113e+00    8.58843e+00    3.44779e+02    3.14048e+01    1.13491e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09482e+01   -4.50610e+02    1.02912e+03    0.00000e+00
+
+           Step           Time         Lambda
+            425      425.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    7.64850e-01    8.83245e+00    3.44746e+02    3.14867e+01    1.13485e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09498e+01   -4.50611e+02    1.02912e+03    0.00000e+00
+
+           Step           Time         Lambda
+            426      426.00000        0.00000
+
+           Step           Time         Lambda
+            427      427.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.09854e+00    8.50006e+00    3.44773e+02    3.13699e+01    1.13491e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09549e+01   -4.50597e+02    1.02910e+03    0.00000e+00
+
+           Step           Time         Lambda
+            428      428.00000        0.00000
+
+           Step           Time         Lambda
+            429      429.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.89611e-01    8.67731e+00    3.44751e+02    3.14340e+01    1.13487e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09545e+01   -4.50601e+02    1.02907e+03    0.00000e+00
+
+           Step           Time         Lambda
+            430      430.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.37453e-01    8.62702e+00    3.44752e+02    3.14160e+01    1.13488e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09566e+01   -4.50597e+02    1.02906e+03    0.00000e+00
+
+           Step           Time         Lambda
+            431      431.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.11179e-01    8.64835e+00    3.44745e+02    3.14227e+01    1.13487e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09583e+01   -4.50594e+02    1.02904e+03    0.00000e+00
+
+           Step           Time         Lambda
+            432      432.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.33930e-01    8.62176e+00    3.44741e+02    3.14128e+01    1.13487e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09609e+01   -4.50590e+02    1.02903e+03    0.00000e+00
+
+           Step           Time         Lambda
+            433      433.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.04602e-01    8.64481e+00    3.44731e+02    3.14197e+01    1.13486e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09632e+01   -4.50586e+02    1.02901e+03    0.00000e+00
+
+           Step           Time         Lambda
+            434      434.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.56641e-01    8.58873e+00    3.44728e+02    3.13989e+01    1.13486e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09671e+01   -4.50580e+02    1.02899e+03    0.00000e+00
+
+           Step           Time         Lambda
+            435      435.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.39689e-01    8.70004e+00    3.44707e+02    3.14356e+01    1.13483e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09697e+01   -4.50578e+02    1.02897e+03    0.00000e+00
+
+           Step           Time         Lambda
+            436      436.00000        0.00000
+
+           Step           Time         Lambda
+            437      437.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.02353e+00    8.51905e+00    3.44719e+02    3.13713e+01    1.13486e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09737e+01   -4.50570e+02    1.02895e+03    0.00000e+00
+
+           Step           Time         Lambda
+            438      438.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    7.88687e-01    8.75224e+00    3.44689e+02    3.14507e+01    1.13481e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09743e+01   -4.50573e+02    1.02894e+03    0.00000e+00
+
+           Step           Time         Lambda
+            439      439.00000        0.00000
+
+           Step           Time         Lambda
+            440      440.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.98765e-01    8.53084e+00    3.44705e+02    3.13740e+01    1.13485e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09777e+01   -4.50564e+02    1.02892e+03    0.00000e+00
+
+           Step           Time         Lambda
+            441      441.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.63775e-01    8.65616e+00    3.44688e+02    3.14174e+01    1.13482e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09786e+01   -4.50566e+02    1.02890e+03    0.00000e+00
+
+           Step           Time         Lambda
+            442      442.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.93183e-01    8.52734e+00    3.44694e+02    3.13710e+01    1.13484e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09818e+01   -4.50559e+02    1.02889e+03    0.00000e+00
+
+           Step           Time         Lambda
+            443      443.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.19434e-01    8.69695e+00    3.44670e+02    3.14288e+01    1.13480e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09831e+01   -4.50562e+02    1.02887e+03    0.00000e+00
+
+           Step           Time         Lambda
+            444      444.00000        0.00000
+
+           Step           Time         Lambda
+            445      445.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.82116e-01    8.52824e+00    3.44682e+02    3.13696e+01    1.13483e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09860e+01   -4.50555e+02    1.02885e+03    0.00000e+00
+
+           Step           Time         Lambda
+            446      446.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.72470e-01    8.62983e+00    3.44667e+02    3.14046e+01    1.13481e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09871e+01   -4.50556e+02    1.02884e+03    0.00000e+00
+
+           Step           Time         Lambda
+            447      447.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.83216e-01    8.51898e+00    3.44671e+02    3.13645e+01    1.13482e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09902e+01   -4.50550e+02    1.02882e+03    0.00000e+00
+
+           Step           Time         Lambda
+            448      448.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.28107e-01    8.66959e+00    3.44649e+02    3.14157e+01    1.13479e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09916e+01   -4.50553e+02    1.02881e+03    0.00000e+00
+
+           Step           Time         Lambda
+            449      449.00000        0.00000
+
+           Step           Time         Lambda
+            450      450.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.79486e-01    8.51382e+00    3.44660e+02    3.13608e+01    1.13481e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09945e+01   -4.50547e+02    1.02879e+03    0.00000e+00
+
+           Step           Time         Lambda
+            451      451.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.71642e-01    8.61372e+00    3.44645e+02    3.13951e+01    1.13479e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09955e+01   -4.50548e+02    1.02877e+03    0.00000e+00
+
+           Step           Time         Lambda
+            452      452.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.86602e-01    8.49957e+00    3.44649e+02    3.13535e+01    1.13481e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09987e+01   -4.50543e+02    1.02875e+03    0.00000e+00
+
+           Step           Time         Lambda
+            453      453.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.20137e-01    8.66188e+00    3.44626e+02    3.14088e+01    1.13477e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.09998e+01   -4.50546e+02    1.02874e+03    0.00000e+00
+
+           Step           Time         Lambda
+            454      454.00000        0.00000
+
+           Step           Time         Lambda
+            455      455.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.88834e-01    8.48901e+00    3.44638e+02    3.13476e+01    1.13480e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10029e+01   -4.50540e+02    1.02872e+03    0.00000e+00
+
+           Step           Time         Lambda
+            456      456.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.61875e-01    8.60768e+00    3.44621e+02    3.13886e+01    1.13477e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10037e+01   -4.50543e+02    1.02870e+03    0.00000e+00
+
+           Step           Time         Lambda
+            457      457.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00385e+00    8.46806e+00    3.44628e+02    3.13378e+01    1.13479e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10071e+01   -4.50537e+02    1.02869e+03    0.00000e+00
+
+           Step           Time         Lambda
+            458      458.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    7.93303e-01    8.67869e+00    3.44600e+02    3.14095e+01    1.13475e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10079e+01   -4.50542e+02    1.02868e+03    0.00000e+00
+
+           Step           Time         Lambda
+            459      459.00000        0.00000
+
+           Step           Time         Lambda
+            460      460.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.01588e+00    8.44987e+00    3.44618e+02    3.13288e+01    1.13479e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10114e+01   -4.50535e+02    1.02865e+03    0.00000e+00
+
+           Step           Time         Lambda
+            461      461.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.37732e-01    8.61801e+00    3.44596e+02    3.13873e+01    1.13475e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10117e+01   -4.50540e+02    1.02864e+03    0.00000e+00
+
+           Step           Time         Lambda
+            462      462.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.04792e+00    8.41607e+00    3.44609e+02    3.13139e+01    1.13478e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10156e+01   -4.50533e+02    1.02862e+03    0.00000e+00
+
+           Step           Time         Lambda
+            463      463.00000        0.00000
+
+           Step           Time         Lambda
+            464      464.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.73358e-01    8.57166e+00    3.44590e+02    3.13694e+01    1.13475e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10156e+01   -4.50538e+02    1.02860e+03    0.00000e+00
+
+           Step           Time         Lambda
+            465      465.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.54272e-01    8.48906e+00    3.44593e+02    3.13394e+01    1.13476e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10177e+01   -4.50535e+02    1.02859e+03    0.00000e+00
+
+           Step           Time         Lambda
+            466      466.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.87152e-01    8.55021e+00    3.44581e+02    3.13599e+01    1.13475e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10188e+01   -4.50537e+02    1.02857e+03    0.00000e+00
+
+           Step           Time         Lambda
+            467      467.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.69449e-01    8.46728e+00    3.44583e+02    3.13290e+01    1.13476e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10216e+01   -4.50534e+02    1.02855e+03    0.00000e+00
+
+           Step           Time         Lambda
+            468      468.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.35654e-01    8.59665e+00    3.44562e+02    3.13726e+01    1.13472e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10230e+01   -4.50539e+02    1.02853e+03    0.00000e+00
+
+           Step           Time         Lambda
+            469      469.00000        0.00000
+
+           Step           Time         Lambda
+            470      470.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.87929e-01    8.44311e+00    3.44573e+02    3.13174e+01    1.13475e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10258e+01   -4.50534e+02    1.02851e+03    0.00000e+00
+
+           Step           Time         Lambda
+            471      471.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.54943e-01    8.56831e+00    3.44555e+02    3.13606e+01    1.13472e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10263e+01   -4.50539e+02    1.02849e+03    0.00000e+00
+
+           Step           Time         Lambda
+            472      472.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.02718e+00    8.40252e+00    3.44565e+02    3.12996e+01    1.13475e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10299e+01   -4.50535e+02    1.02848e+03    0.00000e+00
+
+           Step           Time         Lambda
+            473      473.00000        0.00000
+
+           Step           Time         Lambda
+            474      474.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.74732e-01    8.54009e+00    3.44547e+02    3.13484e+01    1.13472e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10298e+01   -4.50540e+02    1.02846e+03    0.00000e+00
+
+           Step           Time         Lambda
+            475      475.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.57196e-01    8.45655e+00    3.44550e+02    3.13177e+01    1.13473e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10320e+01   -4.50538e+02    1.02844e+03    0.00000e+00
+
+           Step           Time         Lambda
+            476      476.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.81932e-01    8.52588e+00    3.44538e+02    3.13410e+01    1.13471e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10330e+01   -4.50542e+02    1.02842e+03    0.00000e+00
+
+           Step           Time         Lambda
+            477      477.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.83434e-01    8.42544e+00    3.44541e+02    3.13035e+01    1.13473e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10359e+01   -4.50540e+02    1.02840e+03    0.00000e+00
+
+           Step           Time         Lambda
+            478      478.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.09057e-01    8.59903e+00    3.44516e+02    3.13622e+01    1.13469e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10366e+01   -4.50548e+02    1.02839e+03    0.00000e+00
+
+           Step           Time         Lambda
+            479      479.00000        0.00000
+
+           Step           Time         Lambda
+            480      480.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.02346e+00    8.38380e+00    3.44533e+02    3.12850e+01    1.13472e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10400e+01   -4.50543e+02    1.02837e+03    0.00000e+00
+
+           Step           Time         Lambda
+            481      481.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.17957e-01    8.58191e+00    3.44507e+02    3.13537e+01    1.13468e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10398e+01   -4.50551e+02    1.02835e+03    0.00000e+00
+
+           Step           Time         Lambda
+            482      482.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.11548e+00    8.30661e+00    3.44529e+02    3.12522e+01    1.13473e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10442e+01   -4.50545e+02    1.02834e+03    0.00000e+00
+
+           Step           Time         Lambda
+            483      483.00000        0.00000
+
+           Step           Time         Lambda
+            484      484.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.33350e-01    8.55682e+00    3.44499e+02    3.13425e+01    1.13468e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10430e+01   -4.50555e+02    1.02831e+03    0.00000e+00
+
+           Step           Time         Lambda
+            485      485.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00353e+00    8.38671e+00    3.44511e+02    3.12810e+01    1.13471e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10458e+01   -4.50552e+02    1.02829e+03    0.00000e+00
+
+           Step           Time         Lambda
+            486      486.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.33318e-01    8.55048e+00    3.44489e+02    3.13374e+01    1.13467e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10459e+01   -4.50560e+02    1.02827e+03    0.00000e+00
+
+           Step           Time         Lambda
+            487      487.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.08983e+00    8.31172e+00    3.44507e+02    3.12490e+01    1.13471e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10498e+01   -4.50557e+02    1.02826e+03    0.00000e+00
+
+           Step           Time         Lambda
+            488      488.00000        0.00000
+
+           Step           Time         Lambda
+            489      489.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.39349e-01    8.53702e+00    3.44479e+02    3.13297e+01    1.13466e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10488e+01   -4.50566e+02    1.02823e+03    0.00000e+00
+
+           Step           Time         Lambda
+            490      490.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.00242e+00    8.37451e+00    3.44491e+02    3.12707e+01    1.13469e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10514e+01   -4.50564e+02    1.02821e+03    0.00000e+00
+
+           Step           Time         Lambda
+            491      491.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.32105e-01    8.53915e+00    3.44469e+02    3.13273e+01    1.13465e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10514e+01   -4.50573e+02    1.02819e+03    0.00000e+00
+
+           Step           Time         Lambda
+            492      492.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.10154e+00    8.29010e+00    3.44487e+02    3.12348e+01    1.13470e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10553e+01   -4.50570e+02    1.02819e+03    0.00000e+00
+
+           Step           Time         Lambda
+            493      493.00000        0.00000
+
+           Step           Time         Lambda
+            494      494.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.30221e-01    8.53454e+00    3.44458e+02    3.13226e+01    1.13464e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10540e+01   -4.50582e+02    1.02815e+03    0.00000e+00
+
+           Step           Time         Lambda
+            495      495.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    1.01864e+00    8.34810e+00    3.44472e+02    3.12547e+01    1.13468e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10568e+01   -4.50579e+02    1.02813e+03    0.00000e+00
+
+           Step           Time         Lambda
+            496      496.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.13912e-01    8.54789e+00    3.44446e+02    3.13238e+01    1.13463e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10564e+01   -4.50591e+02    1.02812e+03    0.00000e+00
+
+           Step           Time         Lambda
+            497      497.00000        0.00000
+
+           Step           Time         Lambda
+            498      498.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.68029e-01    8.38562e+00    3.44459e+02    3.12660e+01    1.13466e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10585e+01   -4.50589e+02    1.02809e+03    0.00000e+00
+
+           Step           Time         Lambda
+            499      499.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    8.94955e-01    8.45286e+00    3.44448e+02    3.12889e+01    1.13464e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10588e+01   -4.50595e+02    1.02808e+03    0.00000e+00
+
+           Step           Time         Lambda
+            500      500.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle Ryckaert-Bell.          LJ-14     Coulomb-14
+    9.51231e-01    8.39551e+00    3.44449e+02    3.12668e+01    1.13465e+03
+        LJ (SR)   Coulomb (SR)      Potential Pressure (bar)
+   -4.10603e+01   -4.50597e+02    1.02806e+03    0.00000e+00
+
+
+Energy minimization reached the maximum number of steps before the forces
+reached the requested precision Fmax < 10.
+
+Steepest Descents did not converge to Fmax < 10 in 501 steps.
+Potential Energy  =  1.0280554e+03
+Maximum force     =  5.3698765e+01 on atom 146
+Norm of force     =  8.2612686e+00
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+ NB=Group-cutoff nonbonded kernels    NxN=N-by-N cluster Verlet kernels
+ RF=Reaction-Field  VdW=Van der Waals  QSTab=quadratic-spline table
+ W3=SPC/TIP3p  W4=TIP4p (single or pairs)
+ V&F=Potential and force  V=Potential only  F=Force only
+
+ Computing:                               M-Number         M-Flops  % Flops
+-----------------------------------------------------------------------------
+ Pair Search distance check               2.092176          18.830     4.5
+ NxN RF Elec. + LJ [V&F]                  5.844608         315.609    75.6
+ 1,4 nonbonded interactions               0.157815          14.203     3.4
+ Shift-X                                  0.075150           0.451     0.1
+ Bonds                                    0.074649           4.404     1.1
+ Angles                                   0.137274          23.062     5.5
+ RB-Dihedrals                             0.157815          38.980     9.3
+ Virial                                   0.097695           1.759     0.4
+-----------------------------------------------------------------------------
+ Total                                                     417.298   100.0
+-----------------------------------------------------------------------------
+
+
+     R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
+
+On 1 MPI rank, each using 32 OpenMP threads
+
+ Computing:          Num   Num      Call    Wall time         Giga-Cycles
+                     Ranks Threads  Count      (s)         total sum    %
+-----------------------------------------------------------------------------
+ Neighbor search        1   32        501       0.037          6.143  18.4
+ Launch GPU ops.        1   32        501       0.016          2.659   8.0
+ Force                  1   32        501       0.021          3.574  10.7
+ Wait GPU local         1   32        501       0.002          0.266   0.8
+ NB X/F buffer ops.     1   32        501       0.004          0.592   1.8
+ Rest                                           0.121         20.161  60.4
+-----------------------------------------------------------------------------
+ Total                                          0.201         33.395 100.0
+-----------------------------------------------------------------------------
+ Breakdown of PP computation
+-----------------------------------------------------------------------------
+ NS grid local          1   32        501       0.016          2.635   7.9
+ NS search local        1   32        501       0.017          2.755   8.3
+ Bonded F               1   32        501       0.006          1.022   3.1
+ Listed buffer ops.     1   32        501       0.015          2.478   7.4
+ NB F buffer ops.       1   32        501       0.004          0.590   1.8
+-----------------------------------------------------------------------------
+
+ GPU timings
+-----------------------------------------------------------------------------
+ Computing:                         Count  Wall t (s)      ms/step       %
+-----------------------------------------------------------------------------
+ Pair list H2D                        501       0.013        0.026    23.5
+ X / q H2D                            501       0.002        0.005     4.4
+ Nonbonded F+ene+prune k.             501       0.035        0.070    63.0
+ F D2H                                501       0.005        0.010     9.0
+-----------------------------------------------------------------------------
+ Total                                          0.056        0.112   100.0
+-----------------------------------------------------------------------------
+
+Force evaluation time GPU/CPU: 0.112 ms/0.043 ms = 2.604
+
+NOTE: 18 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        6.260        0.201     3119.1
+               (steps/hour)
+Performance:      8986705.2
+Finished mdrun on rank 0 Fri Oct 29 11:07:51 2021

@@ -1,0 +1,1419 @@
+log started: Tue Sep  5 10:40:03 2023
+
+Log file: ./leap.log
+> #
+> # ----- leaprc for loading the ff99SB (Hornak & Simmerling) force field
+> # -----  this file is updated for PDB format 3
+> #
+> #	load atom type hybridizations
+> #
+> addAtomTypes {
+> 	{ "H"   "H" "sp3" }
+> 	{ "HO"  "H" "sp3" }
+> 	{ "HS"  "H" "sp3" }
+> 	{ "H1"  "H" "sp3" }
+> 	{ "H2"  "H" "sp3" }
+> 	{ "H3"  "H" "sp3" }
+> 	{ "H4"  "H" "sp3" }
+> 	{ "H5"  "H" "sp3" }
+> 	{ "HW"  "H" "sp3" }
+> 	{ "HC"  "H" "sp3" }
+> 	{ "HA"  "H" "sp3" }
+> 	{ "HP"  "H" "sp3" }
+> 	{ "OH"  "O" "sp3" }
+> 	{ "OS"  "O" "sp3" }
+> 	{ "O"   "O" "sp2" }
+> 	{ "O2"  "O" "sp2" }
+> 	{ "OW"  "O" "sp3" }
+> 	{ "CT"  "C" "sp3" }
+> 	{ "CH"  "C" "sp3" }
+> 	{ "C2"  "C" "sp3" }
+> 	{ "C3"  "C" "sp3" }
+> 	{ "C"   "C" "sp2" }
+> 	{ "C*"  "C" "sp2" }
+> 	{ "CA"  "C" "sp2" }
+> 	{ "CB"  "C" "sp2" }
+> 	{ "CC"  "C" "sp2" }
+> 	{ "CN"  "C" "sp2" }
+> 	{ "CM"  "C" "sp2" }
+> 	{ "CK"  "C" "sp2" }
+> 	{ "CQ"  "C" "sp2" }
+> 	{ "CD"  "C" "sp2" }
+> 	{ "CE"  "C" "sp2" }
+> 	{ "CF"  "C" "sp2" }
+> 	{ "CP"  "C" "sp2" }
+> 	{ "CI"  "C" "sp2" }
+> 	{ "CJ"  "C" "sp2" }
+> 	{ "CW"  "C" "sp2" }
+> 	{ "CV"  "C" "sp2" }
+> 	{ "CR"  "C" "sp2" }
+> 	{ "CA"  "C" "sp2" }
+> 	{ "CY"  "C" "sp2" }
+> 	{ "C0"  "Ca" "sp2" }
+> 	{ "MG"  "Mg" "sp3" }
+> 	{ "N"   "N" "sp2" }
+> 	{ "NA"  "N" "sp2" }
+> 	{ "N2"  "N" "sp2" }
+> 	{ "N*"  "N" "sp2" }
+> 	{ "NP"  "N" "sp2" }
+> 	{ "NQ"  "N" "sp2" }
+> 	{ "NB"  "N" "sp2" }
+> 	{ "NC"  "N" "sp2" }
+> 	{ "NT"  "N" "sp3" }
+> 	{ "N3"  "N" "sp3" }
+> 	{ "S"   "S" "sp3" }
+> 	{ "SH"  "S" "sp3" }
+> 	{ "P"   "P" "sp3" }
+> 	{ "LP"  ""  "sp3" }
+> 	{ "F"   "F" "sp3" }
+> 	{ "CL"  "Cl" "sp3" }
+> 	{ "BR"  "Br" "sp3" }
+> 	{ "I"   "I"  "sp3" }
+> 	{ "FE"  "Fe" "sp3" }
+> 	{ "EP"  ""  "sp3" }
+> # glycam
+> 	{ "OG"  "O" "sp3" }
+> 	{ "OL"  "O" "sp3" }
+> 	{ "AC"  "C" "sp3" }
+> 	{ "EC"  "C" "sp3" }
+> }
+> #
+> #	Load the main parameter set.
+> #
+> parm99 = loadamberparams parm99.dat
+Loading parameters: /home/harish/miniconda3/envs/harish_env/dat/leap/parm/parm99.dat
+Reading title:
+PARM99 for DNA,RNA,AA, organic molecules, Polariz.& LP incl.02/04/99
+(UNKNOWN ATOM TYPE: HZ)
+(UNKNOWN ATOM TYPE: IM)
+(UNKNOWN ATOM TYPE: Li)
+(UNKNOWN ATOM TYPE: IP)
+(UNKNOWN ATOM TYPE: K)
+(UNKNOWN ATOM TYPE: Rb)
+(UNKNOWN ATOM TYPE: Cs)
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: IB)
+(UNKNOWN ATOM TYPE: LP)
+> frcmod99SB = loadamberparams frcmod.ff99SB
+Loading parameters: /home/harish/miniconda3/envs/harish_env/dat/leap/parm/frcmod.ff99SB
+Reading force field modification type file (frcmod)
+Reading title:
+Modification/update of parm99.dat (Hornak & Simmerling)
+> #
+> #	Load DNA/RNA libraries
+> #
+> loadOff all_nucleic94.lib
+Loading library: /home/harish/miniconda3/envs/harish_env/dat/leap/lib/all_nucleic94.lib
+Loading: DA
+Loading: DA3
+Loading: DA5
+Loading: DAN
+Loading: DC
+Loading: DC3
+Loading: DC5
+Loading: DCN
+Loading: DG
+Loading: DG3
+Loading: DG5
+Loading: DGN
+Loading: DT
+Loading: DT3
+Loading: DT5
+Loading: DTN
+Loading: RA
+Loading: RA3
+Loading: RA5
+Loading: RAN
+Loading: RC
+Loading: RC3
+Loading: RC5
+Loading: RCN
+Loading: RG
+Loading: RG3
+Loading: RG5
+Loading: RGN
+Loading: RU
+Loading: RU3
+Loading: RU5
+Loading: RUN
+> #
+> #	Load main chain and terminating 
+> #	amino acid libraries (i.e. ff94 libs)
+> #
+> loadOff all_amino94.lib
+Loading library: /home/harish/miniconda3/envs/harish_env/dat/leap/lib/all_amino94.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+> loadOff all_aminoct94.lib
+Loading library: /home/harish/miniconda3/envs/harish_env/dat/leap/lib/all_aminoct94.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+> loadOff all_aminont94.lib
+Loading library: /home/harish/miniconda3/envs/harish_env/dat/leap/lib/all_aminont94.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+> #
+> #       Load water and ions
+> # 
+> loadOff ions94.lib
+Loading library: /home/harish/miniconda3/envs/harish_env/dat/leap/lib/ions94.lib
+Loading: CIO
+Loading: Cl-
+Loading: Cs+
+Loading: IB
+Loading: K+
+Loading: Li+
+Loading: MG2
+Loading: Na+
+Loading: Rb+
+> loadOff solvents.lib
+Loading library: /home/harish/miniconda3/envs/harish_env/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: O3P
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+> HOH = TP3
+> WAT = TP3
+> 
+> #
+> #	Define the PDB name map for the amino acids and DNA.
+> #
+> addPdbResMap {
+>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>   { 0 "GUA" "DG5"  } { 1 "GUA" "DG3"  } { "GUA" "DG" }
+>   { 0 "ADE" "DA5"  } { 1 "ADE" "DA3"  } { "ADE" "DA" }
+>   { 0 "CYT" "DC5"  } { 1 "CYT" "DC3"  } { "CYT" "DC" }
+>   { 0 "THY" "DT5"  } { 1 "THY" "DT3"  } { "THY" "DT" }
+>   { 0 "G" "RG5"  } { 1 "G" "RG3"  } { "G" "RG" } { "GN" "RGN" }
+>   { 0 "A" "RA5"  } { 1 "A" "RA3"  } { "A" "RA" } { "AN" "RAN" }
+>   { 0 "C" "RC5"  } { 1 "C" "RC3"  } { "C" "RC" } { "CN" "RCN" }
+>   { 0 "U" "RU5"  } { 1 "U" "RU3"  } { "U" "RU" } { "UN" "RUN" }
+>   { 0 "DG" "DG5"  } { 1 "DG" "DG3"  }  
+>   { 0 "DA" "DA5"  } { 1 "DA" "DA3"  }  
+>   { 0 "DC" "DC5"  } { 1 "DC" "DC3"  }  
+>   { 0 "DT" "DT5"  } { 1 "DT" "DT3"  }
+> 
+> }
+> 
+> addPdbAtomMap {
+>   { "O5*" "O5'" }
+>   { "C5*" "C5'" }
+>   { "C4*" "C4'" }
+>   { "O4*" "O4'" }
+>   { "C3*" "C3'" }
+>   { "O3*" "O3'" }
+>   { "C2*" "C2'" }
+>   { "C1*" "C1'" }
+>   { "C5M" "C7"  }
+>   { "O2*" "O2'" }
+>   { "H1*" "H1'" }
+>   { "H2*1" "H2'1" }
+>   { "H2*2" "H2'2" }
+>   { "H2'"  "H2'1" }
+>   { "H2''" "H2'2" }
+>   { "H3*" "H3'" }
+>   { "H4*" "H4'" }
+>   { "H5*1" "H5'1" }
+>   { "H5*2" "H5'2" }
+>   { "H5'"  "H5'1" }
+>   { "H5''" "H5'2" }
+>   { "HO2'" "HO'2" }
+>   { "HO5'" "H5T" }
+>   { "HO3'" "H3T" }
+>   { "O1'" "O4'" }
+>   { "OA"  "O1P" }
+>   { "OB"  "O2P" }
+>   { "OP1" "O1P" }
+>   { "OP2" "O2P" }
+> }
+> 
+> 
+> #
+> # assumed that most often proteins use HIE
+> #
+> NHIS = NHIE
+> HIS = HIE
+> CHIS = CHIE
+ 
+> source leaprc.gaff
+----- Source: /home/harish/miniconda3/envs/harish_env/dat/leap/cmd/leaprc.gaff
+----- Source of /home/harish/miniconda3/envs/harish_env/dat/leap/cmd/leaprc.gaff done
+>> logFile leap.log
+log started: Tue Sep  5 10:40:11 2023
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "op"  "O" "sp3" }
+>> 	{ "oq"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "ni"  "N" "sp2" }
+>> 	{ "nj"  "N" "sp2" }
+>> 	{ "nk"  "N" "sp3" }
+>> 	{ "nl"  "N" "sp3" }
+>> 	{ "nm"  "N" "sp2" }
+>> 	{ "nn"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "np"  "N" "sp3" }
+>> 	{ "nq"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "sp"   "S" "sp3" }
+>> 	{ "sq"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /home/harish/miniconda3/envs/harish_env/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.81, May 2017)
+> 
+> TFS = loadmol2 an1.mol2
+Loading Mol2 file: ./an1.mol2
+Reading MOLECULE named *****
+> listy
+
+Error: Error from the parser: 
+       syntax error.
+       Check for typos, misspellings, etc.
+       Try help on the command name and desc on the command arguments.
+
+> list
+ACE       ALA       ARG       ASH       ASN       ASP       CALA      CARG      
+CASN      CASP      CCYS      CCYX      CGLN      CGLU      CGLY      CHCL3BOX  
+CHID      CHIE      CHIP      CHIS      CILE      CIO       CLEU      CLYS      
+CMET      CPHE      CPRO      CSER      CTHR      CTRP      CTYR      CVAL      
+CYM       CYS       CYX       Cl-       Cs+       DA        DA3       DA5       
+DAN       DC        DC3       DC4       DC5       DCN       DG        DG3       
+DG5       DGN       DT        DT3       DT5       DTN       FB3       FB3BOX    
+FB4       FB4BOX    GLH       GLN       GLU       GLY       HID       HIE       
+HIP       HIS       HOH       IB        ILE       K+        LEU       LYN       
+LYS       Li+       MEOHBOX   MET       MG2       NALA      NARG      NASN      
+NASP      NCYS      NCYX      NGLN      NGLU      NGLY      NHE       NHID      
+NHIE      NHIP      NHIS      NILE      NLEU      NLYS      NMABOX    NME       
+NMET      NPHE      NPRO      NSER      NTHR      NTRP      NTYR      NVAL      
+Na+       O3P       OP3       OPC       OPC3BOX   OPCBOX    PHE       PL3       
+POL3BOX   PRO       QSPCFWBOX RA        RA3       RA5       RAN       RC        
+RC3       RC5       RCN       RG        RG3       RG5       RGN       RU        
+RU3       RU5       RUN       Rb+       SER       SPC       SPCBOX    SPCFWBOX  
+SPF       SPG       T4E       TFS       THR       TIP3PBOX  TIP3PFBOX TIP4PBOX  
+TIP4PEWBOXTIP5PBOX  TP3       TP4       TP5       TPF       TRP       TYR       
+VAL       WAT       frcmod99SBgaff      parm99    
+> check TFS
+Checking 'TFS'....
+Checking parameters for unit 'TFS'.
+Checking for bond parameters.
+
+Error: Could not find bond parameter for atom types: C.3 - C.3
+        for atom C at position -4.724900, 0.453700, -3.785600 
+        and atom C at position -3.622400, -0.544000, -3.400200.
+
+Error: Could not find bond parameter for atom types: C.3 - H
+        for atom C at position -4.724900, 0.453700, -3.785600 
+        and atom H at position -4.299200, 1.340800, -4.267400.
+
+Error: Could not find bond parameter for atom types: C.3 - H
+        for atom C at position -4.724900, 0.453700, -3.785600 
+        and atom H at position -5.288600, 0.782700, -2.905200.
+
+Error: Could not find bond parameter for atom types: C.3 - H
+        for atom C at position -4.724900, 0.453700, -3.785600 
+        and atom H at position -5.438400, 0.016300, -4.492000.
+
+Error: Could not find bond parameter for atom types: C.3 - C.3
+        for atom C at position -3.622400, -0.544000, -3.400200 
+        and atom C at position -2.539600, 0.203300, -2.610900.
+
+Error: Could not find bond parameter for atom types: C.3 - C.ar
+        for atom C at position -3.622400, -0.544000, -3.400200 
+        and atom C at position -4.214000, -1.765600, -2.701300.
+
+Error: Could not find bond parameter for atom types: C.3 - H
+        for atom C at position -3.622400, -0.544000, -3.400200 
+        and atom H at position -3.147300, -0.903600, -4.323100.
+
+Error: Could not find bond parameter for atom types: C.3 - H
+        for atom C at position -2.539600, 0.203300, -2.610900 
+        and atom H at position -2.134100, 1.032600, -3.201400.
+
+Error: Could not find bond parameter for atom types: C.3 - H
+        for atom C at position -2.539600, 0.203300, -2.610900 
+        and atom H at position -1.703900, -0.457600, -2.357600.
+
+Error: Could not find bond parameter for atom types: C.3 - H
+        for atom C at position -2.539600, 0.203300, -2.610900 
+        and atom H at position -2.937800, 0.626800, -1.681500.
+
+Error: Could not find bond parameter for atom types: C.ar - C.ar
+        for atom C at position -4.214000, -1.765600, -2.701300 
+        and atom C at position -5.132200, -2.572400, -3.401100.
+
+Error: Could not find bond parameter for atom types: C.ar - C.ar
+        for atom C at position -4.214000, -1.765600, -2.701300 
+        and atom C at position -3.899000, -2.118800, -1.379100.
+
+Error: Could not find bond parameter for atom types: C.ar - C.ar
+        for atom C at position -5.132200, -2.572400, -3.401100 
+        and atom C at position -5.752400, -3.665400, -2.790400.
+
+Error: Could not find bond parameter for atom types: C.ar - H
+        for atom C at position -5.132200, -2.572400, -3.401100 
+        and atom H at position -5.393400, -2.335700, -4.431700.
+
+Error: Could not find bond parameter for atom types: C.ar - C.ar
+        for atom C at position -5.752400, -3.665400, -2.790400 
+        and atom C at position -5.439600, -3.978300, -1.468200.
+
+Error: Could not find bond parameter for atom types: C.ar - H
+        for atom C at position -5.752400, -3.665400, -2.790400 
+        and atom H at position -6.489300, -4.239900, -3.347700.
+
+Error: Could not find bond parameter for atom types: C.ar - C.ar
+        for atom C at position -5.439600, -3.978300, -1.468200 
+        and atom C at position -4.509500, -3.214300, -0.760500.
+
+Error: Could not find bond parameter for atom types: C.ar - S.O2
+        for atom C at position -5.439600, -3.978300, -1.468200 
+        and atom S at position -6.297900, -5.297000, -0.631600.
+
+Error: Could not find bond parameter for atom types: C.ar - C.ar
+        for atom C at position -4.509500, -3.214300, -0.760500 
+        and atom C at position -3.899000, -2.118800, -1.379100.
+
+Error: Could not find bond parameter for atom types: C.ar - H
+        for atom C at position -4.509500, -3.214300, -0.760500 
+        and atom H at position -4.272400, -3.441100, 0.277400.
+
+Error: Could not find bond parameter for atom types: C.ar - H
+        for atom C at position -3.899000, -2.118800, -1.379100 
+        and atom H at position -3.191000, -1.536500, -0.794000.
+
+Error: Could not find bond parameter for atom types: S.O2 - O.2
+        for atom S at position -6.297900, -5.297000, -0.631600 
+        and atom O at position -7.315000, -5.781700, -1.539600.
+
+Error: Could not find bond parameter for atom types: S.O2 - O.2
+        for atom S at position -6.297900, -5.297000, -0.631600 
+        and atom O at position -6.630000, -4.784000, 0.682200.
+
+Error: Could not find bond parameter for atom types: S.O2 - N.2
+        for atom S at position -6.297900, -5.297000, -0.631600 
+        and atom N at position -5.079900, -6.435100, -0.531400.
+
+Error: Could not find bond parameter for atom types: N.2 - S.O2
+        for atom N at position -5.079900, -6.435100, -0.531400 
+        and atom S at position -5.274700, -7.635200, 0.630400.
+
+Error: Could not find bond parameter for atom types: S.O2 - C.3
+        for atom S at position -5.274700, -7.635200, 0.630400 
+        and atom C at position -4.253100, -8.935000, -0.126100.
+
+Error: Could not find bond parameter for atom types: S.O2 - O.2
+        for atom S at position -5.274700, -7.635200, 0.630400 
+        and atom O at position -4.636000, -7.171700, 1.852600.
+
+Error: Could not find bond parameter for atom types: S.O2 - O.2
+        for atom S at position -5.274700, -7.635200, 0.630400 
+        and atom O at position -6.659500, -8.073300, 0.653600.
+
+Error: Could not find bond parameter for atom types: C.3 - F
+        for atom C at position -4.253100, -8.935000, -0.126100 
+        and atom F at position -2.961100, -8.532000, -0.306100.
+
+Error: Could not find bond parameter for atom types: C.3 - F
+        for atom C at position -4.253100, -8.935000, -0.126100 
+        and atom F at position -4.708300, -9.296800, -1.360500.
+
+Error: Could not find bond parameter for atom types: C.3 - F
+        for atom C at position -4.253100, -8.935000, -0.126100 
+        and atom F at position -4.203600, -10.073600, 0.620700.
+Checking for angle parameters.
+
+Error: Could not find angle parameter for atom types: C.3 - C.3 - C.3
+        for atom C at position -4.724900, 0.453700, -3.785600,
+            atom C at position -3.622400, -0.544000, -3.400200,
+        and atom C at position -2.539600, 0.203300, -2.610900.
+
+Error: Could not find angle parameter for atom types: C.3 - C.3 - C.ar
+        for atom C at position -4.724900, 0.453700, -3.785600,
+            atom C at position -3.622400, -0.544000, -3.400200,
+        and atom C at position -4.214000, -1.765600, -2.701300.
+
+Error: Could not find angle parameter for atom types: C.3 - C.3 - H
+        for atom C at position -4.724900, 0.453700, -3.785600,
+            atom C at position -3.622400, -0.544000, -3.400200,
+        and atom H at position -3.147300, -0.903600, -4.323100.
+
+Error: Could not find angle parameter for atom types: C.3 - C.3 - H
+        for atom C at position -3.622400, -0.544000, -3.400200,
+            atom C at position -4.724900, 0.453700, -3.785600,
+        and atom H at position -4.299200, 1.340800, -4.267400.
+
+Error: Could not find angle parameter for atom types: C.3 - C.3 - H
+        for atom C at position -3.622400, -0.544000, -3.400200,
+            atom C at position -4.724900, 0.453700, -3.785600,
+        and atom H at position -5.288600, 0.782700, -2.905200.
+
+Error: Could not find angle parameter for atom types: C.3 - C.3 - H
+        for atom C at position -3.622400, -0.544000, -3.400200,
+            atom C at position -4.724900, 0.453700, -3.785600,
+        and atom H at position -5.438400, 0.016300, -4.492000.
+
+Error: Could not find angle parameter for atom types: C.3 - C.3 - H
+        for atom C at position -3.622400, -0.544000, -3.400200,
+            atom C at position -2.539600, 0.203300, -2.610900,
+        and atom H at position -2.134100, 1.032600, -3.201400.
+
+Error: Could not find angle parameter for atom types: C.3 - C.3 - H
+        for atom C at position -3.622400, -0.544000, -3.400200,
+            atom C at position -2.539600, 0.203300, -2.610900,
+        and atom H at position -1.703900, -0.457600, -2.357600.
+
+Error: Could not find angle parameter for atom types: C.3 - C.3 - H
+        for atom C at position -3.622400, -0.544000, -3.400200,
+            atom C at position -2.539600, 0.203300, -2.610900,
+        and atom H at position -2.937800, 0.626800, -1.681500.
+
+Error: Could not find angle parameter for atom types: C.3 - C.ar - C.ar
+        for atom C at position -3.622400, -0.544000, -3.400200,
+            atom C at position -4.214000, -1.765600, -2.701300,
+        and atom C at position -5.132200, -2.572400, -3.401100.
+
+Error: Could not find angle parameter for atom types: C.3 - C.ar - C.ar
+        for atom C at position -3.622400, -0.544000, -3.400200,
+            atom C at position -4.214000, -1.765600, -2.701300,
+        and atom C at position -3.899000, -2.118800, -1.379100.
+
+Error: Could not find angle parameter for atom types: H - C.3 - H
+        for atom H at position -4.299200, 1.340800, -4.267400,
+            atom C at position -4.724900, 0.453700, -3.785600,
+        and atom H at position -5.288600, 0.782700, -2.905200.
+
+Error: Could not find angle parameter for atom types: H - C.3 - H
+        for atom H at position -4.299200, 1.340800, -4.267400,
+            atom C at position -4.724900, 0.453700, -3.785600,
+        and atom H at position -5.438400, 0.016300, -4.492000.
+
+Error: Could not find angle parameter for atom types: H - C.3 - H
+        for atom H at position -5.288600, 0.782700, -2.905200,
+            atom C at position -4.724900, 0.453700, -3.785600,
+        and atom H at position -5.438400, 0.016300, -4.492000.
+
+Error: Could not find angle parameter for atom types: C.3 - C.3 - C.ar
+        for atom C at position -2.539600, 0.203300, -2.610900,
+            atom C at position -3.622400, -0.544000, -3.400200,
+        and atom C at position -4.214000, -1.765600, -2.701300.
+
+Error: Could not find angle parameter for atom types: C.3 - C.3 - H
+        for atom C at position -2.539600, 0.203300, -2.610900,
+            atom C at position -3.622400, -0.544000, -3.400200,
+        and atom H at position -3.147300, -0.903600, -4.323100.
+
+Error: Could not find angle parameter for atom types: H - C.3 - H
+        for atom H at position -2.134100, 1.032600, -3.201400,
+            atom C at position -2.539600, 0.203300, -2.610900,
+        and atom H at position -1.703900, -0.457600, -2.357600.
+
+Error: Could not find angle parameter for atom types: H - C.3 - H
+        for atom H at position -2.134100, 1.032600, -3.201400,
+            atom C at position -2.539600, 0.203300, -2.610900,
+        and atom H at position -2.937800, 0.626800, -1.681500.
+
+Error: Could not find angle parameter for atom types: H - C.3 - H
+        for atom H at position -1.703900, -0.457600, -2.357600,
+            atom C at position -2.539600, 0.203300, -2.610900,
+        and atom H at position -2.937800, 0.626800, -1.681500.
+
+Error: Could not find angle parameter for atom types: C.ar - C.3 - H
+        for atom C at position -4.214000, -1.765600, -2.701300,
+            atom C at position -3.622400, -0.544000, -3.400200,
+        and atom H at position -3.147300, -0.903600, -4.323100.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - C.ar
+        for atom C at position -4.214000, -1.765600, -2.701300,
+            atom C at position -5.132200, -2.572400, -3.401100,
+        and atom C at position -5.752400, -3.665400, -2.790400.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - H
+        for atom C at position -4.214000, -1.765600, -2.701300,
+            atom C at position -5.132200, -2.572400, -3.401100,
+        and atom H at position -5.393400, -2.335700, -4.431700.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - C.ar
+        for atom C at position -4.214000, -1.765600, -2.701300,
+            atom C at position -3.899000, -2.118800, -1.379100,
+        and atom C at position -4.509500, -3.214300, -0.760500.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - H
+        for atom C at position -4.214000, -1.765600, -2.701300,
+            atom C at position -3.899000, -2.118800, -1.379100,
+        and atom H at position -3.191000, -1.536500, -0.794000.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - C.ar
+        for atom C at position -5.132200, -2.572400, -3.401100,
+            atom C at position -4.214000, -1.765600, -2.701300,
+        and atom C at position -3.899000, -2.118800, -1.379100.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - C.ar
+        for atom C at position -5.132200, -2.572400, -3.401100,
+            atom C at position -5.752400, -3.665400, -2.790400,
+        and atom C at position -5.439600, -3.978300, -1.468200.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - H
+        for atom C at position -5.132200, -2.572400, -3.401100,
+            atom C at position -5.752400, -3.665400, -2.790400,
+        and atom H at position -6.489300, -4.239900, -3.347700.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - H
+        for atom C at position -5.752400, -3.665400, -2.790400,
+            atom C at position -5.132200, -2.572400, -3.401100,
+        and atom H at position -5.393400, -2.335700, -4.431700.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - C.ar
+        for atom C at position -5.752400, -3.665400, -2.790400,
+            atom C at position -5.439600, -3.978300, -1.468200,
+        and atom C at position -4.509500, -3.214300, -0.760500.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - S.O2
+        for atom C at position -5.752400, -3.665400, -2.790400,
+            atom C at position -5.439600, -3.978300, -1.468200,
+        and atom S at position -6.297900, -5.297000, -0.631600.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - H
+        for atom C at position -5.439600, -3.978300, -1.468200,
+            atom C at position -5.752400, -3.665400, -2.790400,
+        and atom H at position -6.489300, -4.239900, -3.347700.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - C.ar
+        for atom C at position -5.439600, -3.978300, -1.468200,
+            atom C at position -4.509500, -3.214300, -0.760500,
+        and atom C at position -3.899000, -2.118800, -1.379100.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - H
+        for atom C at position -5.439600, -3.978300, -1.468200,
+            atom C at position -4.509500, -3.214300, -0.760500,
+        and atom H at position -4.272400, -3.441100, 0.277400.
+
+Error: Could not find angle parameter for atom types: C.ar - S.O2 - O.2
+        for atom C at position -5.439600, -3.978300, -1.468200,
+            atom S at position -6.297900, -5.297000, -0.631600,
+        and atom O at position -7.315000, -5.781700, -1.539600.
+
+Error: Could not find angle parameter for atom types: C.ar - S.O2 - O.2
+        for atom C at position -5.439600, -3.978300, -1.468200,
+            atom S at position -6.297900, -5.297000, -0.631600,
+        and atom O at position -6.630000, -4.784000, 0.682200.
+
+Error: Could not find angle parameter for atom types: C.ar - S.O2 - N.2
+        for atom C at position -5.439600, -3.978300, -1.468200,
+            atom S at position -6.297900, -5.297000, -0.631600,
+        and atom N at position -5.079900, -6.435100, -0.531400.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - S.O2
+        for atom C at position -4.509500, -3.214300, -0.760500,
+            atom C at position -5.439600, -3.978300, -1.468200,
+        and atom S at position -6.297900, -5.297000, -0.631600.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - H
+        for atom C at position -4.509500, -3.214300, -0.760500,
+            atom C at position -3.899000, -2.118800, -1.379100,
+        and atom H at position -3.191000, -1.536500, -0.794000.
+
+Error: Could not find angle parameter for atom types: C.ar - C.ar - H
+        for atom C at position -3.899000, -2.118800, -1.379100,
+            atom C at position -4.509500, -3.214300, -0.760500,
+        and atom H at position -4.272400, -3.441100, 0.277400.
+
+Error: Could not find angle parameter for atom types: S.O2 - N.2 - S.O2
+        for atom S at position -6.297900, -5.297000, -0.631600,
+            atom N at position -5.079900, -6.435100, -0.531400,
+        and atom S at position -5.274700, -7.635200, 0.630400.
+
+Error: Could not find angle parameter for atom types: O.2 - S.O2 - O.2
+        for atom O at position -7.315000, -5.781700, -1.539600,
+            atom S at position -6.297900, -5.297000, -0.631600,
+        and atom O at position -6.630000, -4.784000, 0.682200.
+
+Error: Could not find angle parameter for atom types: O.2 - S.O2 - N.2
+        for atom O at position -7.315000, -5.781700, -1.539600,
+            atom S at position -6.297900, -5.297000, -0.631600,
+        and atom N at position -5.079900, -6.435100, -0.531400.
+
+Error: Could not find angle parameter for atom types: O.2 - S.O2 - N.2
+        for atom O at position -6.630000, -4.784000, 0.682200,
+            atom S at position -6.297900, -5.297000, -0.631600,
+        and atom N at position -5.079900, -6.435100, -0.531400.
+
+Error: Could not find angle parameter for atom types: N.2 - S.O2 - C.3
+        for atom N at position -5.079900, -6.435100, -0.531400,
+            atom S at position -5.274700, -7.635200, 0.630400,
+        and atom C at position -4.253100, -8.935000, -0.126100.
+
+Error: Could not find angle parameter for atom types: N.2 - S.O2 - O.2
+        for atom N at position -5.079900, -6.435100, -0.531400,
+            atom S at position -5.274700, -7.635200, 0.630400,
+        and atom O at position -4.636000, -7.171700, 1.852600.
+
+Error: Could not find angle parameter for atom types: N.2 - S.O2 - O.2
+        for atom N at position -5.079900, -6.435100, -0.531400,
+            atom S at position -5.274700, -7.635200, 0.630400,
+        and atom O at position -6.659500, -8.073300, 0.653600.
+
+Error: Could not find angle parameter for atom types: S.O2 - C.3 - F
+        for atom S at position -5.274700, -7.635200, 0.630400,
+            atom C at position -4.253100, -8.935000, -0.126100,
+        and atom F at position -2.961100, -8.532000, -0.306100.
+
+Error: Could not find angle parameter for atom types: S.O2 - C.3 - F
+        for atom S at position -5.274700, -7.635200, 0.630400,
+            atom C at position -4.253100, -8.935000, -0.126100,
+        and atom F at position -4.708300, -9.296800, -1.360500.
+
+Error: Could not find angle parameter for atom types: S.O2 - C.3 - F
+        for atom S at position -5.274700, -7.635200, 0.630400,
+            atom C at position -4.253100, -8.935000, -0.126100,
+        and atom F at position -4.203600, -10.073600, 0.620700.
+
+Error: Could not find angle parameter for atom types: C.3 - S.O2 - O.2
+        for atom C at position -4.253100, -8.935000, -0.126100,
+            atom S at position -5.274700, -7.635200, 0.630400,
+        and atom O at position -4.636000, -7.171700, 1.852600.
+
+Error: Could not find angle parameter for atom types: C.3 - S.O2 - O.2
+        for atom C at position -4.253100, -8.935000, -0.126100,
+            atom S at position -5.274700, -7.635200, 0.630400,
+        and atom O at position -6.659500, -8.073300, 0.653600.
+
+Error: Could not find angle parameter for atom types: F - C.3 - F
+        for atom F at position -2.961100, -8.532000, -0.306100,
+            atom C at position -4.253100, -8.935000, -0.126100,
+        and atom F at position -4.708300, -9.296800, -1.360500.
+
+Error: Could not find angle parameter for atom types: F - C.3 - F
+        for atom F at position -2.961100, -8.532000, -0.306100,
+            atom C at position -4.253100, -8.935000, -0.126100,
+        and atom F at position -4.203600, -10.073600, 0.620700.
+
+Error: Could not find angle parameter for atom types: F - C.3 - F
+        for atom F at position -4.708300, -9.296800, -1.360500,
+            atom C at position -4.253100, -8.935000, -0.126100,
+        and atom F at position -4.203600, -10.073600, 0.620700.
+
+Error: Could not find angle parameter for atom types: O.2 - S.O2 - O.2
+        for atom O at position -4.636000, -7.171700, 1.852600,
+            atom S at position -5.274700, -7.635200, 0.630400,
+        and atom O at position -6.659500, -8.073300, 0.653600.
+
+Warning: There are missing parameters.
+Unit is OK.
+log started: Tue Sep  5 10:45:49 2023
+
+Log file: ./leap.log
+> #
+> # ----- leaprc for loading the ff99SB (Hornak & Simmerling) force field
+> # -----  this file is updated for PDB format 3
+> #
+> #	load atom type hybridizations
+> #
+> addAtomTypes {
+> 	{ "H"   "H" "sp3" }
+> 	{ "HO"  "H" "sp3" }
+> 	{ "HS"  "H" "sp3" }
+> 	{ "H1"  "H" "sp3" }
+> 	{ "H2"  "H" "sp3" }
+> 	{ "H3"  "H" "sp3" }
+> 	{ "H4"  "H" "sp3" }
+> 	{ "H5"  "H" "sp3" }
+> 	{ "HW"  "H" "sp3" }
+> 	{ "HC"  "H" "sp3" }
+> 	{ "HA"  "H" "sp3" }
+> 	{ "HP"  "H" "sp3" }
+> 	{ "OH"  "O" "sp3" }
+> 	{ "OS"  "O" "sp3" }
+> 	{ "O"   "O" "sp2" }
+> 	{ "O2"  "O" "sp2" }
+> 	{ "OW"  "O" "sp3" }
+> 	{ "CT"  "C" "sp3" }
+> 	{ "CH"  "C" "sp3" }
+> 	{ "C2"  "C" "sp3" }
+> 	{ "C3"  "C" "sp3" }
+> 	{ "C"   "C" "sp2" }
+> 	{ "C*"  "C" "sp2" }
+> 	{ "CA"  "C" "sp2" }
+> 	{ "CB"  "C" "sp2" }
+> 	{ "CC"  "C" "sp2" }
+> 	{ "CN"  "C" "sp2" }
+> 	{ "CM"  "C" "sp2" }
+> 	{ "CK"  "C" "sp2" }
+> 	{ "CQ"  "C" "sp2" }
+> 	{ "CD"  "C" "sp2" }
+> 	{ "CE"  "C" "sp2" }
+> 	{ "CF"  "C" "sp2" }
+> 	{ "CP"  "C" "sp2" }
+> 	{ "CI"  "C" "sp2" }
+> 	{ "CJ"  "C" "sp2" }
+> 	{ "CW"  "C" "sp2" }
+> 	{ "CV"  "C" "sp2" }
+> 	{ "CR"  "C" "sp2" }
+> 	{ "CA"  "C" "sp2" }
+> 	{ "CY"  "C" "sp2" }
+> 	{ "C0"  "Ca" "sp2" }
+> 	{ "MG"  "Mg" "sp3" }
+> 	{ "N"   "N" "sp2" }
+> 	{ "NA"  "N" "sp2" }
+> 	{ "N2"  "N" "sp2" }
+> 	{ "N*"  "N" "sp2" }
+> 	{ "NP"  "N" "sp2" }
+> 	{ "NQ"  "N" "sp2" }
+> 	{ "NB"  "N" "sp2" }
+> 	{ "NC"  "N" "sp2" }
+> 	{ "NT"  "N" "sp3" }
+> 	{ "N3"  "N" "sp3" }
+> 	{ "S"   "S" "sp3" }
+> 	{ "SH"  "S" "sp3" }
+> 	{ "P"   "P" "sp3" }
+> 	{ "LP"  ""  "sp3" }
+> 	{ "F"   "F" "sp3" }
+> 	{ "CL"  "Cl" "sp3" }
+> 	{ "BR"  "Br" "sp3" }
+> 	{ "I"   "I"  "sp3" }
+> 	{ "FE"  "Fe" "sp3" }
+> 	{ "EP"  ""  "sp3" }
+> # glycam
+> 	{ "OG"  "O" "sp3" }
+> 	{ "OL"  "O" "sp3" }
+> 	{ "AC"  "C" "sp3" }
+> 	{ "EC"  "C" "sp3" }
+> }
+> #
+> #	Load the main parameter set.
+> #
+> parm99 = loadamberparams parm99.dat
+Loading parameters: /home/harish/miniconda3/envs/harish_env/dat/leap/parm/parm99.dat
+Reading title:
+PARM99 for DNA,RNA,AA, organic molecules, Polariz.& LP incl.02/04/99
+(UNKNOWN ATOM TYPE: HZ)
+(UNKNOWN ATOM TYPE: IM)
+(UNKNOWN ATOM TYPE: Li)
+(UNKNOWN ATOM TYPE: IP)
+(UNKNOWN ATOM TYPE: K)
+(UNKNOWN ATOM TYPE: Rb)
+(UNKNOWN ATOM TYPE: Cs)
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: IB)
+(UNKNOWN ATOM TYPE: LP)
+> frcmod99SB = loadamberparams frcmod.ff99SB
+Loading parameters: /home/harish/miniconda3/envs/harish_env/dat/leap/parm/frcmod.ff99SB
+Reading force field modification type file (frcmod)
+Reading title:
+Modification/update of parm99.dat (Hornak & Simmerling)
+> #
+> #	Load DNA/RNA libraries
+> #
+> loadOff all_nucleic94.lib
+Loading library: /home/harish/miniconda3/envs/harish_env/dat/leap/lib/all_nucleic94.lib
+Loading: DA
+Loading: DA3
+Loading: DA5
+Loading: DAN
+Loading: DC
+Loading: DC3
+Loading: DC5
+Loading: DCN
+Loading: DG
+Loading: DG3
+Loading: DG5
+Loading: DGN
+Loading: DT
+Loading: DT3
+Loading: DT5
+Loading: DTN
+Loading: RA
+Loading: RA3
+Loading: RA5
+Loading: RAN
+Loading: RC
+Loading: RC3
+Loading: RC5
+Loading: RCN
+Loading: RG
+Loading: RG3
+Loading: RG5
+Loading: RGN
+Loading: RU
+Loading: RU3
+Loading: RU5
+Loading: RUN
+> #
+> #	Load main chain and terminating 
+> #	amino acid libraries (i.e. ff94 libs)
+> #
+> loadOff all_amino94.lib
+Loading library: /home/harish/miniconda3/envs/harish_env/dat/leap/lib/all_amino94.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+> loadOff all_aminoct94.lib
+Loading library: /home/harish/miniconda3/envs/harish_env/dat/leap/lib/all_aminoct94.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+> loadOff all_aminont94.lib
+Loading library: /home/harish/miniconda3/envs/harish_env/dat/leap/lib/all_aminont94.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+> #
+> #       Load water and ions
+> # 
+> loadOff ions94.lib
+Loading library: /home/harish/miniconda3/envs/harish_env/dat/leap/lib/ions94.lib
+Loading: CIO
+Loading: Cl-
+Loading: Cs+
+Loading: IB
+Loading: K+
+Loading: Li+
+Loading: MG2
+Loading: Na+
+Loading: Rb+
+> loadOff solvents.lib
+Loading library: /home/harish/miniconda3/envs/harish_env/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: O3P
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+> HOH = TP3
+> WAT = TP3
+> 
+> #
+> #	Define the PDB name map for the amino acids and DNA.
+> #
+> addPdbResMap {
+>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>   { 0 "GUA" "DG5"  } { 1 "GUA" "DG3"  } { "GUA" "DG" }
+>   { 0 "ADE" "DA5"  } { 1 "ADE" "DA3"  } { "ADE" "DA" }
+>   { 0 "CYT" "DC5"  } { 1 "CYT" "DC3"  } { "CYT" "DC" }
+>   { 0 "THY" "DT5"  } { 1 "THY" "DT3"  } { "THY" "DT" }
+>   { 0 "G" "RG5"  } { 1 "G" "RG3"  } { "G" "RG" } { "GN" "RGN" }
+>   { 0 "A" "RA5"  } { 1 "A" "RA3"  } { "A" "RA" } { "AN" "RAN" }
+>   { 0 "C" "RC5"  } { 1 "C" "RC3"  } { "C" "RC" } { "CN" "RCN" }
+>   { 0 "U" "RU5"  } { 1 "U" "RU3"  } { "U" "RU" } { "UN" "RUN" }
+>   { 0 "DG" "DG5"  } { 1 "DG" "DG3"  }  
+>   { 0 "DA" "DA5"  } { 1 "DA" "DA3"  }  
+>   { 0 "DC" "DC5"  } { 1 "DC" "DC3"  }  
+>   { 0 "DT" "DT5"  } { 1 "DT" "DT3"  }
+> 
+> }
+> 
+> addPdbAtomMap {
+>   { "O5*" "O5'" }
+>   { "C5*" "C5'" }
+>   { "C4*" "C4'" }
+>   { "O4*" "O4'" }
+>   { "C3*" "C3'" }
+>   { "O3*" "O3'" }
+>   { "C2*" "C2'" }
+>   { "C1*" "C1'" }
+>   { "C5M" "C7"  }
+>   { "O2*" "O2'" }
+>   { "H1*" "H1'" }
+>   { "H2*1" "H2'1" }
+>   { "H2*2" "H2'2" }
+>   { "H2'"  "H2'1" }
+>   { "H2''" "H2'2" }
+>   { "H3*" "H3'" }
+>   { "H4*" "H4'" }
+>   { "H5*1" "H5'1" }
+>   { "H5*2" "H5'2" }
+>   { "H5'"  "H5'1" }
+>   { "H5''" "H5'2" }
+>   { "HO2'" "HO'2" }
+>   { "HO5'" "H5T" }
+>   { "HO3'" "H3T" }
+>   { "O1'" "O4'" }
+>   { "OA"  "O1P" }
+>   { "OB"  "O2P" }
+>   { "OP1" "O1P" }
+>   { "OP2" "O2P" }
+> }
+> 
+> 
+> #
+> # assumed that most often proteins use HIE
+> #
+> NHIS = NHIE
+> HIS = HIE
+> CHIS = CHIE
+ 
+> source leaprc.gaff
+----- Source: /home/harish/miniconda3/envs/harish_env/dat/leap/cmd/leaprc.gaff
+----- Source of /home/harish/miniconda3/envs/harish_env/dat/leap/cmd/leaprc.gaff done
+>> logFile leap.log
+log started: Tue Sep  5 10:46:00 2023
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "op"  "O" "sp3" }
+>> 	{ "oq"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "ni"  "N" "sp2" }
+>> 	{ "nj"  "N" "sp2" }
+>> 	{ "nk"  "N" "sp3" }
+>> 	{ "nl"  "N" "sp3" }
+>> 	{ "nm"  "N" "sp2" }
+>> 	{ "nn"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "np"  "N" "sp3" }
+>> 	{ "nq"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "sp"   "S" "sp3" }
+>> 	{ "sq"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /home/harish/miniconda3/envs/harish_env/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.81, May 2017)
+> 
+> SUS = loadmol2 an1_2.mol2
+Loading Mol2 file: ./an1_2.mol2
+Reading MOLECULE named TFS
+> check SUS
+Checking 'SUS'....
+
+Warning: The unperturbed charge of the unit (-1.000999) is not zero.
+Checking parameters for unit 'SUS'.
+Checking for bond parameters.
+Checking for angle parameters.
+
+Error: Could not find angle parameter for atom types: sy - ne - sy
+        for atom S at position -6.298000, -5.297000, -0.632000,
+            atom N at position -5.080000, -6.435000, -0.531000,
+        and atom S1 at position -5.275000, -7.635000, 0.630000.
+
+Error: Could not find angle parameter for atom types: sy - c3 - f
+        for atom S1 at position -5.275000, -7.635000, 0.630000,
+            atom C9 at position -4.253000, -8.935000, -0.126000,
+        and atom F at position -2.961000, -8.532000, -0.306000.
+
+Error: Could not find angle parameter for atom types: sy - c3 - f
+        for atom S1 at position -5.275000, -7.635000, 0.630000,
+            atom C9 at position -4.253000, -8.935000, -0.126000,
+        and atom F1 at position -4.708000, -9.297000, -1.361000.
+
+Error: Could not find angle parameter for atom types: sy - c3 - f
+        for atom S1 at position -5.275000, -7.635000, 0.630000,
+            atom C9 at position -4.253000, -8.935000, -0.126000,
+        and atom F2 at position -4.204000, -10.074000, 0.621000.
+
+Warning: There are missing parameters.
+check:  Warnings: 1
+Unit is OK.
+> loadamberparams an1.frcmod
+
+Error: Could not open file an1.frcmod: not found
+> loadamberparams ani1.frcmod
+Loading parameters: ./ani1.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> check SUS
+Checking 'SUS'....
+
+Warning: The unperturbed charge of the unit (-1.000999) is not zero.
+Checking parameters for unit 'SUS'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 1
+Unit is OK.

@@ -1,0 +1,28 @@
+units real
+atom_style full
+
+dimension 3
+boundary p p p
+
+bond_style hybrid harmonic
+angle_style hybrid harmonic
+dihedral_style hybrid charmm multi/harmonic
+special_bonds lj 0.0 0.0 0.5 coul 0.0 0.0 0.83333333
+
+read_data PEO_polymer_converted.lmp
+
+pair_style lj/cut/coul/long 9.0 9.0
+pair_modify tail yes
+kspace_style pppm 1e-8
+
+pair_coeff 1 1   0.1700000   3.0000123
+pair_coeff 2 2   0.1094000   3.3996695
+pair_coeff 3 3   0.2104000   3.0664734
+pair_coeff 4 4   0.0000000   0.0000000
+pair_coeff 5 5   0.0157000   2.4713530
+
+pair_modify mix arithmetic
+
+thermo_style custom ebond eangle edihed eimp epair evdwl ecoul elong etail pe
+
+run 0

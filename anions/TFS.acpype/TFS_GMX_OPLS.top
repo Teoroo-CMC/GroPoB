@@ -1,0 +1,19 @@
+; TFS_GMX_OPLS.top created by acpype (v: 2022.6.6) on Wed Feb  8 16:39:38 2023
+
+; Include forcefield parameters
+#include "ffoplsaa.itp"
+
+; Include TFS_GMX.itp topology
+#include "TFS_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_TFS.itp"
+#endif
+
+[ system ]
+ TFS
+
+[ molecules ]
+; Compound        nmols
+ TFS              1     

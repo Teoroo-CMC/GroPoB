@@ -1,0 +1,50 @@
+Remarks TFS_CNS.par created by acpype (v: 2022.6.6) on Wed Feb  8 16:39:38 2023
+
+set echo=false end
+
+{ Bonds: atomType1 atomType2 kb r0 }
+BOND   c3_    f_    352.6   1.3500
+BOND   c3_   s6_    200.1   1.8080
+BOND   s6_   ne_    412.2   1.5980
+BOND   s6_    o_    683.0   1.4530
+BOND   ne_   sy_    326.0   1.6720
+BOND   sy_    o_    653.2   1.4660
+BOND   sy_   c3_    199.4   1.8090
+
+{ Angles: aType1 aType2 aType3 kt t0 }
+ANGLe   c3_   s6_   ne_     91.3   108.19
+ANGLe   c3_   s6_    o_     93.7   108.61
+ANGLe   s6_   ne_   sy_     67.7   119.63
+ANGLe   s6_   c3_    f_     83.9   109.68
+ANGLe    f_   c3_    f_    121.6   107.36
+ANGLe   ne_   sy_    o_    123.2   109.65
+ANGLe   ne_   sy_   c3_     92.4   102.19
+ANGLe   ne_   s6_    o_    124.1   119.10
+ANGLe   sy_   c3_    f_     83.9   109.68
+ANGLe   c3_   sy_    o_     93.8   107.85
+ANGLe    o_   s6_    o_    128.2   120.05
+ANGLe    o_   sy_    o_    126.4   121.41
+
+{ Proper Dihedrals: aType1 aType2 aType3 aType4 kt period phase }
+DIHEdral    f_   c3_   s6_   ne_           0.144    3     0.00
+DIHEdral   c3_   s6_   ne_   sy_           6.667    2   180.00
+DIHEdral    f_   c3_   s6_    o_           0.144    3     0.00
+DIHEdral   s6_   ne_   sy_    o_  MULT 2   6.800    1   180.00
+                                           0.500    3   180.00
+DIHEdral   ne_   sy_   c3_    f_           0.144    3     0.00
+DIHEdral   s6_   ne_   sy_   c3_  MULT 2   6.800    1   180.00
+                                           0.500    3   180.00
+DIHEdral    f_   c3_   sy_    o_           0.144    3     0.00
+DIHEdral   sy_   ne_   s6_    o_           6.667    2   180.00
+
+{ Improper Dihedrals: aType1 aType2 aType3 aType4 kt period phase }
+
+{ Nonbonded: Type Emin sigma; (1-4): Emin/2 sigma }
+NONBonded   c3_    0.107800    3.397710    0.053900    3.397710
+NONBonded   s6_    0.282400    3.532413    0.141200    3.532413
+NONBonded    f_    0.083200    3.034223    0.041600    3.034223
+NONBonded   ne_    0.094100    3.384168    0.047050    3.384168
+NONBonded   sy_    0.282400    3.532413    0.141200    3.532413
+NONBonded    o_    0.146300    3.048121    0.073150    3.048121
+
+set echo=true end

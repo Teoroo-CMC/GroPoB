@@ -1,0 +1,15 @@
+; PCLL_GMX.top created by acpype (Rev: 0) on Wed Jun 23 17:34:11 2021
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333
+
+; Include PCLL_GMX.itp topology
+#include "PCLL_GMX.itp"
+
+[ system ]
+ PCLL
+
+[ molecules ]
+; Compound        nmols
+ PCLL             1     

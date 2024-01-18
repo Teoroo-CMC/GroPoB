@@ -1,0 +1,8 @@
+source leaprc.gaff
+loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PEO_OH/PEO.prepi
+loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PEO_OH/HPT.prepi
+loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PEO_OH/TPT.prepi
+mol = sequence {HPT PEO PEO PEO PEO PEO PEO PEO PEO PEO PEO PEO PEO PEO PEO PEO PEO PEO PEO TPT}
+savepdb mol PEO_polymer.pdb
+saveamberparm mol PEO_polymer.prmtop PEO_polymer.inpcrd
+quit

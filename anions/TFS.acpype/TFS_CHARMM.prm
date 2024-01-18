@@ -1,0 +1,45 @@
+* Force Field Parameter File.
+* 
+
+BOND
+c3 s6  233.50   1.808
+c3 f   356.90   1.350
+s6 ne  441.30   1.554	! same as  n2 s6
+o  s6  512.70   1.453
+ne sy  317.10   1.672
+c3 sy  232.80   1.809
+o  sy  493.00   1.466
+
+ANGLE
+c3 s6 ne   16.300     108.190
+c3 s6 o    65.400     108.610
+s6 c3 f    63.100     109.680
+s6 ne sy   68.400     119.180	! same as s6 n2 s6
+f  c3 f    70.900     107.360
+ne s6 o    70.800     119.100	! same as n2 s6 o 
+ne s6 o    70.800     119.100
+ne sy c3   64.100     102.190
+ne sy o    70.300     109.650
+sy c3 f    63.100     109.680	! same as f  c3 s6
+c3 sy o    65.400     107.850
+o  s6 o    73.600     120.050
+o  sy o    72.500     121.410
+
+DIHEDRAL
+X  c3 s6 X      0.144         3       0.0
+c3 s6 ne sy     6.667         2     180.0      ! same as X  n2 s6 X 
+o  s6 ne sy     6.667         2     180.0      ! same as X  n2 s6 X 
+X  ne sy X      0.500         3     180.0
+X  ne sy X      6.800         1     180.0
+X  c3 sy X      0.144         3       0.0
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!                Emin     Rmin/2              Emin/2     Rmin  (for 1-4's)
+!             (kcal/mol)    (A)
+c3      0.00   -0.1094    1.9080      0.00   -0.0547    1.9080
+s6      0.00   -0.2500    2.0000      0.00   -0.1250    2.0000
+ f      0.00   -0.0610    1.7500      0.00   -0.0305    1.7500
+ne      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+sy      0.00   -0.2500    2.0000      0.00   -0.1250    2.0000
+ o      0.00   -0.2100    1.6612      0.00   -0.1050    1.6612

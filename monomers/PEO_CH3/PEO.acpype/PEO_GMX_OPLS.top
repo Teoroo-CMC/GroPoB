@@ -1,0 +1,14 @@
+; PEO_GMX_OPLS.top created by acpype (Rev: 0) on Wed Mar 31 20:38:38 2021
+
+; Include forcefield parameters
+#include "ffoplsaa.itp"
+
+; Include PEO_GMX.itp topology
+#include "PEO_GMX.itp"
+
+[ system ]
+ PEO
+
+[ molecules ]
+; Compound        nmols
+ PEO              1     

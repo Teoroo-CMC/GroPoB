@@ -1,0 +1,35 @@
+-I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/prep to search path.
+-I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/lib to search path.
+-I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm to search path.
+-I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/cmd to search path.
+-s: Ignoring startup file: leaprc
+-f: Source tleap.in.
+
+Welcome to LEaP!
+Sourcing: ./tleap.in
+----- Source: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/cmd/leaprc.gaff
+----- Source of /pdc/vol/amber/16.at17/amd64_co7/dat/leap/cmd/leaprc.gaff done
+Log file: ./leap.log
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PEO_OH/PEO.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PEO_OH/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PEO_OH/TPT.prepi
+Writing pdb file: PEO_polymer.pdb
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ total 0 improper torsions applied
+ 0 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+	Quit

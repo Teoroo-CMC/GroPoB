@@ -1,0 +1,37 @@
+-I: Adding /home/hargu978/Downloads/amber18/dat/leap/prep to search path.
+-I: Adding /home/hargu978/Downloads/amber18/dat/leap/lib to search path.
+-I: Adding /home/hargu978/Downloads/amber18/dat/leap/parm to search path.
+-I: Adding /home/hargu978/Downloads/amber18/dat/leap/cmd to search path.
+-s: Ignoring startup file: leaprc
+-f: Source PEO_tleap.in.
+
+Welcome to LEaP!
+Sourcing: ./PEO_tleap.in
+----- Source: /home/hargu978/Downloads/amber18/dat/leap/cmd/leaprc.gaff
+----- Source of /home/hargu978/Downloads/amber18/dat/leap/cmd/leaprc.gaff done
+Log file: ./leap.log
+Loading parameters: /home/hargu978/Downloads/amber18/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.81, May 2017)
+Loading Prep file: ./PEO.prepi
+Loading Prep file: ./HPT.prepi
+Loading Prep file: ./TPT.prepi
+Writing pdb file: PEO_polymer.pdb
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ total 0 improper torsions applied
+ 0 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.

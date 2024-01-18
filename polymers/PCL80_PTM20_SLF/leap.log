@@ -1,0 +1,403 @@
+log started: Fri Dec 17 16:12:51 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT PTM PCLL PTM PCLL PTM PCLL PCLL PCLL PCLL PCLL PTM PCLL PTM PCLL PCLL PCLL PCLL PCLL PCLL PCLL PCLL PCLL PCLL PCLL PCLL PCLR PCLR PCLR PCLR PCLR PCLR PCLR PCLR PTM PCLR PTM PCLR PTM PCLR PCLR PCLR PCLR PTM PCLR PCLR PCLR PCLR PCLR PCLR PTM TPT }
+Sequence: HPT
+Sequence: PTM
+Joining HPT - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PTM
+Joining PCLL - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PTM
+Joining PCLL - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PTM
+Joining PCLL - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PTM
+Joining PCLL - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLR
+Joining PCLL - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: PCLR
+Joining PTM - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: PCLR
+Joining PTM - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: PCLR
+Joining PTM - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: PCLR
+Joining PTM - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: TPT
+Joining PTM - TPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL80_PTM20_SLF/polymer.pdb
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL80_PTM20_SLF/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL80_PTM20_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL80_PTM20_SLF/polymer.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+ ** Warning: No sp2 improper torsion term for  cc-c-cd-ha
+        atoms are: C9 C11 C10 H16
+ ** Warning: No sp2 improper torsion term for  na-cd-cc-c3
+        atoms are: N3 C10 C9 C12
+ ** Warning: No sp2 improper torsion term for  n-na-cc-nd
+        atoms are: N2 N3 C8 N4
+old PREP-specified impropers:
+ <HPT 1>:  N    O    C    O3  
+ <HPT 1>:  C    C1   N    H   
+ <HPT 1>:  C7   C6   N1   H13 
+ <HPT 1>:  N1   N2   C7   O1  
+ <HPT 1>:  C7   C8   N2   H14 
+ <HPT 1>:  N2   N3   C8   N4  
+ <HPT 1>:  C8   C9   N3   H15 
+ <HPT 1>:  C12  C10  C9   N3  
+ <HPT 1>:  C11  C9   C10  H16 
+ <HPT 1>:  C10  N4   C11  O2  
+ <PTM 2>:  O5   O2   C3   O1  
+ <PTM 2>:  O6   O3   C7   O4  
+ <PCLL 3>:  C4   O3   C5   O1  
+ <PCLL 3>:  C10  O4   C11  O2  
+ <PTM 4>:  O5   O2   C3   O1  
+ <PTM 4>:  O6   O3   C7   O4  
+ <PCLL 5>:  C4   O3   C5   O1  
+ <PCLL 5>:  C10  O4   C11  O2  
+ <PTM 6>:  O5   O2   C3   O1  
+ <PTM 6>:  O6   O3   C7   O4  
+ <PCLL 7>:  C4   O3   C5   O1  
+ <PCLL 7>:  C10  O4   C11  O2  
+ <PCLL 8>:  C4   O3   C5   O1  
+ <PCLL 8>:  C10  O4   C11  O2  
+ <PCLL 9>:  C4   O3   C5   O1  
+ <PCLL 9>:  C10  O4   C11  O2  
+ <PCLL 10>:  C4   O3   C5   O1  
+ <PCLL 10>:  C10  O4   C11  O2  
+ <PCLL 11>:  C4   O3   C5   O1  
+ <PCLL 11>:  C10  O4   C11  O2  
+ <PTM 12>:  O5   O2   C3   O1  
+ <PTM 12>:  O6   O3   C7   O4  
+ <PCLL 13>:  C4   O3   C5   O1  
+ <PCLL 13>:  C10  O4   C11  O2  
+ <PTM 14>:  O5   O2   C3   O1  
+ <PTM 14>:  O6   O3   C7   O4  
+ <PCLL 15>:  C4   O3   C5   O1  
+ <PCLL 15>:  C10  O4   C11  O2  
+ <PCLL 16>:  C4   O3   C5   O1  
+ <PCLL 16>:  C10  O4   C11  O2  
+ <PCLL 17>:  C4   O3   C5   O1  
+ <PCLL 17>:  C10  O4   C11  O2  
+ <PCLL 18>:  C4   O3   C5   O1  
+ <PCLL 18>:  C10  O4   C11  O2  
+ <PCLL 19>:  C4   O3   C5   O1  
+ <PCLL 19>:  C10  O4   C11  O2  
+ <PCLL 20>:  C4   O3   C5   O1  
+ <PCLL 20>:  C10  O4   C11  O2  
+ <PCLL 21>:  C4   O3   C5   O1  
+ <PCLL 21>:  C10  O4   C11  O2  
+ <PCLL 22>:  C4   O3   C5   O1  
+ <PCLL 22>:  C10  O4   C11  O2  
+ <PCLL 23>:  C4   O3   C5   O1  
+ <PCLL 23>:  C10  O4   C11  O2  
+ <PCLL 24>:  C4   O3   C5   O1  
+ <PCLL 24>:  C10  O4   C11  O2  
+ <PCLL 25>:  C4   O3   C5   O1  
+ <PCLL 25>:  C10  O4   C11  O2  
+ <PCLL 26>:  C4   O3   C5   O1  
+ <PCLL 26>:  C10  O4   C11  O2  
+ <PCLR 27>:  C4   O1   C3   O   
+ <PCLR 27>:  C10  O3   C9   O2  
+ <PCLR 28>:  C4   O1   C3   O   
+ <PCLR 28>:  C10  O3   C9   O2  
+ <PCLR 29>:  C4   O1   C3   O   
+ <PCLR 29>:  C10  O3   C9   O2  
+ <PCLR 30>:  C4   O1   C3   O   
+ <PCLR 30>:  C10  O3   C9   O2  
+ <PCLR 31>:  C4   O1   C3   O   
+ <PCLR 31>:  C10  O3   C9   O2  
+ <PCLR 32>:  C4   O1   C3   O   
+ <PCLR 32>:  C10  O3   C9   O2  
+ <PCLR 33>:  C4   O1   C3   O   
+ <PCLR 33>:  C10  O3   C9   O2  
+ <PCLR 34>:  C4   O1   C3   O   
+ <PCLR 34>:  C10  O3   C9   O2  
+ <PTM 35>:  O5   O2   C3   O1  
+ <PTM 35>:  O6   O3   C7   O4  
+ <PCLR 36>:  C4   O1   C3   O   
+ <PCLR 36>:  C10  O3   C9   O2  
+ <PTM 37>:  O5   O2   C3   O1  
+ <PTM 37>:  O6   O3   C7   O4  
+ <PCLR 38>:  C4   O1   C3   O   
+ <PCLR 38>:  C10  O3   C9   O2  
+ <PTM 39>:  O5   O2   C3   O1  
+ <PTM 39>:  O6   O3   C7   O4  
+ <PCLR 40>:  C4   O1   C3   O   
+ <PCLR 40>:  C10  O3   C9   O2  
+ <PCLR 41>:  C4   O1   C3   O   
+ <PCLR 41>:  C10  O3   C9   O2  
+ <PCLR 42>:  C4   O1   C3   O   
+ <PCLR 42>:  C10  O3   C9   O2  
+ <PCLR 43>:  C4   O1   C3   O   
+ <PCLR 43>:  C10  O3   C9   O2  
+ <PTM 44>:  O5   O2   C3   O1  
+ <PTM 44>:  O6   O3   C7   O4  
+ <PCLR 45>:  C4   O1   C3   O   
+ <PCLR 45>:  C10  O3   C9   O2  
+ <PCLR 46>:  C4   O1   C3   O   
+ <PCLR 46>:  C10  O3   C9   O2  
+ <PCLR 47>:  C4   O1   C3   O   
+ <PCLR 47>:  C10  O3   C9   O2  
+ <PCLR 48>:  C4   O1   C3   O   
+ <PCLR 48>:  C10  O3   C9   O2  
+ <PCLR 49>:  C4   O1   C3   O   
+ <PCLR 49>:  C10  O3   C9   O2  
+ <PCLR 50>:  C4   O1   C3   O   
+ <PCLR 50>:  C10  O3   C9   O2  
+ <PTM 51>:  O5   O2   C3   O1  
+ <PTM 51>:  O6   O3   C7   O4  
+ <TPT 52>:  N    O    C    O3  
+ <TPT 52>:  C1   C    N    H   
+ <TPT 52>:  C7   C6   N1   H13 
+ <TPT 52>:  N1   N2   C7   O1  
+ <TPT 52>:  C7   C8   N2   H14 
+ <TPT 52>:  N2   N3   C8   N4  
+ <TPT 52>:  C8   C9   N3   H15 
+ <TPT 52>:  C12  C10  C9   N3  
+ <TPT 52>:  C11  C9   C10  H16 
+ <TPT 52>:  C10  N4   C11  O2  
+ total 114 improper torsions applied
+ 120 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+ quit
+	Quit

@@ -1,0 +1,47 @@
+; PF6_GMX_OPLS.itp created by acpype (v: 2022.6.6) on Wed Feb  8 16:37:18 2023
+
+; For OPLS atomtypes manual fine tuning
+; AC_at:OPLS_at:OPLScode: Possible_Alternatives (see ffoplsaa.atp and ffoplsaanb.itp)
+; p5:x:opls_x: []
+; f:x:opls_x: []
+
+[ moleculetype ]
+;name            nrexcl
+ PF6              3
+
+[ atoms ]
+;   nr  type  resi  res  atom  cgnr     charge      mass       ; qtot   bond_type
+     1 opls_x     1    61     P    1     1.244600      0.00000 ; qtot  1.245  x   
+     2 opls_x     1    61     F    2    -0.374100      0.00000 ; qtot  0.870  x   
+     3 opls_x     1    61    F1    3    -0.374100      0.00000 ; qtot  0.496  x   
+     4 opls_x     1    61    F2    4    -0.374100      0.00000 ; qtot  0.122  x   
+     5 opls_x     1    61    F3    5    -0.374100      0.00000 ; qtot -0.252  x   
+     6 opls_x     1    61    F4    6    -0.374100      0.00000 ; qtot -0.626  x   
+     7 opls_x     1    61    F5    7    -0.374100      0.00000 ; qtot -1.000  x   
+
+[ bonds ]
+;   ai     aj funct   r             k
+     1      2   1 ;    1.5860e-01    3.7045e+05 ;      P - F           x - x     
+     1      3   1 ;    1.5860e-01    3.7045e+05 ;      P - F1          x - x     
+     1      4   1 ;    1.5860e-01    3.7045e+05 ;      P - F2          x - x     
+     1      5   1 ;    1.5860e-01    3.7045e+05 ;      P - F3          x - x     
+     1      6   1 ;    1.5860e-01    3.7045e+05 ;      P - F4          x - x     
+     1      7   1 ;    1.5860e-01    3.7045e+05 ;      P - F5          x - x     
+
+[ angles ]
+;   ai     aj     ak    funct   theta         cth
+     2      1      3      1 ;    9.2220e+01    7.7320e+02 ;      F - P    - F1        x -    x - x   
+     2      1      4      1 ;    9.2220e+01    7.7320e+02 ;      F - P    - F2        x -    x - x   
+     2      1      5      1 ;    9.2220e+01    7.7320e+02 ;      F - P    - F3        x -    x - x   
+     2      1      6      1 ;    9.2220e+01    7.7320e+02 ;      F - P    - F4        x -    x - x   
+     2      1      7      1 ;    9.2220e+01    7.7320e+02 ;      F - P    - F5        x -    x - x   
+     3      1      4      1 ;    9.2220e+01    7.7320e+02 ;     F1 - P    - F2        x -    x - x   
+     3      1      5      1 ;    9.2220e+01    7.7320e+02 ;     F1 - P    - F3        x -    x - x   
+     3      1      6      1 ;    9.2220e+01    7.7320e+02 ;     F1 - P    - F4        x -    x - x   
+     3      1      7      1 ;    9.2220e+01    7.7320e+02 ;     F1 - P    - F5        x -    x - x   
+     4      1      5      1 ;    9.2220e+01    7.7320e+02 ;     F2 - P    - F3        x -    x - x   
+     4      1      6      1 ;    9.2220e+01    7.7320e+02 ;     F2 - P    - F4        x -    x - x   
+     4      1      7      1 ;    9.2220e+01    7.7320e+02 ;     F2 - P    - F5        x -    x - x   
+     5      1      6      1 ;    9.2220e+01    7.7320e+02 ;     F3 - P    - F4        x -    x - x   
+     5      1      7      1 ;    9.2220e+01    7.7320e+02 ;     F3 - P    - F5        x -    x - x   
+     6      1      7      1 ;    9.2220e+01    7.7320e+02 ;     F4 - P    - F5        x -    x - x   

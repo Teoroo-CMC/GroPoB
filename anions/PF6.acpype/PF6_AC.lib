@@ -1,0 +1,75 @@
+!!index array str
+ "R6"
+!entry.R6.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "P" "p5" 0 1 131072 1 15 1.241600
+ "F" "f" 0 1 131072 2 9 -0.374100
+ "F1" "f" 0 1 131072 3 9 -0.374100
+ "F2" "f" 0 1 131072 4 9 -0.374100
+ "F3" "f" 0 1 131072 5 9 -0.374100
+ "F4" "f" 0 1 131072 6 9 -0.374100
+ "F5" "f" 0 1 131072 7 9 -0.374100
+!entry.R6.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "P" "p5" 0 -1 0.0
+ "F" "f" 0 -1 0.0
+ "F1" "f" 0 -1 0.0
+ "F2" "f" 0 -1 0.0
+ "F3" "f" 0 -1 0.0
+ "F4" "f" 0 -1 0.0
+ "F5" "f" 0 -1 0.0
+!entry.R6.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.R6.unit.childsequence single int
+ 2
+!entry.R6.unit.connect array int
+ 0
+ 0
+!entry.R6.unit.connectivity table  int atom1x  int atom2x  int flags
+ 1 7 1
+ 1 2 1
+ 1 3 1
+ 1 5 1
+ 1 4 1
+ 1 6 1
+!entry.R6.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+ "R" 1 "A" 2
+ "R" 1 "A" 3
+ "R" 1 "A" 4
+ "R" 1 "A" 5
+ "R" 1 "A" 6
+ "R" 1 "A" 7
+!entry.R6.unit.name single str
+ "pf6.pdb"
+!entry.R6.unit.positions table  dbl x  dbl y  dbl z
+ -1.384000 0.086000 -0.019000
+ -0.204000 1.315000 -0.242000
+ -2.633000 1.249000 -0.211000
+ -2.563000 -1.143000 0.204000
+ -0.134000 -1.078000 0.173000
+ -1.370000 0.380000 1.673000
+ -1.398000 -0.209000 -1.711000
+!entry.R6.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 0 0 0 0 0 0
+!entry.R6.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "61" 1 8 1 "?" 0
+!entry.R6.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.R6.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.R6.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0

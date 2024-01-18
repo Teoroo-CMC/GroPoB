@@ -1,0 +1,82 @@
+Remarks PCLL_CNS.par created by acpype (Rev: 0) on Wed Jun 23 17:34:11 2021
+
+set echo=false end
+
+{ Bonds: atomType1 atomType2 kb r0 }
+BOND   oh_   ho_    371.4   0.9730
+BOND   c3_   h1_    330.6   1.0969
+BOND   c3_   hc_    330.6   1.0969
+BOND   oh_   c3_    316.7   1.4233
+BOND   c3_   c3_    300.9   1.5375
+BOND   c3_    c_    313.0   1.5241
+BOND    c_   os_    390.8   1.3584
+BOND    c_    o_    637.7   1.2183
+BOND   os_   c3_    308.6   1.4316
+
+{ Angles: aType1 aType2 aType3 kt t0 }
+ANGLe   oh_   c3_   h1_     50.9   110.26
+ANGLe   c3_   oh_   ho_     47.4   107.26
+ANGLe   c3_   c3_   hc_     46.3   109.80
+ANGLe   c3_   c3_   h1_     46.4   109.56
+ANGLe   h1_   c3_   h1_     39.2   108.46
+ANGLe   hc_   c3_   hc_     39.4   107.58
+ANGLe    c_   c3_   hc_     46.9   108.77
+ANGLe   os_   c3_   h1_     50.8   109.78
+ANGLe   oh_   c3_   c3_     67.5   110.19
+ANGLe   c3_   c3_   c3_     62.9   111.51
+ANGLe   c3_   c3_    c_     63.3   111.04
+ANGLe   c3_    c_   os_     68.9   110.72
+ANGLe   c3_    c_    o_     67.4   123.20
+ANGLe    c_   os_   c3_     63.3   115.98
+ANGLe   os_    c_    o_     75.3   123.25
+ANGLe   os_   c3_   c3_     68.0   107.97
+
+{ Proper Dihedrals: aType1 aType2 aType3 aType4 kt period phase }
+DIHEdral   h1_   c3_   c3_   hc_           0.156    3     0.00
+DIHEdral   oh_   c3_   c3_   c3_           0.156    3     0.00
+DIHEdral   hc_   c3_   c3_    c_           0.156    3     0.00
+DIHEdral   c3_   c3_   c3_   hc_           0.160    3     0.00
+DIHEdral   c3_   c3_   c3_    c_           0.156    3     0.00
+DIHEdral   h1_   c3_   c3_   c3_           0.156    3     0.00
+DIHEdral   hc_   c3_   c3_   hc_           0.150    3     0.00
+DIHEdral   hc_   c3_    c_   os_           0.000    2   180.00
+DIHEdral   ho_   oh_   c3_   h1_           0.167    3     0.00
+DIHEdral   hc_   c3_   c3_   c3_           0.160    3     0.00
+DIHEdral    c_   os_   c3_   h1_           0.383    3     0.00
+DIHEdral   c3_   c3_    c_    o_           0.000    2   180.00
+DIHEdral   c3_   os_    c_    o_  MULT 2   1.400    1   180.00
+                                           2.700    2   180.00
+DIHEdral   c3_   c3_   c3_   c3_  MULT 3   0.200    1   180.00
+                                           0.250    2   180.00
+                                           0.180    3     0.00
+DIHEdral   os_   c3_   c3_   c3_           0.156    3     0.00
+DIHEdral    c_   os_   c3_   c3_  MULT 2   0.800    1   180.00
+                                           0.383    3     0.00
+DIHEdral   c3_   c3_    c_   os_           0.000    2   180.00
+DIHEdral   c3_    c_   os_   c3_  MULT 3   0.000    0     0.00
+                                           2.700    2   180.00
+                                           1.150    3     0.00
+DIHEdral   os_   c3_   c3_   hc_  MULT 2   0.250    1     0.00
+                                           0.000    0     0.00
+DIHEdral   hc_   c3_    c_    o_  MULT 3   0.800    1     0.00
+                                           0.000    0     0.00
+                                           0.080    3   180.00
+DIHEdral   ho_   oh_   c3_   c3_  MULT 2   0.250    1     0.00
+                                           0.160    3     0.00
+DIHEdral   oh_   c3_   c3_   hc_  MULT 2   0.250    1     0.00
+                                           0.000    0     0.00
+
+{ Improper Dihedrals: aType1 aType2 aType3 aType4 kt period phase }
+IMPRoper   c3_    o_    c_   os_          10.5    2   180.00
+
+{ Nonbonded: Type Emin sigma; (1-4): Emin/2 sigma }
+NONBonded   oh_    0.210400    3.066473    0.105200    3.066473
+NONBonded   c3_    0.109400    3.399670    0.054700    3.399670
+NONBonded   h1_    0.015700    2.471353    0.007850    2.471353
+NONBonded   hc_    0.015700    2.649533    0.007850    2.649533
+NONBonded    c_    0.086000    3.399670    0.043000    3.399670
+NONBonded   os_    0.170000    3.000012    0.085000    3.000012
+NONBonded   ho_    0.000000    0.000000    0.000000    0.000000
+NONBonded    o_    0.210000    2.959922    0.105000    2.959922
+
+set echo=true end

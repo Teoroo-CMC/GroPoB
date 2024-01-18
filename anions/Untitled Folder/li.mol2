@@ -1,0 +1,9 @@
+@<TRIPOS>MOLECULE
+*****
+ 1 0 0 0 0
+SMALL
+GASTEIGER
+
+@<TRIPOS>ATOM
+      1 Li+          0.6146    0.0649    0.0000 Li+      1  LI        0.0000
+@<TRIPOS>BOND
