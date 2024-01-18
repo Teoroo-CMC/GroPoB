@@ -165,7 +165,37 @@ LI    '''+str(nions)+'''
 TFS   '''+str(nions)+'''
 ''')
 topol.close() 
+<<<<<<< HEAD
+```
+By using PACKMOL, we can now generate the initial configuration of the MD simulation box.
+```python
+#Build initial simulation boxes using packmol
+pack=open('packmol.inp','w+')
+pack.write('''tolerance 2.0
+filetype pdb
+output initial.pdb
+structure PEO_25mer.pdb
+  number '''+str(npol)+'''
+  inside cube 0. 0. 0. 100. 
+end structure
+
+structure li.pdb
+  number '''+str(nions)+'''
+  inside cube 20. 20. 20. 50.
+end structure
+
+structure tfsi.pdb
+  number '''+str(nions)+'''
+  inside cube 20. 20. 20. 50.
+end structure
+        ''')
+pack.close()
+!packmol < packmol.inp
+
+```
+=======
 
 ```
 By using PACKMOL, we can now generate the initial configuration of the MD simulation box.
+>>>>>>> 4a79618068b75283c8cd38f24d07d3d7ff7dbb40
 ## Step-5: Run MD to test the input files
