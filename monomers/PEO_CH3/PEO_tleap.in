@@ -1,0 +1,8 @@
+source leaprc.gaff
+loadamberprep PEO.prepi
+loadamberprep HPT.prepi
+loadamberprep TPT.prepi
+mol = sequence {HPT  TPT}
+savepdb mol PEO_polymer.pdb
+saveamberparm mol PEO_polymer.prmtop PEO_polymer.inpcrd
+quit

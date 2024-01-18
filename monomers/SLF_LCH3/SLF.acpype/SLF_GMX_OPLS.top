@@ -1,0 +1,14 @@
+; SLF_GMX_OPLS.top created by acpype (Rev: 0) on Tue Dec 14 20:03:52 2021
+
+; Include forcefield parameters
+#include "ffoplsaa.itp"
+
+; Include SLF_GMX.itp topology
+#include "SLF_GMX.itp"
+
+[ system ]
+ SLF
+
+[ molecules ]
+; Compound        nmols
+ SLF              1     

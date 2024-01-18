@@ -1,0 +1,20 @@
+; PE_GMX.top created by acpype (v: 2022.6.6) on Thu Jan 12 15:08:03 2023
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333333333
+
+; Include PE_GMX.itp topology
+#include "PE_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_PE.itp"
+#endif
+
+[ system ]
+ PE
+
+[ molecules ]
+; Compound        nmols
+ PE               1     

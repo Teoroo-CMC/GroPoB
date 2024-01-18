@@ -1,0 +1,19 @@
+Remarks PF6_CNS.par created by acpype (v: 2022.6.6) on Wed Feb  8 16:37:18 2023
+
+set echo=false end
+
+{ Bonds: atomType1 atomType2 kb r0 }
+BOND   p5_    f_    442.7   1.5860
+
+{ Angles: aType1 aType2 aType3 kt t0 }
+ANGLe    f_   p5_    f_     92.4    92.22
+
+{ Proper Dihedrals: aType1 aType2 aType3 aType4 kt period phase }
+
+{ Improper Dihedrals: aType1 aType2 aType3 aType4 kt period phase }
+
+{ Nonbonded: Type Emin sigma; (1-4): Emin/2 sigma }
+NONBonded   p5_    0.229500    3.694022    0.114750    3.694022
+NONBonded    f_    0.083200    3.034223    0.041600    3.034223
+
+set echo=true end

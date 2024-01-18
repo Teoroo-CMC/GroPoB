@@ -1,0 +1,50 @@
+Remarks PEO_CNS.par created by acpype (Rev: 0) on Thu Oct 28 14:40:20 2021
+
+set echo=false end
+
+{ Bonds: atomType1 atomType2 kb r0 }
+BOND   c3_   h1_    330.6   1.0969
+BOND   oh_   ho_    371.4   0.9730
+BOND   os_   c3_    308.6   1.4316
+BOND   c3_   c3_    300.9   1.5375
+BOND   c3_   oh_    316.7   1.4233
+
+{ Angles: aType1 aType2 aType3 kt t0 }
+ANGLe   os_   c3_   h1_     50.8   109.78
+ANGLe   c3_   c3_   h1_     46.4   109.56
+ANGLe   c3_   oh_   ho_     47.4   107.26
+ANGLe   h1_   c3_   h1_     39.2   108.46
+ANGLe   oh_   c3_   h1_     50.9   110.26
+ANGLe   os_   c3_   c3_     68.0   107.97
+ANGLe   c3_   os_   c3_     62.7   112.48
+ANGLe   c3_   c3_   oh_     67.5   110.19
+
+{ Proper Dihedrals: aType1 aType2 aType3 aType4 kt period phase }
+DIHEdral   c3_   os_   c3_   c3_  MULT 2   0.100    2   180.00
+                                           0.383    3     0.00
+DIHEdral   os_   c3_   c3_   oh_  MULT 2   1.175    2     0.00
+                                           0.144    3     0.00
+DIHEdral   h1_   c3_   c3_   oh_  MULT 2   0.250    1     0.00
+                                           0.000    0     0.00
+DIHEdral   os_   c3_   c3_   h1_  MULT 2   0.250    1     0.00
+                                           0.000    0     0.00
+DIHEdral   h1_   c3_   c3_   h1_           0.156    3     0.00
+DIHEdral   h1_   c3_   oh_   ho_           0.167    3     0.00
+DIHEdral   c3_   c3_   oh_   ho_  MULT 2   0.250    1     0.00
+                                           0.160    3     0.00
+DIHEdral   c3_   c3_   os_   c3_  MULT 2   0.100    2   180.00
+                                           0.383    3     0.00
+DIHEdral   c3_   os_   c3_   h1_           0.383    3     0.00
+DIHEdral   os_   c3_   c3_   os_  MULT 2   1.175    2     0.00
+                                           0.144    3     0.00
+
+{ Improper Dihedrals: aType1 aType2 aType3 aType4 kt period phase }
+
+{ Nonbonded: Type Emin sigma; (1-4): Emin/2 sigma }
+NONBonded   os_    0.170000    3.000012    0.085000    3.000012
+NONBonded   c3_    0.109400    3.399670    0.054700    3.399670
+NONBonded   h1_    0.015700    2.471353    0.007850    2.471353
+NONBonded   oh_    0.210400    3.066473    0.105200    3.066473
+NONBonded   ho_    0.000000    0.000000    0.000000    0.000000
+
+set echo=true end

@@ -1,0 +1,55 @@
+Remarks PF6_CNS.top created by acpype (v: 2022.6.6) on Wed Feb  8 16:37:18 2023
+
+set echo=false end
+
+autogenerate angles=True dihedrals=True end
+
+{ atomType  mass }
+MASS p5_     30.970
+MASS f_      19.000
+
+RESIdue 61
+
+GROUP
+
+{ atomName  atomType  Charge }
+ATOM P     TYPE= p5_   CHARGE=   1.2446 END
+ATOM F     TYPE= f_    CHARGE=  -0.3741 END
+ATOM F1    TYPE= f_    CHARGE=  -0.3741 END
+ATOM F2    TYPE= f_    CHARGE=  -0.3741 END
+ATOM F3    TYPE= f_    CHARGE=  -0.3741 END
+ATOM F4    TYPE= f_    CHARGE=  -0.3741 END
+ATOM F5    TYPE= f_    CHARGE=  -0.3741 END
+
+{ Bonds: atomName1  atomName2 }
+BOND P     F5   
+BOND P     F    
+BOND P     F1   
+BOND P     F3   
+BOND P     F2   
+BOND P     F4   
+
+{ Angles: atomName1 atomName2 atomName3}
+ANGLe F     P     F5   
+ANGLe F     P     F1   
+ANGLe F     P     F3   
+ANGLe F     P     F2   
+ANGLe F     P     F4   
+ANGLe F1    P     F5   
+ANGLe F1    P     F3   
+ANGLe F1    P     F2   
+ANGLe F1    P     F4   
+ANGLe F2    P     F5   
+ANGLe F2    P     F3   
+ANGLe F2    P     F4   
+ANGLe F3    P     F5   
+ANGLe F3    P     F4   
+ANGLe F4    P     F5   
+
+{ Proper Dihedrals: name1 name2 name3 name4 }
+
+{ Improper Dihedrals: aName1 aName2 aName3 aName4 }
+
+END {RESIdue 61}
+
+set echo=true end

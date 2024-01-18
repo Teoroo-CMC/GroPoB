@@ -1,0 +1,20 @@
+Remark line goes here
+MASS
+
+BOND
+
+ANGLE
+s6-ne-sy   67.700     119.630   same as s -ne-sy, penalty score=  4.2
+ne-s6-o   124.100     119.100   same as n2-s6-o , penalty score=  2.8
+f -c3-sy   83.900     109.680   same as f -c3-s6, penalty score=  1.0
+
+DIHE
+sy-ne-s6-c3   3   20.000       180.000           2.000      same as X -n2-s6-X , penalty score=160.5
+sy-ne-s6-o    3   20.000       180.000           2.000      same as X -n2-s6-X , penalty score=160.5
+
+IMPROPER
+
+NONBON
+
+
+

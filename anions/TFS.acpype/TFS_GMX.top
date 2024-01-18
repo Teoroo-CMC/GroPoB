@@ -1,0 +1,20 @@
+; TFS_GMX.top created by acpype (v: 2022.6.6) on Wed Feb  8 16:39:38 2023
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333333333
+
+; Include TFS_GMX.itp topology
+#include "TFS_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_TFS.itp"
+#endif
+
+[ system ]
+ TFS
+
+[ molecules ]
+; Compound        nmols
+ TFS              1     

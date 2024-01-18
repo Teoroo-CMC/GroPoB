@@ -1,0 +1,14 @@
+; PCLR_GMX_OPLS.top created by acpype (Rev: 0) on Wed Jun 23 17:34:03 2021
+
+; Include forcefield parameters
+#include "ffoplsaa.itp"
+
+; Include PCLR_GMX.itp topology
+#include "PCLR_GMX.itp"
+
+[ system ]
+ PCLR
+
+[ molecules ]
+; Compound        nmols
+ PCLR             1     

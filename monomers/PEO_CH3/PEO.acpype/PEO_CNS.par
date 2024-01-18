@@ -1,0 +1,37 @@
+Remarks PEO_CNS.par created by acpype (Rev: 0) on Wed Mar 31 20:38:38 2021
+
+set echo=false end
+
+{ Bonds: atomType1 atomType2 kb r0 }
+BOND   c3_   h1_    330.6   1.0969
+BOND   c3_   os_    308.6   1.4316
+BOND   c3_   c3_    300.9   1.5375
+
+{ Angles: aType1 aType2 aType3 kt t0 }
+ANGLe   os_   c3_   h1_     50.8   109.78
+ANGLe   c3_   c3_   h1_     46.4   109.56
+ANGLe   h1_   c3_   h1_     39.2   108.46
+ANGLe   c3_   os_   c3_     62.7   112.48
+ANGLe   os_   c3_   c3_     68.0   107.97
+
+{ Proper Dihedrals: aType1 aType2 aType3 aType4 kt period phase }
+DIHEdral   c3_   os_   c3_   c3_  MULT 2   0.100    2   180.00
+                                           0.383    3     0.00
+DIHEdral   os_   c3_   c3_   h1_  MULT 2   0.250    1     0.00
+                                           0.000    0     0.00
+DIHEdral   h1_   c3_   c3_   h1_           0.156    3     0.00
+DIHEdral   os_   c3_   c3_   os_  MULT 2   1.175    2     0.00
+                                           0.144    3     0.00
+DIHEdral   c3_   c3_   os_   c3_  MULT 2   0.100    2   180.00
+                                           0.383    3     0.00
+DIHEdral   c3_   os_   c3_   h1_           0.383    3     0.00
+DIHEdral   h1_   c3_   os_   c3_           0.383    3     0.00
+
+{ Improper Dihedrals: aType1 aType2 aType3 aType4 kt period phase }
+
+{ Nonbonded: Type Emin sigma; (1-4): Emin/2 sigma }
+NONBonded   c3_    0.109400    3.399670    0.054700    3.399670
+NONBonded   os_    0.170000    3.000012    0.085000    3.000012
+NONBonded   h1_    0.015700    2.471353    0.007850    2.471353
+
+set echo=true end

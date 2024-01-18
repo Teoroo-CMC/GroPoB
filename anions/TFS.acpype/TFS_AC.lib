@@ -1,0 +1,123 @@
+!!index array str
+ "TFS"
+!entry.TFS.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "C" "c3" 0 1 131072 1 6 0.554700
+ "S" "s6" 0 1 131072 2 16 1.483700
+ "F" "f" 0 1 131072 3 9 -0.271633
+ "F1" "f" 0 1 131072 4 9 -0.271633
+ "F2" "f" 0 1 131072 5 9 -0.271633
+ "N" "ne" 0 1 131072 6 7 -1.059100
+ "S1" "sy" 0 1 131072 7 16 1.682400
+ "C1" "c3" 0 1 131072 8 6 0.554700
+ "F3" "f" 0 1 131072 9 9 -0.271633
+ "F4" "f" 0 1 131072 10 9 -0.271633
+ "F5" "f" 0 1 131072 11 9 -0.271633
+ "O" "o" 0 1 131072 12 8 -0.613200
+ "O1" "o" 0 1 131072 13 8 -0.656800
+ "O2" "o" 0 1 131072 14 8 -0.656800
+ "O3" "o" 0 1 131072 15 8 -0.656800
+!entry.TFS.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "C" "c3" 0 -1 0.0
+ "S" "s6" 0 -1 0.0
+ "F" "f" 0 -1 0.0
+ "F1" "f" 0 -1 0.0
+ "F2" "f" 0 -1 0.0
+ "N" "ne" 0 -1 0.0
+ "S1" "sy" 0 -1 0.0
+ "C1" "c3" 0 -1 0.0
+ "F3" "f" 0 -1 0.0
+ "F4" "f" 0 -1 0.0
+ "F5" "f" 0 -1 0.0
+ "O" "o" 0 -1 0.0
+ "O1" "o" 0 -1 0.0
+ "O2" "o" 0 -1 0.0
+ "O3" "o" 0 -1 0.0
+!entry.TFS.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.TFS.unit.childsequence single int
+ 2
+!entry.TFS.unit.connect array int
+ 0
+ 0
+!entry.TFS.unit.connectivity table  int atom1x  int atom2x  int flags
+ 1 4 1
+ 1 2 1
+ 1 3 1
+ 1 5 1
+ 2 6 2
+ 2 12 1
+ 2 15 2
+ 6 7 1
+ 7 14 2
+ 7 8 1
+ 7 13 2
+ 8 10 1
+ 8 9 1
+ 8 11 1
+!entry.TFS.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+ "R" 1 "A" 2
+ "R" 1 "A" 3
+ "R" 1 "A" 4
+ "R" 1 "A" 5
+ "R" 1 "A" 6
+ "R" 1 "A" 7
+ "R" 1 "A" 8
+ "R" 1 "A" 9
+ "R" 1 "A" 10
+ "R" 1 "A" 11
+ "R" 1 "A" 12
+ "R" 1 "A" 13
+ "R" 1 "A" 14
+ "R" 1 "A" 15
+!entry.TFS.unit.name single str
+ "tfsi.pdb"
+!entry.TFS.unit.positions table  dbl x  dbl y  dbl z
+ -8.051000 -0.832000 0.471000
+ -7.228000 1.001000 -0.123000
+ -7.203000 -1.623000 1.204000
+ -8.443000 -1.640000 -0.567000
+ -9.170000 -0.717000 1.253000
+ -6.116000 0.488000 -0.894000
+ -5.004000 -0.026000 -1.666000
+ -4.183000 1.807000 -2.263000
+ -5.032000 2.595000 -2.999000
+ -3.063000 1.692000 -3.043000
+ -3.795000 2.619000 -1.227000
+ -8.301000 1.552000 -0.808000
+ -3.930000 -0.574000 -0.981000
+ -5.272000 -0.599000 -2.900000
+ -6.960000 1.571000 1.113000
+!entry.TFS.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 0 0 0 0 0 0
+!entry.TFS.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "TFS" 1 16 1 "?" 0
+!entry.TFS.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.TFS.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.TFS.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0

@@ -1,0 +1,14 @@
+; PTM_GMX_OPLS.top created by acpype (Rev: 0) on Tue Dec 14 19:33:41 2021
+
+; Include forcefield parameters
+#include "ffoplsaa.itp"
+
+; Include PTM_GMX.itp topology
+#include "PTM_GMX.itp"
+
+[ system ]
+ PTM
+
+[ molecules ]
+; Compound        nmols
+ PTM              1     

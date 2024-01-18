@@ -1,0 +1,19 @@
+; PF6_GMX_OPLS.top created by acpype (v: 2022.6.6) on Wed Feb  8 16:37:18 2023
+
+; Include forcefield parameters
+#include "ffoplsaa.itp"
+
+; Include PF6_GMX.itp topology
+#include "PF6_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_PF6.itp"
+#endif
+
+[ system ]
+ PF6
+
+[ molecules ]
+; Compound        nmols
+ PF6              1     

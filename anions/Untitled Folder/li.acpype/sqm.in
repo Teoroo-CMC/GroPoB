@@ -1,0 +1,7 @@
+Run semi-empirical minimization
+ &qmmm
+    qm_theory='AM1', grms_tol=0.0005,
+ scfconv=1.d-10, ndiis_attempts=700,   qmcharge=1,
+ /
+   3   Li+        0.6150        0.0650        0.0000 
+

@@ -1,0 +1,80 @@
+==========================================================================
+| ACPYPE: AnteChamber PYthon Parser interfacE v. 2022.6.6 (c) 2023 AWSdS |
+==========================================================================
+DEBUG: CLI: -i CCOCCOCCOCCOCCOCC -b PEO -n 0 -o gmx
+DEBUG: Python Version 3.7.11 (default, Jul 27 2021, 14:32:16) 
+[GCC 7.5.0]
+DEBUG: Max execution time tolerance is 3h
+DEBUG: /home/harish/miniconda3/envs/harish_env/bin/antechamber -dr no -i PEO.mol2 -fi mol2 -o tmp -fo ac -pf y
+DEBUG: 
+Welcome to antechamber 22.0: molecular input file processor.
+
+Info: The atom type is set to gaff; the options available to the -at flag are
+ gaff, gaff2, amber, bcc, and sybyl.
+
+
+DEBUG: setResNameCheckCoords done
+DEBUG: Net charge drift '0.000000'
+==> ... charge set to 0
+==> Executing Antechamber...
+DEBUG: /home/harish/miniconda3/envs/harish_env/bin/antechamber -dr no -i PEO.mol2 -fi mol2 -o PEO_bcc_gaff2.mol2 -fo mol2 -c bcc -nc 0 -m 1 -s 2 -df 2 -at gaff2 -pf n 
+DEBUG: No file left to be removed
+==> * Antechamber OK *
+DEBUG: /home/harish/miniconda3/envs/harish_env/bin/parmchk2 -i PEO_bcc_gaff2.mol2 -f mol2 -o PEO_AC.frcmod -s 2
+==> * Parmchk OK *
+DEBUG: No crd or prm files left to be removed
+==> Executing Tleap...
+DEBUG: /home/harish/miniconda3/envs/harish_env/bin/tleap -f tleap.in
+DEBUG: ++++++++++start_quote+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DEBUG: Checking 'UNL'....
+Checking parameters for unit 'UNL'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+DEBUG: ++++++++++end_quote+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+==> * Tleap OK *
+==> Removing temporary files...
+DEBUG: prmtop and inpcrd files loaded
+DEBUG: basename defined = 'PEO'
+DEBUG: getCoords done
+DEBUG: getABCOEFs done
+DEBUG: charge to be balanced: total 0.0000019989
+DEBUG: balanceCharges done
+DEBUG: Balanced TotalCharge 0.0000000000
+DEBUG: PBC = None
+DEBUG: getAtoms done
+DEBUG: getBonds done
+DEBUG: getAngles done
+DEBUG: getDihedrals done
+==> Using OpenBabel v.3.1.0
+
+==> Writing GROMACS files
+
+==> Disambiguating lower and uppercase atomtypes in GMX top file, even if identical.
+
+DEBUG: writing GRO file
+DEBUG: Box size estimated
+DEBUG: writing POSRE file
+DEBUG: atomTypes 4
+DEBUG: GMX atomtypes done
+DEBUG: atoms 43
+DEBUG: GMX atoms done
+DEBUG: bonds 42
+DEBUG: GMX bonds done
+DEBUG: atomPairs 84
+DEBUG: GMX pairs done
+DEBUG: angles 77
+DEBUG: GMX angles done
+DEBUG: setProperDihedralsCoef done
+DEBUG: properDihedralsCoefRB 84
+DEBUG: properDihedralsAlphaGamma 0
+DEBUG: properDihedralsGmx45 134
+==> Writing GMX dihedrals for GMX 4.5 and higher.
+
+DEBUG: GMX special proper dihedrals done
+DEBUG: improperDihedrals 0
+DEBUG: GMX improper dihedrals done
+==> Writing pickle file PEO.pkl
+==> Removing temporary files...
+Total time of execution: 35s
+DEBUG: No tmp folder left to be removed

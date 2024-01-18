@@ -1,0 +1,8 @@
+source leaprc.gaff
+loadamberprep ../PCLR_5mer/PCLR.prepi
+loadamberprep ../PCLR_5mer/HPT.prepi
+loadamberprep ../PCLR_5mer/TPT.prepi
+mol = sequence {HPT  TPT}
+savepdb mol PCLR_polymer.pdb
+saveamberparm mol PCLR_polymer.prmtop PCLR_polymer.inpcrd
+quit

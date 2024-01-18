@@ -1,0 +1,177 @@
+-I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/prep to search path.
+-I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/lib to search path.
+-I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm to search path.
+-I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/cmd to search path.
+-s: Ignoring startup file: leaprc
+-f: Source tleap.in.
+
+Welcome to LEaP!
+Sourcing: ./tleap.in
+----- Source: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/cmd/leaprc.gaff
+----- Source of /pdc/vol/amber/16.at17/amd64_co7/dat/leap/cmd/leaprc.gaff done
+Log file: ./leap.log
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/TPT.prepi
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL80_PTM20/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <HPT 1>:  O5   O1   C3   O2  
+ <HPT 1>:  O6   O3   C7   O4  
+ <PCLL 2>:  C4   O3   C5   O1  
+ <PCLL 2>:  C10  O4   C11  O2  
+ <PCLL 3>:  C4   O3   C5   O1  
+ <PCLL 3>:  C10  O4   C11  O2  
+ <PCLL 4>:  C4   O3   C5   O1  
+ <PCLL 4>:  C10  O4   C11  O2  
+ <PCLL 5>:  C4   O3   C5   O1  
+ <PCLL 5>:  C10  O4   C11  O2  
+ <PCLL 6>:  C4   O3   C5   O1  
+ <PCLL 6>:  C10  O4   C11  O2  
+ <PTM 7>:  O5   O2   C3   O1  
+ <PTM 7>:  O6   O3   C7   O4  
+ <PCLL 8>:  C4   O3   C5   O1  
+ <PCLL 8>:  C10  O4   C11  O2  
+ <PTM 9>:  O5   O2   C3   O1  
+ <PTM 9>:  O6   O3   C7   O4  
+ <PCLL 10>:  C4   O3   C5   O1  
+ <PCLL 10>:  C10  O4   C11  O2  
+ <PCLL 11>:  C4   O3   C5   O1  
+ <PCLL 11>:  C10  O4   C11  O2  
+ <PCLL 12>:  C4   O3   C5   O1  
+ <PCLL 12>:  C10  O4   C11  O2  
+ <PCLL 13>:  C4   O3   C5   O1  
+ <PCLL 13>:  C10  O4   C11  O2  
+ <PCLL 14>:  C4   O3   C5   O1  
+ <PCLL 14>:  C10  O4   C11  O2  
+ <PCLL 15>:  C4   O3   C5   O1  
+ <PCLL 15>:  C10  O4   C11  O2  
+ <PCLL 16>:  C4   O3   C5   O1  
+ <PCLL 16>:  C10  O4   C11  O2  
+ <PCLL 17>:  C4   O3   C5   O1  
+ <PCLL 17>:  C10  O4   C11  O2  
+ <PCLL 18>:  C4   O3   C5   O1  
+ <PCLL 18>:  C10  O4   C11  O2  
+ <PTM 19>:  O5   O2   C3   O1  
+ <PTM 19>:  O6   O3   C7   O4  
+ <PTM 20>:  O5   O2   C3   O1  
+ <PTM 20>:  O6   O3   C7   O4  
+ <PCLL 21>:  C4   O3   C5   O1  
+ <PCLL 21>:  C10  O4   C11  O2  
+ <PCLL 22>:  C4   O3   C5   O1  
+ <PCLL 22>:  C10  O4   C11  O2  
+ <PCLL 23>:  C4   O3   C5   O1  
+ <PCLL 23>:  C10  O4   C11  O2  
+ <PCLL 24>:  C4   O3   C5   O1  
+ <PCLL 24>:  C10  O4   C11  O2  
+ <PCLL 25>:  C4   O3   C5   O1  
+ <PCLL 25>:  C10  O4   C11  O2  
+ <PCLR 26>:  C4   O1   C3   O   
+ <PCLR 26>:  C10  O3   C9   O2  
+ <PTM 27>:  O5   O2   C3   O1  
+ <PTM 27>:  O6   O3   C7   O4  
+ <PTM 28>:  O5   O2   C3   O1  
+ <PTM 28>:  O6   O3   C7   O4  
+ <PCLR 29>:  C4   O1   C3   O   
+ <PCLR 29>:  C10  O3   C9   O2  
+ <PTM 30>:  O5   O2   C3   O1  
+ <PTM 30>:  O6   O3   C7   O4  
+ <PCLR 31>:  C4   O1   C3   O   
+ <PCLR 31>:  C10  O3   C9   O2  
+ <PCLR 32>:  C4   O1   C3   O   
+ <PCLR 32>:  C10  O3   C9   O2  
+ <PCLR 33>:  C4   O1   C3   O   
+ <PCLR 33>:  C10  O3   C9   O2  
+ <PCLR 34>:  C4   O1   C3   O   
+ <PCLR 34>:  C10  O3   C9   O2  
+ <PCLR 35>:  C4   O1   C3   O   
+ <PCLR 35>:  C10  O3   C9   O2  
+ <PCLR 36>:  C4   O1   C3   O   
+ <PCLR 36>:  C10  O3   C9   O2  
+ <PCLR 37>:  C4   O1   C3   O   
+ <PCLR 37>:  C10  O3   C9   O2  
+ <PCLR 38>:  C4   O1   C3   O   
+ <PCLR 38>:  C10  O3   C9   O2  
+ <PTM 39>:  O5   O2   C3   O1  
+ <PTM 39>:  O6   O3   C7   O4  
+ <PCLR 40>:  C4   O1   C3   O   
+ <PCLR 40>:  C10  O3   C9   O2  
+ <PCLR 41>:  C4   O1   C3   O   
+ <PCLR 41>:  C10  O3   C9   O2  
+ <PCLR 42>:  C4   O1   C3   O   
+ <PCLR 42>:  C10  O3   C9   O2  
+ <PCLR 43>:  C4   O1   C3   O   
+ <PCLR 43>:  C10  O3   C9   O2  
+ <PCLR 44>:  C4   O1   C3   O   
+ <PCLR 44>:  C10  O3   C9   O2  
+ <PCLR 45>:  C4   O1   C3   O   
+ <PCLR 45>:  C10  O3   C9   O2  
+ <PCLR 46>:  C4   O1   C3   O   
+ <PCLR 46>:  C10  O3   C9   O2  
+ <PCLR 47>:  C4   O1   C3   O   
+ <PCLR 47>:  C10  O3   C9   O2  
+ <PCLR 48>:  C4   O1   C3   O   
+ <PCLR 48>:  C10  O3   C9   O2  
+ <PCLR 49>:  C4   O1   C3   O   
+ <PCLR 49>:  C10  O3   C9   O2  
+ <TPT 50>:  O5   O1   C3   O2  
+ <TPT 50>:  O6   O3   C7   O4  
+ total 100 improper torsions applied
+ 100 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+	Quit

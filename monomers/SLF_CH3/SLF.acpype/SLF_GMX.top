@@ -1,0 +1,15 @@
+; SLF_GMX.top created by acpype (Rev: 0) on Tue Dec 14 14:32:36 2021
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333
+
+; Include SLF_GMX.itp topology
+#include "SLF_GMX.itp"
+
+[ system ]
+ SLF
+
+[ molecules ]
+; Compound        nmols
+ SLF              1     

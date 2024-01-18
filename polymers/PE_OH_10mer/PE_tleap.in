@@ -1,0 +1,8 @@
+source leaprc.gaff
+loadamberprep /home/harish/GroPolBul/monomers/PE_OH/PE.prepi
+loadamberprep /home/harish/GroPolBul/monomers/PE_OH/HPT.prepi
+loadamberprep /home/harish/GroPolBul/monomers/PE_OH/TPT.prepi
+mol = sequence {HPT  TPT}
+savepdb mol PE_polymer.pdb
+saveamberparm mol PE_polymer.prmtop PE_polymer.inpcrd
+quit

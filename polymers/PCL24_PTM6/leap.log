@@ -1,0 +1,199 @@
+log started: Tue Dec 14 18:21:21 2021
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+Loaded UNIT: PCLL
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+Loaded UNIT: PCLR
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+Loaded UNIT: PTM
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/HPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/HPT.prepi
+Loaded UNIT: HPT
+> loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/TPT.prepi
+Loading Prep file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/TPT.prepi
+Loaded UNIT: TPT
+> mol = sequence {HPT PCLL PCLL PCLL PTM PCLL PTM PTM PTM PCLR PCLR PCLR PCLR PTM PTM TPT}
+Sequence: HPT
+Sequence: PCLL
+Joining HPT - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PCLL
+Joining PCLL - PCLL
+Sequence: PTM
+Joining PCLL - PTM
+Sequence: PCLL
+Joining PTM - PCLL
+Sequence: PTM
+Joining PCLL - PTM
+Sequence: PTM
+Joining PTM - PTM
+Sequence: PTM
+Joining PTM - PTM
+Sequence: PCLR
+Joining PTM - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PCLR
+Joining PCLR - PCLR
+Sequence: PTM
+Joining PCLR - PTM
+Sequence: PTM
+Joining PTM - PTM
+Sequence: TPT
+Joining PTM - TPT
+> savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL24_PTM6/polymer.pdb
+Writing pdb file: /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL24_PTM6/polymer.pdb
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLL -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+ Truncating residue name for PDB format: PCLR -> PCL
+> saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL24_PTM6/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL24_PTM6/polymer.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <HPT 1>:  C4   O3   C5   O1  
+ <HPT 1>:  C10  O4   C11  O2  
+ <PCLL 2>:  C4   O3   C5   O1  
+ <PCLL 2>:  C10  O4   C11  O2  
+ <PCLL 3>:  C4   O3   C5   O1  
+ <PCLL 3>:  C10  O4   C11  O2  
+ <PCLL 4>:  C4   O3   C5   O1  
+ <PCLL 4>:  C10  O4   C11  O2  
+ <PTM 5>:  O5   O2   C3   O1  
+ <PTM 5>:  O6   O3   C7   O4  
+ <PCLL 6>:  C4   O3   C5   O1  
+ <PCLL 6>:  C10  O4   C11  O2  
+ <PTM 7>:  O5   O2   C3   O1  
+ <PTM 7>:  O6   O3   C7   O4  
+ <PTM 8>:  O5   O2   C3   O1  
+ <PTM 8>:  O6   O3   C7   O4  
+ <PTM 9>:  O5   O2   C3   O1  
+ <PTM 9>:  O6   O3   C7   O4  
+ <PCLR 10>:  C4   O1   C3   O   
+ <PCLR 10>:  C10  O3   C9   O2  
+ <PCLR 11>:  C4   O1   C3   O   
+ <PCLR 11>:  C10  O3   C9   O2  
+ <PCLR 12>:  C4   O1   C3   O   
+ <PCLR 12>:  C10  O3   C9   O2  
+ <PCLR 13>:  C4   O1   C3   O   
+ <PCLR 13>:  C10  O3   C9   O2  
+ <PTM 14>:  O5   O2   C3   O1  
+ <PTM 14>:  O6   O3   C7   O4  
+ <PTM 15>:  O5   O2   C3   O1  
+ <PTM 15>:  O6   O3   C7   O4  
+ <TPT 16>:  C4   O3   C5   O1  
+ <TPT 16>:  C10  O4   C11  O2  
+ total 32 improper torsions applied
+ 32 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+ quit
+	Quit

@@ -1,0 +1,109 @@
+Remarks TFS_CNS.top created by acpype (v: 2022.6.6) on Wed Feb  8 16:39:38 2023
+
+set echo=false end
+
+autogenerate angles=True dihedrals=True end
+
+{ atomType  mass }
+MASS c3_     12.010
+MASS s6_     32.060
+MASS f_      19.000
+MASS ne_     14.010
+MASS sy_     32.060
+MASS o_      16.000
+
+RESIdue TFS
+
+GROUP
+
+{ atomName  atomType  Charge }
+ATOM C     TYPE= c3_   CHARGE=   0.5547 END
+ATOM S     TYPE= s6_   CHARGE=   1.4837 END
+ATOM F     TYPE= f_    CHARGE=  -0.2716 END
+ATOM F1    TYPE= f_    CHARGE=  -0.2716 END
+ATOM F2    TYPE= f_    CHARGE=  -0.2716 END
+ATOM N     TYPE= ne_   CHARGE=  -1.0591 END
+ATOM S1    TYPE= sy_   CHARGE=   1.6794 END
+ATOM C1    TYPE= c3_   CHARGE=   0.5547 END
+ATOM F3    TYPE= f_    CHARGE=  -0.2716 END
+ATOM F4    TYPE= f_    CHARGE=  -0.2716 END
+ATOM F5    TYPE= f_    CHARGE=  -0.2716 END
+ATOM O     TYPE= o_    CHARGE=  -0.6132 END
+ATOM O1    TYPE= o_    CHARGE=  -0.6568 END
+ATOM O2    TYPE= o_    CHARGE=  -0.6568 END
+ATOM O3    TYPE= o_    CHARGE=  -0.6568 END
+
+{ Bonds: atomName1  atomName2 }
+BOND C     F1   
+BOND C     S    
+BOND C     F    
+BOND C     F2   
+BOND S     N    
+BOND S     O    
+BOND S     O3   
+BOND N     S1   
+BOND S1    O2   
+BOND S1    C1   
+BOND S1    O1   
+BOND C1    F4   
+BOND C1    F3   
+BOND C1    F5   
+
+{ Angles: atomName1 atomName2 atomName3}
+ANGLe C     S     N    
+ANGLe C     S     O    
+ANGLe C     S     O3   
+ANGLe S     N     S1   
+ANGLe S     C     F1   
+ANGLe S     C     F    
+ANGLe S     C     F2   
+ANGLe F     C     F1   
+ANGLe F     C     F2   
+ANGLe F1    C     F2   
+ANGLe N     S1    O2   
+ANGLe N     S1    C1   
+ANGLe N     S1    O1   
+ANGLe N     S     O    
+ANGLe N     S     O3   
+ANGLe S1    C1    F4   
+ANGLe S1    C1    F3   
+ANGLe S1    C1    F5   
+ANGLe C1    S1    O2   
+ANGLe C1    S1    O1   
+ANGLe F3    C1    F4   
+ANGLe F3    C1    F5   
+ANGLe F4    C1    F5   
+ANGLe O     S     O3   
+ANGLe O1    S1    O2   
+
+{ Proper Dihedrals: name1 name2 name3 name4 }
+DIHEdral C     S     N     S1   
+DIHEdral S     N     S1    O2   
+DIHEdral S     N     S1    C1   
+DIHEdral S     N     S1    O1   
+DIHEdral F     C     S     N    
+DIHEdral F     C     S     O    
+DIHEdral F     C     S     O3   
+DIHEdral F1    C     S     N    
+DIHEdral F1    C     S     O    
+DIHEdral F1    C     S     O3   
+DIHEdral F2    C     S     N    
+DIHEdral F2    C     S     O    
+DIHEdral F2    C     S     O3   
+DIHEdral N     S1    C1    F4   
+DIHEdral N     S1    C1    F3   
+DIHEdral N     S1    C1    F5   
+DIHEdral S1    N     S     O    
+DIHEdral S1    N     S     O3   
+DIHEdral F3    C1    S1    O2   
+DIHEdral F3    C1    S1    O1   
+DIHEdral F4    C1    S1    O2   
+DIHEdral F4    C1    S1    O1   
+DIHEdral F5    C1    S1    O2   
+DIHEdral F5    C1    S1    O1   
+
+{ Improper Dihedrals: aName1 aName2 aName3 aName4 }
+
+END {RESIdue TFS}
+
+set echo=true end

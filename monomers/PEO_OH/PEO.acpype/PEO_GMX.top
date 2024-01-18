@@ -1,0 +1,15 @@
+; PEO_GMX.top created by acpype (Rev: 0) on Thu Oct 28 14:40:20 2021
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333
+
+; Include PEO_GMX.itp topology
+#include "PEO_GMX.itp"
+
+[ system ]
+ PEO
+
+[ molecules ]
+; Compound        nmols
+ PEO              1     

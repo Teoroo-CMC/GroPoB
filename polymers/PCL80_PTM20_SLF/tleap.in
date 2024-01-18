@@ -1,0 +1,10 @@
+source leaprc.gaff
+loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_LOH/PCL.prepi
+loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PCL_ROH/PCL.prepi
+loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/PTM_OH/PTM.prepi
+loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_CH3/HPT.prepi
+loadamberprep /cfs/klemming/nobackup/h/hargu978/GroPolBul/monomers/SLF_LCH3/TPT.prepi
+mol = sequence {HPT PTM PCLL PTM PCLL PTM PCLL PCLL PCLL PCLL PCLL PTM PCLL PTM PCLL PCLL PCLL PCLL PCLL PCLL PCLL PCLL PCLL PCLL PCLL PCLL PCLR PCLR PCLR PCLR PCLR PCLR PCLR PCLR PTM PCLR PTM PCLR PTM PCLR PCLR PCLR PCLR PTM PCLR PCLR PCLR PCLR PCLR PCLR PTM TPT }
+savepdb mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL80_PTM20_SLF/polymer.pdb
+saveamberparm mol /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL80_PTM20_SLF/polymer.prmtop /cfs/klemming/nobackup/h/hargu978/GroPolBul/polymers/PCL80_PTM20_SLF/polymer.inpcrd
+quit
