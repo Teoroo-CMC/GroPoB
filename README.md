@@ -165,6 +165,7 @@ LI    '''+str(nions)+'''
 TFS   '''+str(nions)+'''
 ''')
 topol.close() 
+<<<<<<< HEAD
 ```
 By using PACKMOL, we can now generate the initial configuration of the MD simulation box.
 ```python
@@ -192,4 +193,9 @@ pack.close()
 !packmol < packmol.inp
 
 ```
+=======
+
+```
+By using PACKMOL, we can now generate the initial configuration of the MD simulation box.
+>>>>>>> 4a79618068b75283c8cd38f24d07d3d7ff7dbb40
 ## Step-5: Run MD to test the input files
