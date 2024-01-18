@@ -133,7 +133,39 @@ Finally visualize the polymer using nglview.
 
 ![polymer](./Polymer_chain_PEO.png){width=100px}
 
+This will convert the AMBER files to GROMACS files,
+1. *.gro : Initial structure file for single PEO polymer
+2. *.top : Topology files consisiting force field parameters.
 
-## Step-5: Build polymer electrolyte system
+The topology file can then be broken into two itp files, 
+1. *ff.itp* : Consits the default settings like combinaton rules, atomtypes and LJ parameters.  
+2. *PEO_25mer.itp* : Consists the atomic paramerters like molecular weight, partial charges, bonded and non-bonded parameters.
 
-## Step-6: Run MD to test the input files
+## Step-4: Build polymer electrolyte system
+Follow the *Step-1* for desired slat ions to genertate GAFF parameters, in this turtorial we use LiTFSI, corresponding *.pdb and *.itp files were provided. We also use scale the partial charges on LiTFSI by a factor of 0.75.
+
+We can now generate the topology file for PEO_LiTFSI system with desired number of polymer chains and salt concnetration.
+```python
+### Make the topology file with ITP directory location and system details
+ITPDIR='/home/harish/GroPolBul/tutorial/ITP'
+npol=40;nmon=25;conc=0.08        
+nions=npol*nmon*conc
+topol=open('topol.top','w+')
+topol.write('''#include "'''+str(ITPDIR)+'''/ff.itp"
+#include "'''+str(ITPDIR)+'''/ITP/PEO_'''+str(nmon)+'''mer.itp"    
+#include "'''+str(ITPDIR)+'''/ITP/li_75c.itp"  
+#include "'''+str(ITPDIR)+'''/ITP/tfsi_75c.itp"
+        
+[ system ] 
+PEO_LiTFSI_'''+str(conc)+'''
+
+[ molecules ]
+polymer   '''+str(npol)+'''     
+LI    '''+str(nions)+'''
+TFS   '''+str(nions)+'''
+''')
+topol.close() 
+
+```
+By using PACKMOL, we can now generate the initial configuration of the MD simulation box.
+## Step-5: Run MD to test the input files

@@ -1,9 +1,0 @@
--I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/prep to search path.
--I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/lib to search path.
--I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/parm to search path.
--I: Adding /pdc/vol/amber/16.at17/amd64_co7/dat/leap/cmd to search path.
--s: Ignoring startup file: leaprc
--f: Source tleap.in.
-
-Welcome to LEaP!
-Could not open file tleap.in: not found

@@ -1,0 +1,12 @@
+#include "/home/harish/GroPolBul/tutorial/ITP/ff.itp"
+#include "/home/harish/GroPolBul/tutorial/ITP/ITP/PEO_25mer.itp"    
+#include "/home/harish/GroPolBul/tutorial/ITP/ITP/li_75c.itp"  
+#include "/home/harish/GroPolBul/tutorial/ITP/ITP/tfsi_75c.itp"
+        
+[ system ] 
+PEO_LiTFSI_0.08
+
+[ molecules ]
+polymer   40     
+LI    80.0
+TFS   80.0
