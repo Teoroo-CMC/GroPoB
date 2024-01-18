@@ -105,7 +105,7 @@ Next "tleap" is used to prepare the desired single polymer chain.
 #Build the desired homopolymer using above prepi files
 %mkdir polymer
 n_mono_repeat=5
-n_mono_pol=20
+n_mono_pol=25
 
 repeat=" ".join(['PEO'] * int(int(n_mono_pol/n_mono_repeat)-2))
 print('HPT '+str(repeat)+' TPT')
@@ -133,7 +133,6 @@ Finally visualize the polymer using nglview.
 
 ![polymer](./Polymer_chain_PEO.png){width=100px}
 
-## Step-4: Choose salt (cation+anion)
 
 ## Step-5: Build polymer electrolyte system
 
