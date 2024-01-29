@@ -1,16 +1,16 @@
--I: Adding /home/harish/miniconda3/envs/harish_env/dat/leap/prep to search path.
--I: Adding /home/harish/miniconda3/envs/harish_env/dat/leap/lib to search path.
--I: Adding /home/harish/miniconda3/envs/harish_env/dat/leap/parm to search path.
--I: Adding /home/harish/miniconda3/envs/harish_env/dat/leap/cmd to search path.
+-I: Adding /mnt/c/Users/hargu978/Documents/miniconda3/dat/leap/prep to search path.
+-I: Adding /mnt/c/Users/hargu978/Documents/miniconda3/dat/leap/lib to search path.
+-I: Adding /mnt/c/Users/hargu978/Documents/miniconda3/dat/leap/parm to search path.
+-I: Adding /mnt/c/Users/hargu978/Documents/miniconda3/dat/leap/cmd to search path.
 -s: Ignoring all leaprc startup files.
 -f: Source polymer/PEO_tleap.in.
 
 Welcome to LEaP!
 Sourcing: ./polymer/PEO_tleap.in
------ Source: /home/harish/miniconda3/envs/harish_env/dat/leap/cmd/leaprc.gaff
------ Source of /home/harish/miniconda3/envs/harish_env/dat/leap/cmd/leaprc.gaff done
+----- Source: /mnt/c/Users/hargu978/Documents/miniconda3/dat/leap/cmd/leaprc.gaff
+----- Source of /mnt/c/Users/hargu978/Documents/miniconda3/dat/leap/cmd/leaprc.gaff done
 Log file: ./leap.log
-Loading parameters: /home/harish/miniconda3/envs/harish_env/dat/leap/parm/gaff.dat
+Loading parameters: /mnt/c/Users/hargu978/Documents/miniconda3/dat/leap/parm/gaff.dat
 Reading title:
 AMBER General Force Field for organic molecules (Version 1.81, May 2017)
 Loading Prep file: ./PEO.prepi
