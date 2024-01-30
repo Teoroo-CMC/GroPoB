@@ -1,35 +1,28 @@
-#!/bin/bash -l
+#!/bin/bash
+# time allocation
+#SBATCH -A naiss2023-1-37
+# name of this job
+#SBATCH -o slurm2.out
+#SBATCH -J tg
+# wall time for this job
+#SBATCH -t 02:00:00
+# partition for this job
+#SBATCH -p shared
 
-# Include your allocation number
-#SBATCH -A 2021-1-32
-
-# Name your job
-#SBATCH -J 25mer0.08Tg 
-#SBATCH -o Tg_540-140K.out
-
-# Total number of nodes
-#SBATCH --nodes=2
-#SBATCH --ntasks-per-node=24
-#SBATCH --constraint=group-2
-
-# Test run for 1 hour
-#SBATCH -t 24:00:00
-
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=hargu978
-
-# here we use only one OpenMP thread per MPI task
+# number of nodes
+#SBATCH --nodes=1
+# number of MPI processes per node
+#SBATCH --ntasks-per-node=32
 export OMP_NUM_THREADS=1
 
-# load the relevant modules
-module swap PrgEnv-cray PrgEnv-gnu
-module add gromacs/2021
-#module add gromacs/2018.1
+ml PDC
+ml gromacs
 
-srun gmx_mpi mdrun -s npt.tpr -cpi npt.cpt -deffnm npt -v 
+rm \#* core
 
-#srun gmx_mpi mdrun -cpi npt.cpt -deffnm npt -v
-#cp npt.gro ../400K/npt_1000-400K.gro
+for conc in 0.02;do
+srun gmx_mpi mdrun -s npt_${conc}.tpr -cpi npt_${conc}.cpt -deffnm npt_${conc} -v #-nsteps 130000
+done
 
 rm \#*
 

@@ -4,9 +4,9 @@
 #include "/home/harish/GroPolBul/tutorial/ITP/ITP/tfsi_75c.itp"
         
 [ system ] 
-PEO_LiTFSI_0.08
+PEO_LiTFSI_0
 
 [ molecules ]
-polymer   40     
-LI    80.0
-TFS   80.0
+polymer   10     
+LI    0
+TFS   0

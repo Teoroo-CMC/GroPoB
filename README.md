@@ -1,6 +1,9 @@
 # GroPolBul Gromacs Polymer Builder
 Generalized Amber Force Field (GAFF) for polymer electrolyte systems
 
+A workflow for creating the polymer force field parameters from the monomers, then preparing the configurations, topology, and MD parameters for running the polymer electrolyte simulations and calculating the glass transition parameters temperature.
+![workflow](./FF_MD_workflow.png){width=100px}
+![tgcal](./Annealing_Tg_calc.png){width=100px}
 # Polymer Electrolyte builder for MD simulations
 
 This is a tutorial to build initial configurations and force field parameters required for the Classical Molecular dynamics simulation using GROMACS software of polymer electrolyte system PEO-LiTFSI. This tutorial is based on the jupyter notebook, written using different open-source tools. Before building the PE system, one has to answer the following questions:
@@ -165,7 +168,6 @@ LI    '''+str(nions)+'''
 TFS   '''+str(nions)+'''
 ''')
 topol.close() 
-<<<<<<< HEAD
 ```
 By using PACKMOL, we can now generate the initial configuration of the MD simulation box.
 ```python
@@ -193,9 +195,4 @@ pack.close()
 !packmol < packmol.inp
 
 ```
-=======
 
-```
-By using PACKMOL, we can now generate the initial configuration of the MD simulation box.
->>>>>>> 4a79618068b75283c8cd38f24d07d3d7ff7dbb40
-## Step-5: Run MD to test the input files

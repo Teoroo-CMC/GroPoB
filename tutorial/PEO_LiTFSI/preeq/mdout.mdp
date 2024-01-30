@@ -1,10 +1,17 @@
 ;
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (3220374)
-;	On host: t03n16.pdc.kth.se
-;	At date: Mon Nov 22 13:50:44 2021
-
+;	On host: nid002568
+;	At date: Mon Jan 29 18:11:16 2024
 ;
+;	Created by:
+;	                     :-) GROMACS - gmx grompp, 2023.3 (-:
+;	
+;	Executable:   /pdc/software/22.06/eb/software/gromacs/2023.3-cpeGNU-22.06/bin/gmx
+;	Data prefix:  /pdc/software/22.06/eb/software/gromacs/2023.3-cpeGNU-22.06
+;	Working dir:  /cfs/klemming/projects/snic/snic2022-23-108/GroPolBul/tutorial/PEO_LiTFSI/preeq
+;	Command line:
+;	  gmx grompp -f npt.mdp -c nvt_0.02.gro -p ../topol_0.02.top -o npt_0.02.tpr -maxwarn 2
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -23,6 +30,8 @@ nsteps                   = 10000000
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
 simulation-part          = 1
+; Multiple time-stepping
+mts                      = no
 ; mode for center of mass motion removal
 comm-mode                = Linear
 ; number of steps for center of mass motion removal
@@ -70,12 +79,10 @@ compressed-x-grps        = System
 energygrps               = 
 
 ; NEIGHBORSEARCHING PARAMETERS
-; cut-off scheme (Verlet: particle based cut-offs, group: using charge groups)
+; cut-off scheme (Verlet: particle based cut-offs)
 cutoff-scheme            = Verlet
 ; nblist update frequency
 nstlist                  = 10
-; ns algorithm (simple or grid)
-ns_type                  = grid
 ; Periodic boundary conditions: xyz, no, xy
 pbc                      = xyz
 periodic-molecules       = no
@@ -85,8 +92,6 @@ verlet-buffer-tolerance  = 0.005
 ; nblist cut-off        
 rlist                    = 1
 ; long-range cut-off for switched potentials
-rlistlong                = -1
-nstcalclr                = -1
 
 ; OPTIONS FOR ELECTROSTATICS AND VDW
 ; Method for doing electrostatics
@@ -122,33 +127,11 @@ ewald-rtol-lj            = 0.001
 lj-pme-comb-rule         = Geometric
 ewald-geometry           = 3d
 epsilon-surface          = 0
-
-; IMPLICIT SOLVENT ALGORITHM
-implicit-solvent         = No
-
-; GENERALIZED BORN ELECTROSTATICS
-; Algorithm for calculating Born radii
-gb-algorithm             = Still
-; Frequency of calculating the Born radii inside rlist
-nstgbradii               = 1
-; Cutoff for Born radii calculation; the contribution from atoms
-; between rlist and rgbradii is updated every nstlist steps
-rgbradii                 = 1
-; Dielectric coefficient of the implicit solvent
-gb-epsilon-solvent       = 80
-; Salt concentration in M for Generalized Born models
-gb-saltconc              = 0
-; Scaling factors used in the OBC GB model. Default values are OBC(II)
-gb-obc-alpha             = 1
-gb-obc-beta              = 0.8
-gb-obc-gamma             = 4.85
-gb-dielectric-offset     = 0.009
-sa-algorithm             = Ace-approximation
-; Surface tension (kJ/mol/nm^2) for the SA (nonpolar surface) part of GBSA
-; The value -1 will set default value for Still/HCT/OBC GB-models.
-sa-surface-tension       = -1
+implicit-solvent         = no
 
 ; OPTIONS FOR WEAK COUPLING ALGORITHMS
+ensemble-temperature-setting = auto
+ensemble-temperature     = -1
 ; Temperature coupling  
 tcoupl                   = V-rescale
 nsttcouple               = -1
@@ -157,14 +140,14 @@ print-nose-hoover-chain-variables = no
 ; Groups to couple separately
 tc-grps                  = System
 ; Time constant (ps) and reference temperature (K)
-tau_t                    = 0.5
+tau_t                    = 1.0
 ref_t                    = 400
 ; pressure coupling     
 pcoupl                   = Parrinello-Rahman
 pcoupltype               = isotropic
 nstpcouple               = -1
 ; Time constant (ps), compressibility (1/bar) and reference P (bar)
-tau_p                    = 2.0
+tau_p                    = 1.0
 compressibility          = 4.5e-5
 ref_p                    = 1.0
 ; Scaling of reference coordinates, No, All or COM
@@ -172,31 +155,8 @@ refcoord-scaling         = No
 
 ; OPTIONS FOR QMMM calculations
 QMMM                     = no
-; Groups treated Quantum Mechanically
+; Groups treated with MiMiC
 QMMM-grps                = 
-; QM method             
-QMmethod                 = 
-; QMMM scheme           
-QMMMscheme               = normal
-; QM basisset           
-QMbasis                  = 
-; QM charge             
-QMcharge                 = 
-; QM multiplicity       
-QMmult                   = 
-; Surface Hopping       
-SH                       = 
-; CAS space options     
-CASorbitals              = 
-CASelectrons             = 
-SAon                     = 
-SAoff                    = 
-SAsteps                  = 
-; Scale factor for MM charges
-MMChargeScaleFactor      = 1
-; Optimization of QM subsystem
-bOPT                     = 
-bTS                      = 
 
 ; SIMULATED ANNEALING  
 ; Type of annealing for each temperature group (no/single/periodic)
@@ -211,7 +171,7 @@ annealing_temp           = 400 400 600 800 1000 800 600 400
 ; GENERATE VELOCITIES FOR STARTUP RUN
 gen_vel                  = no
 gen-temp                 = 300
-gen-seed                 = -1
+gen-seed                 = -1184990227
 
 ; OPTIONS FOR BONDS    
 constraints              = h-bonds
@@ -250,6 +210,9 @@ wall-ewald-zfac          = 3
 
 ; COM PULLING          
 pull                     = no
+
+; AWH biasing          
+awh                      = no
 
 ; ENFORCED ROTATION    
 ; Enforced rotation: No or Yes
@@ -298,11 +261,15 @@ temperature-lambdas      =
 calc-lambda-neighbors    = 1
 init-lambda-weights      = 
 dhdl-print-energy        = no
+sc-function              = beutler
 sc-alpha                 = 0
 sc-power                 = 1
 sc-r-power               = 6
 sc-sigma                 = 0.3
 sc-coul                  = no
+sc-gapsys-scale-linpoint-lj = 0.85
+sc-gapsys-scale-linpoint-q = 0.3
+sc-gapsys-sigma-lj       = 0.3
 separate-dhdl-file       = yes
 dhdl-derivatives         = yes
 dh_hist_size             = 0
@@ -322,24 +289,9 @@ simulated-tempering-scaling = geometric
 sim-temp-low             = 300
 sim-temp-high            = 300
 
-; Electric fields      
-; Format is number of terms (int) and for all terms an amplitude (real)
-; and a phase angle (real)
-E-x                      = 
-; Time dependent (pulsed) electric field. Format is omega, time for pulse
-; peak, and sigma (width) for pulse. Sigma = 0 removes pulse, leaving
-; the field to be a cosine function.
-E-xt                     = 
-E-y                      = 
-E-yt                     = 
-E-z                      = 
-E-zt                     = 
-
 ; Ion/water position swapping for computational electrophysiology setups
 ; Swap positions along direction: no, X, Y, Z
 swapcoords               = no
-
-; AdResS parameters    
 adress                   = no
 
 ; User defined thingies
@@ -353,3 +305,17 @@ userreal1                = 0
 userreal2                = 0
 userreal3                = 0
 userreal4                = 0
+; Electric fields
+; Format for electric-field-x, etc. is: four real variables:
+; amplitude (V/nm), frequency omega (1/ps), time for the pulse peak (ps),
+; and sigma (ps) width of the pulse. Omega = 0 means static field,
+; sigma = 0 means no pulse, leaving the field to be a cosine function.
+electric-field-x         = 0 0 0 0
+electric-field-y         = 0 0 0 0
+electric-field-z         = 0 0 0 0
+
+; Density guided simulation
+density-guided-simulation-active = false
+
+; QM/MM with CP2K
+qmmm-cp2k-active         = false

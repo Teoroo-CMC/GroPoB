@@ -1,0 +1,12 @@
+#include "/mnt/c/Users/hargu978/Documents/GroPolBul/ITP/ff.itp"
+#include "/mnt/c/Users/hargu978/Documents/GroPolBul/ITP/PEO_25mer.itp"    
+#include "/mnt/c/Users/hargu978/Documents/GroPolBul/ITP/li_75c.itp"  
+#include "/mnt/c/Users/hargu978/Documents/GroPolBul/ITP/tfsi_75c.itp"
+        
+[ system ] 
+PEO_LiTFSI_0.02
+
+[ molecules ]
+PEO   10     
+LI    5
+TFS   5

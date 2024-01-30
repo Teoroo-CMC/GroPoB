@@ -1,0 +1,19 @@
+Unloading the cpe module is insufficient to restore the system defaults.
+Please run 'source /opt/cray/pe/cpe/22.06/restore_lmod_system_defaults.[csh|sh]'.
+
+Lmod is automatically replacing "cce/14.0.1" with "gcc/11.2.0".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.3.3" with "cpeGNU/22.06".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.17
+
+The following have been reloaded with a version change:
+  1) cray-libsci/21.08.1.2 => cray-libsci/22.06.1.3
+
+rm: cannot remove '#*': No such file or directory
+rm: cannot remove 'core': No such file or directory
+/var/spool/slurmd/job3170188/slurm_script: line 24: syntax error near unexpected token `srun'
+/var/spool/slurmd/job3170188/slurm_script: line 24: `srun gmx_mpi mdrun -s npt_${conc}.tpr -cpi npt_${conc}.cpt -deffnm npt_${conc} -v'
