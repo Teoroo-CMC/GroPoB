@@ -2,12 +2,11 @@
 Generalized Amber Force Field (GAFF) for polymer electrolyte systems
 
 A workflow for creating the polymer force field parameters from the monomers, then preparing the configurations, topology, and MD parameters for running the polymer electrolyte simulations and calculating the glass transition parameters temperature.
-
+![ff](figs/FF_initalconfig.png){width=100px}
 # Polymer Electrolyte builder for MD simulations
 
 This is a tutorial on how to build initial configurations and force field parameters required for the Classical Molecular dynamics simulation using GROMACS software of polymer electrolyte system PEO-LiTFSI. This tutorial is based on the jupyter notebook, written using different open-source tools. Before building the PE system, one has to answer the following questions:
 
-![ff](figs/FF_initalconfig.png){width=100px}
 Questions | In this tutorial
 -------- | ----------------
 *What is the monomer?* | -COCOCOCOC-
