@@ -1,5 +1,5 @@
 # GroPolBul Gromacs Polymer Builder
-Generalized Amber Force Field (GAFF) for polymer electrolyte systems
+Tutorial on building polymer electrolyte systems and setting up Molecular Dynamics simulation for glass transition temperature (Tg) calculation using Generalized Amber Force Field (GAFF) parameters.
 
 A workflow for creating the polymer force field parameters from the monomers, then preparing the configurations, topology, and MD parameters for running the polymer electrolyte simulations and calculating the glass transition parameters temperature.
 ![ff](figs/FF_initalconfig.png){width=100px}
