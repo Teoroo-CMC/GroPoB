@@ -1,0 +1,61 @@
+============================================================================
+| ACPYPE: AnteChamber PYthon Parser interfacE v. 2023.10.27 (c) 2024 AWSdS |
+============================================================================
+DEBUG: CLI: -i Li+.mol2 -n 1 -a amber
+DEBUG: Python Version 3.11.7 | packaged by conda-forge | (main, Dec 23 2023, 14:43:09) [GCC 12.3.0]
+DEBUG: Max execution time tolerance is 3h
+DEBUG: /mnt/c/Users/hargu978/Documents/miniconda3/bin/antechamber -dr no -i Li+.mol2 -fi mol2 -o tmp -fo ac -pf y
+DEBUG: 
+Welcome to antechamber 22.0: molecular input file processor.
+
+Info: The atom type is set to gaff; the options available to the -at flag are
+ gaff, gaff2, amber, bcc, and sybyl.
+
+/bin/bash: /mnt/c/Users/hargu978/Documents/miniconda3/lib/libtinfo.so.6: no version information available (required by /bin/bash)
+
+DEBUG: setResNameCheckCoords done
+DEBUG: Net charge drift '0.000000'
+==> ... charge set to 1
+==> Executing Antechamber...
+DEBUG: /mnt/c/Users/hargu978/Documents/miniconda3/bin/antechamber -dr no -i Li+.mol2 -fi mol2 -o Li+_bcc_amber.mol2 -fo mol2 -c bcc -nc 1 -m 1 -s 2 -df 2 -at amber -pf n 
+DEBUG: No file left to be removed
+ERROR: ++++++++++start_quote+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ERROR: 
+Welcome to antechamber 22.0: molecular input file processor.
+
+Info: The atom type is set to amber; the options available to the -at flag are
+ gaff, gaff2, amber, bcc, and sybyl.
+
+Info: Finished reading file (Li+.mol2); atoms read (1), bonds read (0).
+Info: Determining atomic numbers from atomic symbols which are case sensitive.
+
+Running: /mnt/c/Users/hargu978/Documents/miniconda3/bin/atomtype -i ANTECHAMBER_AC.AC0 -o ANTECHAMBER_AC.AC -p amber
+/bin/bash: /mnt/c/Users/hargu978/Documents/miniconda3/lib/libtinfo.so.6: no version information available (required by /bin/bash)
+Info: Total number of electrons: 2; net charge: 1
+
+Running: /mnt/c/Users/hargu978/Documents/miniconda3/bin/sqm -O -i sqm.in -o sqm.out
+
+ERROR in xmin(): Too few atoms.
+/mnt/c/Users/hargu978/Documents/miniconda3/bin/wrapped_progs/antechamber: Fatal Error!
+Cannot properly run "/mnt/c/Users/hargu978/Documents/miniconda3/bin/sqm -O -i sqm.in -o sqm.out".
+
+ERROR: ++++++++++end_quote+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ERROR: Antechamber failed
+DEBUG: /mnt/c/Users/hargu978/Documents/miniconda3/bin/parmchk2 -i Li+_bcc_amber.mol2 -f mol2 -o Li+_AC.frcmod -p /tmp/parm10gaffff14SB.dat
+ERROR: ++++++++++start_quote+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ERROR: Cannot open file (Li+_bcc_amber.mol2) with mode (r).
+No such file or directory
+ERROR: ++++++++++end_quote+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ERROR: Parmchk failed
+ERROR: Tleap failed
+==> Removing temporary files...
+ERROR: ACPYPE FAILED: [Errno 2] No such file or directory: 'Li+_AC.prmtop'
+Traceback (most recent call last):
+  File "/mnt/c/Users/hargu978/Documents/miniconda3/lib/python3.11/site-packages/acpype/cli.py", line 138, in init_main
+    molecule.createMolTopol()
+  File "/mnt/c/Users/hargu978/Documents/miniconda3/lib/python3.11/site-packages/acpype/topol.py", line 1115, in createMolTopol
+    self.topFileData = open(self.acTopFileName).readlines()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'Li+_AC.prmtop'
+Total time of execution: 1s
+DEBUG: No tmp folder left to be removed
