@@ -2,12 +2,12 @@
 Generalized Amber Force Field (GAFF) for polymer electrolyte systems
 
 A workflow for creating the polymer force field parameters from the monomers, then preparing the configurations, topology, and MD parameters for running the polymer electrolyte simulations and calculating the glass transition parameters temperature.
-![workflow](./FF_MD_workflow.png){width=100px}
-![tgcal](./Annealing_Tg_calc.png){width=100px}
+
 # Polymer Electrolyte builder for MD simulations
 
-This is a tutorial to build initial configurations and force field parameters required for the Classical Molecular dynamics simulation using GROMACS software of polymer electrolyte system PEO-LiTFSI. This tutorial is based on the jupyter notebook, written using different open-source tools. Before building the PE system, one has to answer the following questions:
+This is a tutorial on how to build initial configurations and force field parameters required for the Classical Molecular dynamics simulation using GROMACS software of polymer electrolyte system PEO-LiTFSI. This tutorial is based on the jupyter notebook, written using different open-source tools. Before building the PE system, one has to answer the following questions:
 
+![ff](figs/FF_initconfig.png){width=100px}
 Questions | In this tutorial
 -------- | ----------------
 *What is the monomer?* | -COCOCOCOC-
@@ -70,7 +70,7 @@ vi=ngl.show_ase(mol);vi.add_label(radius=2,color='black',label_type='atomindex')
 vi
 ```
 
-![monomer](./Short_chain_peo.png){width=100px}
+![monomer](figs/Short_chain_peo.png){width=100px}
 
 
 ## Step-2: Defining the HEAD, CHAIN, and TAIL of the monomer
@@ -134,7 +134,7 @@ This will generate *.prmtop and *.inpcrd files, these are coordinates and parame
 ```
 Finally visualize the polymer using nglview.
 
-![polymer](./Polymer_chain_PEO.png){width=100px}
+![polymer](figs/Polymer_chain_PEO.png){width=100px}
 
 This will convert the AMBER files to GROMACS files,
 1. *.gro : Initial structure file for single PEO polymer
@@ -193,6 +193,11 @@ end structure
         ''')
 pack.close()
 !packmol < packmol.inp
+```
+## Step-5: Molecular dynamics simulation workflow 
+![workflow](figs/MD_workflow.png){width=100px}
+![tgcal](figs/Annealing_Tg_calc.png){width=100px}
+
 
 ```
 
