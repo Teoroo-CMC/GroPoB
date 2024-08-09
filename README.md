@@ -194,8 +194,8 @@ pack.close()
 !packmol < packmol.inp
 ```
 ## Step-5: Molecular dynamics simulation workflow 
-![workflow](figs/MD_workflow.png){width=100px}
-![tgcal](figs/Annealing_Tg_calc.png){width=100px}
+![workflow](figs/MD_workflow.png)
+![tgcal](figs/Annealing_Tg_calc.png)
 
 
 ```
