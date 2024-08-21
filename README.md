@@ -2,7 +2,7 @@
 Tutorial on building polymer electrolyte systems and setting up Molecular Dynamics simulation for glass transition temperature (Tg) calculation using Generalized Amber Force Field (GAFF) parameters.
 
 A workflow for creating the polymer force field parameters from the monomers, then preparing the configurations, topology, and MD parameters for running the polymer electrolyte simulations and calculating the glass transition parameters temperature.
-![ff](figs/FF_initalconfig.png){width=100px}
+![ff](figs/FF_initalconfig.png)
 # Polymer Electrolyte builder for MD simulations
 
 This is a tutorial on how to build initial configurations and force field parameters required for the Classical Molecular dynamics simulation using GROMACS software of polymer electrolyte system PEO-LiTFSI. This tutorial is based on the jupyter notebook, written using different open-source tools. Before building the PE system, one has to answer the following questions:
@@ -69,7 +69,7 @@ vi=ngl.show_ase(mol);vi.add_label(radius=2,color='black',label_type='atomindex')
 vi
 ```
 
-![monomer](figs/Short_chain_peo.png){width=100px}
+![monomer](figs/Short_chain_peo.png)
 
 
 ## Step-2: Defining the HEAD, CHAIN, and TAIL of the monomer
@@ -133,7 +133,7 @@ This will generate *.prmtop and *.inpcrd files, these are coordinates and parame
 ```
 Finally visualize the polymer using nglview.
 
-![polymer](figs/Polymer_chain_PEO.png){width=100px}
+![polymer](figs/Polymer_chain_PEO.png)
 
 This will convert the AMBER files to GROMACS files,
 1. *.gro : Initial structure file for single PEO polymer
