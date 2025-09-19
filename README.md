@@ -1,5 +1,5 @@
 # (Gro)macs (Po)lymer (B)uilder
-Tutorial on building polymer electrolyte systems and setting up Molecular Dynamics simulation for glass transition temperature (Tg) calculation using Generalized Amber Force Field (GAFF) parameters. The reference to this work is H. Gudla and C. Zhang, _J. Phys. Chem. B_ 2024, 128: 10537, [DOI: 10.1021/acs.jpcb.4c06018](https://doi.org/10.1021/acs.jpcb.4c06018). 
+Tutorial on building polymer electrolyte systems and setting up Molecular Dynamics simulation for glass transition temperature (Tg) calculation using Generalized Amber Force Field (GAFF) parameters. The reference to GroPoB is H. Gudla and C. Zhang, _J. Phys. Chem. B_ 2024, 128: 10537, [DOI: 10.1021/acs.jpcb.4c06018](https://doi.org/10.1021/acs.jpcb.4c06018). 
 
 A workflow for creating the polymer force field parameters from the monomers, then preparing the configurations, topology, and MD parameters for running the polymer electrolyte simulations and calculating the glass transition parameters temperature.
 ![ff](figs/FF_initalconfig.png)
