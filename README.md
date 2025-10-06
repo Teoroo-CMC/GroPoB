@@ -197,6 +197,12 @@ pack.close()
 ![workflow](figs/MD_workflow.png)
 ![tgcal](figs/Annealing_Tg_calc.png)
 
-## Reference
+## About and reference
+GroPoB is developed by [Harish Gudla][harish] at the [TeC group][tec] in Uppsala
+University, Sweden.
+
+[harish]:https://github.com/hargu978
+[tec]:https://tec-group.github.io/
+
 Gudla, H and Zhang, C., _J. Phys. Chem. B_ 2024, 128: 10537
 
