@@ -198,5 +198,5 @@ pack.close()
 ![tgcal](figs/Annealing_Tg_calc.png)
 
 ## Reference
-H. Gudla and C. Zhang, _J. Phys. Chem. B_ 2024, 128: 10537
+Gudla, H and Zhang, C., _J. Phys. Chem. B_ 2024, 128: 10537
 
